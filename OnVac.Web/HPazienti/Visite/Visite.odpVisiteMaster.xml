@@ -1,0 +1,45 @@
+<odpVisiteMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="Visite" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_VIS_VISITE" TableAlias="" ConnectionName="Visite" />
+      <Table TableName="T_ANA_OPERATORI" TableAlias="" ConnectionName="Visite" />
+      <Table TableName="T_ANA_MALATTIE" TableAlias="" ConnectionName="Visite" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="" ConnectionName="Visite" />
+      <Table TableName="T_ANA_UTENTI" TableAlias="" ConnectionName="Visite" />
+      <Table TableName="T_ANA_MOTIVI_SOSPENSIONE" TableAlias="" ConnectionName="Visite" />
+      <Table TableName="T_ANA_USL" TableAlias="" ConnectionName="Visite" />
+      <Parameters />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="Visite" ConnectionChildName="Visite" TableParentName="T_VIS_VISITE" TableChildName="T_ANA_OPERATORI" FieldParentName="VIS_OPE_CODICE" FieldChildName="OPE_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="Visite" ConnectionChildName="Visite" TableParentName="T_VIS_VISITE" TableChildName="T_ANA_MALATTIE" FieldParentName="VIS_MAL_CODICE" FieldChildName="MAL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_2" ConnectionParentName="Visite" ConnectionChildName="Visite" TableParentName="T_VIS_VISITE" TableChildName="T_ANA_CODIFICHE" FieldParentName="VIS_VACCINABILE" FieldChildName="COD_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_3" ConnectionParentName="Visite" ConnectionChildName="Visite" TableParentName="T_VIS_VISITE" TableChildName="T_ANA_UTENTI" FieldParentName="VIS_UTE_ID" FieldChildName="UTE_ID" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_4" ConnectionParentName="Visite" ConnectionChildName="Visite" TableParentName="T_VIS_VISITE" TableChildName="T_ANA_MOTIVI_SOSPENSIONE" FieldParentName="VIS_MOS_CODICE" FieldChildName="MOS_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_5" ConnectionParentName="Visite" ConnectionChildName="Visite" TableParentName="T_VIS_VISITE" TableChildName="T_ANA_USL" FieldParentName="VIS_USL_INSERIMENTO" FieldChildName="USL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="Visite" TableName="T_VIS_VISITE" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="VIS_ID" DefaultValue="" keyFieldGenMode="generatedFromDb" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="VIS_PAZ_CODICE" DefaultValue="PazId" keyFieldGenMode="evaluate" keyFieldType="Number" />
+      <NotNullField FieldName="VIS_DATA_VISITA" DefaultValue="" keyFieldGenMode="defaultValue" keyFieldType="SysDate" />
+      <NotNullField FieldName="VIS_CNS_CODICE" DefaultValue="Consultorio" keyFieldGenMode="evaluate" keyFieldType="String" />
+    </NotNullFields>
+  </MainTable>
+  <Filters>
+    <Filter connectionName="Visite" TableName="T_VIS_VISITE" Field="VIS_PAZ_CODICE" Operator="And" Comparator="Uguale" FieldType="Number" valueProvenience="evaluate" Value="PazId" ignoreCase="True" />
+    <Filter connectionName="Visite" TableName="" Field="" Operator="And" Comparator="None" FieldType="Null" valueProvenience="valueProperty" Value="" ignoreCase="True">
+      <Filters>
+        <Filter connectionName="Visite" TableName="T_ANA_CODIFICHE" Field="COD_CAMPO" Operator="Or" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="VIS_VACCINABILE" ignoreCase="True" />
+        <Filter connectionName="Visite" TableName="T_ANA_CODIFICHE" Field="COD_CAMPO" Operator="Or" Comparator="Is" FieldType="Null" valueProvenience="valueProperty" Value="NULL" ignoreCase="True" />
+      </Filters>
+    </Filter>
+  </Filters>
+  <BindingFields />
+  <FieldsMaps TargetFrom="" TargetTo="" />
+  <Optimizer AccessPlan="" AlternativeAccessPlan="" useAlternativePlan="False" enabled="False" matchNull="False" maxFilters="-1" />
+</odpVisiteMasterConfiguration>

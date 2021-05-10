@@ -1,0 +1,35 @@
+<odpVisiteDetailConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="VisiteDetail" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_VIS_VISITE" TableAlias="" ConnectionName="VisiteDetail" />
+      <Table TableName="T_ANA_OPERATORI" TableAlias="" ConnectionName="VisiteDetail" />
+      <Table TableName="T_ANA_MALATTIE" TableAlias="" ConnectionName="VisiteDetail" />
+      <Table TableName="T_ANA_MOTIVI_SOSPENSIONE" TableAlias="" ConnectionName="VisiteDetail" />
+    <Table TableName="T_ANA_OPERATORI" TableAlias="T_ANA_OPERATORI_RILEV" ConnectionName="VisiteDetail" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="VisiteDetail" ConnectionChildName="VisiteDetail" TableParentName="T_VIS_VISITE" TableChildName="T_ANA_OPERATORI" FieldParentName="VIS_OPE_CODICE" FieldChildName="OPE_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="VisiteDetail" ConnectionChildName="VisiteDetail" TableParentName="T_VIS_VISITE" TableChildName="T_ANA_MALATTIE" FieldParentName="VIS_MAL_CODICE" FieldChildName="MAL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_2" ConnectionParentName="VisiteDetail" ConnectionChildName="VisiteDetail" TableParentName="T_VIS_VISITE" TableChildName="T_ANA_MOTIVI_SOSPENSIONE" FieldParentName="VIS_MOS_CODICE" FieldChildName="MOS_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_3" ConnectionParentName="VisiteDetail" ConnectionChildName="VisiteDetail" TableParentName="T_VIS_VISITE" TableChildName="T_ANA_OPERATORI_RILEV" FieldParentName="VIS_OPE_CODICE_RILEVATORE" FieldChildName="OPE_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="VisiteDetail" TableName="T_VIS_VISITE" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="VIS_ID" DefaultValue="" keyFieldGenMode="generatedFromDb" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="VIS_PAZ_CODICE" DefaultValue="PazId" keyFieldGenMode="evaluate" keyFieldType="Number" />
+      <NotNullField FieldName="VIS_DATA_VISITA" DefaultValue="" keyFieldGenMode="defaultValue" keyFieldType="SysDate" />
+      <NotNullField FieldName="VIS_CNS_CODICE" DefaultValue="Consultorio" keyFieldGenMode="evaluate" keyFieldType="String" />
+      <NotNullField FieldName="VIS_DATA_REGISTRAZIONE" DefaultValue="" keyFieldGenMode="defaultValue" keyFieldType="SysDate" />
+    </NotNullFields>
+  </MainTable>
+  <Filters>
+    <Filter connectionName="VisiteDetail" TableName="T_VIS_VISITE" Field="VIS_PAZ_CODICE" Operator="And" Comparator="Uguale" FieldType="Number" valueProvenience="evaluate" Value="PazId" />
+  </Filters>
+   <BindingFields>
+    <BindingField Connection="Visite" SourceField="VIS_ID" SourceTable="T_VIS_VISITE" Value="" Target="Codice" Description="" Hidden="False" Editable="always" />
+  </BindingFields>
+</odpVisiteDetailConfiguration>
