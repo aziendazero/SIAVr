@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="Lotti" targetNamespace="http://tempuri.org/Lotti.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/Lotti.xsd" xmlns:mstns="http://tempuri.org/Lotti.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="Lotti" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="element1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="lot_codice" type="xs:string" minOccurs="0" />
+							<xs:element name="lot_descrizione" type="xs:string" minOccurs="0" />
+							<xs:element name="noc_descrizione" type="xs:string" minOccurs="0" />
+							<xs:element name="lot_data_preparazione" type="xs:date" minOccurs="0" />
+							<xs:element name="lot_Data_scadenza" type="xs:date" minOccurs="0" />
+							<xs:element name="lcn_dosi_rimaste" type="xs:int" minOccurs="0" />
+							<xs:element name="lcn_qta_minima" type="xs:int" minOccurs="0" />
+							<xs:element name="lcn_attivo" type="xs:string" minOccurs="0" />
+							<xs:element name="lcn_cns_codice" type="xs:string" minOccurs="0" />
+							<xs:element name="lot_obsoleto" type="xs:string" minOccurs="0" />
+							<xs:element name="Fittizio" type="xs:integer" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CampiOrdinamento">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Fittizio" type="xs:integer" minOccurs="0" />
+							<xs:element name="Campo1" type="xs:string" minOccurs="0" />
+							<xs:element name="Campo2" type="xs:string" minOccurs="0" />
+							<xs:element name="Campo3" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
