@@ -22,7 +22,7 @@ Imports System.Runtime.CompilerServices
 <Assembly: AssemblyDescription("Release Version")> 
 #End If
 
-'Se il progetto viene esposto a COM, il GUID che segue verr‡ utilizzato per creare l'ID della libreria dei tipi.
+'Se il progetto viene esposto a COM, il GUID che segue verr√† utilizzato per creare l'ID della libreria dei tipi.
 <Assembly: Guid("5EFC4F32-6365-4FE0-B60F-40556EC7751D")> 
 
 ' Le informazioni sulla versione di un assembly sono costituite dai seguenti valori:
@@ -32,7 +32,7 @@ Imports System.Runtime.CompilerServices
 '      Numero build
 '      Revisione
 '
-' » possibile specificare tutti i valori oppure impostare valori predefiniti per i numeri relativi alla revisione e alla build
+' √à possibile specificare tutti i valori oppure impostare valori predefiniti per i numeri relativi alla revisione e alla build
 ' utilizzando il carattere "*" come mostrato di seguito:
 
 <Assembly: InternalsVisibleTo("Onit.OnAssistnet.OnVac.Veneto.BIZ")> 
