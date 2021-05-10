@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://SWUslCesena/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://SWUslCesena/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://SWUslCesena/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="CalcoloTicket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcoloTicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalcoloTicketResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PianiDiLavoro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PianiDiLavoroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PianiDiLavoroResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MappaturaRichieste">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MappaturaRichiesteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MappaturaRichiesteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvioErogato">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvioErogatoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvioErogatoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RicercaXCodiceRichiesta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chiaveImportata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strerrmsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RicercaXCodiceRichiestaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RicercaXCodiceRichiestaResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strerrmsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Prova">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chiaveImportata" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProvaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProvaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CalcoloTicketSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcoloTicket" />
+  </wsdl:message>
+  <wsdl:message name="CalcoloTicketSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcoloTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="PianiDiLavoroSoapIn">
+    <wsdl:part name="parameters" element="tns:PianiDiLavoro" />
+  </wsdl:message>
+  <wsdl:message name="PianiDiLavoroSoapOut">
+    <wsdl:part name="parameters" element="tns:PianiDiLavoroResponse" />
+  </wsdl:message>
+  <wsdl:message name="MappaturaRichiesteSoapIn">
+    <wsdl:part name="parameters" element="tns:MappaturaRichieste" />
+  </wsdl:message>
+  <wsdl:message name="MappaturaRichiesteSoapOut">
+    <wsdl:part name="parameters" element="tns:MappaturaRichiesteResponse" />
+  </wsdl:message>
+  <wsdl:message name="InvioErogatoSoapIn">
+    <wsdl:part name="parameters" element="tns:InvioErogato" />
+  </wsdl:message>
+  <wsdl:message name="InvioErogatoSoapOut">
+    <wsdl:part name="parameters" element="tns:InvioErogatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RicercaXCodiceRichiestaSoapIn">
+    <wsdl:part name="parameters" element="tns:RicercaXCodiceRichiesta" />
+  </wsdl:message>
+  <wsdl:message name="RicercaXCodiceRichiestaSoapOut">
+    <wsdl:part name="parameters" element="tns:RicercaXCodiceRichiestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProvaSoapIn">
+    <wsdl:part name="parameters" element="tns:Prova" />
+  </wsdl:message>
+  <wsdl:message name="ProvaSoapOut">
+    <wsdl:part name="parameters" element="tns:ProvaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WsSgpSoap">
+    <wsdl:operation name="CalcoloTicket">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Calcolo del ticket</documentation>
+      <wsdl:input message="tns:CalcoloTicketSoapIn" />
+      <wsdl:output message="tns:CalcoloTicketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PianiDiLavoro">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Lettura dell'agenda cup per una determinata unità</documentation>
+      <wsdl:input message="tns:PianiDiLavoroSoapIn" />
+      <wsdl:output message="tns:PianiDiLavoroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MappaturaRichieste">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Registrazione sulla base dati cup del numero di richiesta-polo per la richiesta-cup</documentation>
+      <wsdl:input message="tns:MappaturaRichiesteSoapIn" />
+      <wsdl:output message="tns:MappaturaRichiesteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InvioErogato">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Passaggio dell'erogato attraverso acqtes e acqdet</documentation>
+      <wsdl:input message="tns:InvioErogatoSoapIn" />
+      <wsdl:output message="tns:InvioErogatoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RicercaXCodiceRichiesta">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Ricerca del documento sul nuovo database CUP</documentation>
+      <wsdl:input message="tns:RicercaXCodiceRichiestaSoapIn" />
+      <wsdl:output message="tns:RicercaXCodiceRichiestaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Prova">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Ricerca del documento sul nuovo database CUP</documentation>
+      <wsdl:input message="tns:ProvaSoapIn" />
+      <wsdl:output message="tns:ProvaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsSgpSoap" type="tns:WsSgpSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CalcoloTicket">
+      <soap:operation soapAction="http://SWUslCesena/CalcoloTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PianiDiLavoro">
+      <soap:operation soapAction="http://SWUslCesena/PianiDiLavoro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MappaturaRichieste">
+      <soap:operation soapAction="http://SWUslCesena/MappaturaRichieste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvioErogato">
+      <soap:operation soapAction="http://SWUslCesena/InvioErogato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RicercaXCodiceRichiesta">
+      <soap:operation soapAction="http://SWUslCesena/RicercaXCodiceRichiesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Prova">
+      <soap:operation soapAction="http://SWUslCesena/Prova" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsSgp">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Servizio Web per l'integrazione con la base dati cup</documentation>
+    <wsdl:port name="WsSgpSoap" binding="tns:WsSgpSoap">
+      <soap:address location="http://localhost/Portale/OnitServizi/wssgp/wssgp.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

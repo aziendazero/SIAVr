@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsBatch/wsBatch" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsBatch/wsBatch" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/wsBatch/wsBatch">
+      <s:element name="CreateJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobInputData" type="tns:JobInputData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="JobInputData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Input" type="tns:InputPort" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalItems" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcedureId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Paused" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InputPort">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BasePort">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="PortConnections" type="tns:ArrayOfPortConnection" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApplicationId" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="AziendaCodice" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DataRichiesta" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BasePort">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PortFiles" type="tns:ArrayOfPortFileInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="PortParameters" type="tns:ArrayOfPortParameter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPortFileInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PortFileInfo" nillable="true" type="tns:PortFileInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PortFileInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParsingAlgorithm" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPortParameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PortParameter" nillable="true" type="tns:PortParameter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PortParameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPortConnection">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PortConnection" nillable="true" type="tns:PortConnection" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PortConnection">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConnectionString" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Provider" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateJobResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResumeJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="jobExecutionCode" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResumeJobResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ResumeJobUpdateTotalItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="jobExecutionCode" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalItems" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResumeJobUpdateTotalItemsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetJobInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="jobExecutionCode" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="JobInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="tns:StatusInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Output" type="tns:OutputPort" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdProcesso" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUtente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdProcedura" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdApplicativo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataRichiesta" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StatusInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessedItems" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalItems" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfErrors" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartingTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ElapsedTime" type="tns:TimeSpan" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:StatusMode" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinishingTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TimeSpan" />
+      <s:simpleType name="StatusMode">
+        <s:restriction base="s:string">
+          <s:enumeration value="PAUSED" />
+          <s:enumeration value="QUEUED" />
+          <s:enumeration value="RUNNING" />
+          <s:enumeration value="CANCELLED" />
+          <s:enumeration value="COMPLETED" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="OutputPort">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BasePort">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="HasErrors" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExceptionDetail" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetJobInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJobInfoResult" type="tns:JobInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobsId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobSearchFilters" type="tns:JobSearchFilters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="JobSearchFilters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdProcedura" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdApplicativo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUtente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataInizioRichiesta" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataFineRichiesta" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetJobsIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJobsIdResult" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateJobSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateJob" />
+  </wsdl:message>
+  <wsdl:message name="CreateJobSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResumeJobSoapIn">
+    <wsdl:part name="parameters" element="tns:ResumeJob" />
+  </wsdl:message>
+  <wsdl:message name="ResumeJobSoapOut">
+    <wsdl:part name="parameters" element="tns:ResumeJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResumeJobUpdateTotalItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:ResumeJobUpdateTotalItems" />
+  </wsdl:message>
+  <wsdl:message name="ResumeJobUpdateTotalItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:ResumeJobUpdateTotalItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJobInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJobInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetJobInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJobInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJobsIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJobsId" />
+  </wsdl:message>
+  <wsdl:message name="GetJobsIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJobsIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsBatchSoap">
+    <wsdl:operation name="CreateJob">
+      <wsdl:input message="tns:CreateJobSoapIn" />
+      <wsdl:output message="tns:CreateJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeJob">
+      <wsdl:input message="tns:ResumeJobSoapIn" />
+      <wsdl:output message="tns:ResumeJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeJobUpdateTotalItems">
+      <wsdl:input message="tns:ResumeJobUpdateTotalItemsSoapIn" />
+      <wsdl:output message="tns:ResumeJobUpdateTotalItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobInfo">
+      <wsdl:input message="tns:GetJobInfoSoapIn" />
+      <wsdl:output message="tns:GetJobInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsId">
+      <wsdl:input message="tns:GetJobsIdSoapIn" />
+      <wsdl:output message="tns:GetJobsIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsBatchSoap" type="tns:wsBatchSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateJob">
+      <soap:operation soapAction="http://tempuri.org/wsBatch/wsBatch/CreateJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumeJob">
+      <soap:operation soapAction="http://tempuri.org/wsBatch/wsBatch/ResumeJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumeJobUpdateTotalItems">
+      <soap:operation soapAction="http://tempuri.org/wsBatch/wsBatch/ResumeJobUpdateTotalItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobInfo">
+      <soap:operation soapAction="http://tempuri.org/wsBatch/wsBatch/GetJobInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsId">
+      <soap:operation soapAction="http://tempuri.org/wsBatch/wsBatch/GetJobsId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsBatchSoap12" type="tns:wsBatchSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateJob">
+      <soap12:operation soapAction="http://tempuri.org/wsBatch/wsBatch/CreateJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumeJob">
+      <soap12:operation soapAction="http://tempuri.org/wsBatch/wsBatch/ResumeJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumeJobUpdateTotalItems">
+      <soap12:operation soapAction="http://tempuri.org/wsBatch/wsBatch/ResumeJobUpdateTotalItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobInfo">
+      <soap12:operation soapAction="http://tempuri.org/wsBatch/wsBatch/GetJobInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsId">
+      <soap12:operation soapAction="http://tempuri.org/wsBatch/wsBatch/GetJobsId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsBatch">
+    <wsdl:port name="wsBatchSoap" binding="tns:wsBatchSoap">
+      <soap:address location="http://localhost/portale/onitservizi/wsbatch/wsbatch.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsBatchSoap12" binding="tns:wsBatchSoap12">
+      <soap12:address location="http://localhost/portale/onitservizi/wsbatch/wsbatch.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

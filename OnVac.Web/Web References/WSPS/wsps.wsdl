@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:i0="http://tempuri.org/Consulenze.xsd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://example.org/wsps" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:dm="http://www.develop.com/web/services/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://example.org/wsps" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/Consulenze.xsd" location="http://localhost/Portale/OnitServizi/WSPS/wsps.asmx?schema=ADVICES" />
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://example.org/wsps">
+      <s:import namespace="http://tempuri.org/Consulenze.xsd" />
+      <s:element name="RichiestaConsulenze">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="params" type="tns:Richiesta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Richiesta">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Testata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Field" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodUnita" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Testata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SendingDomain" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperationDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RichiestaConsulenzeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RichiestaConsulenzeResult" type="tns:ReturnValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AckCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DsRisposta">
+            <s:complexType>
+              <s:sequence>
+                <s:any namespace="http://tempuri.org/Consulenze.xsd" />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InvioReferti">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="referti" type="tns:ArrayOfReferto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReferto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Referto" nillable="true" type="tns:Referto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Referto">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Testata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Presidio" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Scheda" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodicePrestazione" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TipoPrestazione" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Sessione" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LuogoErogazione" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Referto" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DataReferto" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MedicoRichiedente" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MedicoRefertante" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="InvioRefertiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvioRefertiResult" type="tns:ReturnValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPazCodice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codTerminale" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPresidio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPazCodiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPazCodiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RichiestaConsulenzeSoapIn">
+    <wsdl:part name="parameters" element="tns:RichiestaConsulenze" />
+  </wsdl:message>
+  <wsdl:message name="RichiestaConsulenzeSoapOut">
+    <wsdl:part name="parameters" element="tns:RichiestaConsulenzeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InvioRefertiSoapIn">
+    <wsdl:part name="parameters" element="tns:InvioReferti" />
+  </wsdl:message>
+  <wsdl:message name="InvioRefertiSoapOut">
+    <wsdl:part name="parameters" element="tns:InvioRefertiResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPazCodiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPazCodice" />
+  </wsdl:message>
+  <wsdl:message name="GetPazCodiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPazCodiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WsPSSoap">
+    <wsdl:operation name="RichiestaConsulenze">
+      <wsdl:input message="tns:RichiestaConsulenzeSoapIn" />
+      <wsdl:output message="tns:RichiestaConsulenzeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InvioReferti">
+      <wsdl:input message="tns:InvioRefertiSoapIn" />
+      <wsdl:output message="tns:InvioRefertiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPazCodice">
+      <wsdl:input message="tns:GetPazCodiceSoapIn" />
+      <wsdl:output message="tns:GetPazCodiceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsPSSoap" type="tns:WsPSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RichiestaConsulenze">
+      <soap:operation soapAction="http://example.org/wsps/RichiestaConsulenze" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <dm:validation>
+          <dm:assertions />
+        </dm:validation>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvioReferti">
+      <soap:operation soapAction="http://example.org/wsps/InvioReferti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <dm:validation>
+          <dm:assertions />
+        </dm:validation>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPazCodice">
+      <soap:operation soapAction="http://example.org/wsps/GetPazCodice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <dm:validation>
+          <dm:assertions />
+        </dm:validation>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsPS">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="WsPSSoap" binding="tns:WsPSSoap">
+      <soap:address location="http://localhost/Portale/OnitServizi/WSPS/wsps.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

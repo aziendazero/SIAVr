@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/Consulenze.xsd" xmlns="http://tempuri.org/Consulenze.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/Consulenze.xsd" id="ADVICES" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="it-IT" name="ADVICES">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ADVICE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SCHEDA" type="xs:string" />
+              <xs:element minOccurs="0" name="PRESIDIO" type="xs:string" />
+              <xs:element minOccurs="0" name="CODICEPRESTAZIONE" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPOPRESTAZIONE" type="xs:string" />
+              <xs:element minOccurs="0" name="SESSIONE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATARICHIESTA" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCRIZIONEPRESTAZIONE" type="xs:string" />
+              <xs:element minOccurs="0" name="DMPRESTAZIONE" type="xs:string" />
+              <xs:element minOccurs="0" name="CODICEPAZIENTE" type="xs:string" />
+              <xs:element minOccurs="0" name="COGNOMENOME" type="xs:string" />
+              <xs:element minOccurs="0" name="DATANASCITA" type="xs:string" />
+              <xs:element minOccurs="0" name="AMBULATORIOPS" type="xs:string" />
+              <xs:element minOccurs="0" name="URGENZATRIAGE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="MEDICORICHIEDENTE" type="xs:string" />
+              <xs:element minOccurs="0" name="PSRICHIEDENTE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
