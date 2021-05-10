@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<risposta_archiviazione_conservazione>
+  <documents>
+    <document>
+      <idClassificazione>60.00.05.00.00-C.120.21.1.B4</idClassificazione>
+      <risposta>
+        <tokenRV/>
+        <codiceErrore>05</codiceErrore>
+        <descrizioneErrore>Hash dei file nel documento non corretti</descrizioneErrore>
+      </risposta>
+    </document>
+  </documents>
+</risposta_archiviazione_conservazione> 

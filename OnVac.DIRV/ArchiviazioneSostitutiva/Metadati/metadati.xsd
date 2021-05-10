@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="archiviazione_conservazione">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ente"/>
+				<xs:element ref="areaOrg"/>
+				<xs:element ref="ufficio" minOccurs="0"/>
+				<xs:element ref="endUserId"/>
+				<xs:element ref="documents"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="areaOrg" type="xs:string"/>
+	<xs:element name="document">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="idClassificazione"/>
+				<xs:element ref="fileVector"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="documents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="document" maxOccurs="500"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="endUserId" type="xs:string"/>
+	<xs:element name="ente" type="xs:string"/>
+	<xs:element name="fileHash" type="xs:string"/>
+	<xs:element name="fileHashType" type="xs:string"/>
+	<xs:element name="fileItem">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="fileName"/>
+				<xs:element ref="fileShowOrder" minOccurs="0"/>
+				<xs:element ref="filePages" minOccurs="0"/>
+				<xs:element ref="fileHashType"/>
+				<xs:element ref="fileHash"/>
+				<xs:element ref="fileMime"/>
+				<xs:element ref="fileMimeVersion"/>
+				<xs:element ref="fileType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="fileMime" type="xs:string"/>
+	<xs:element name="fileMimeVersion" type="xs:string"/>
+	<xs:element name="fileName" type="xs:string"/>
+	<xs:element name="filePages" type="xs:long"/>
+	<xs:element name="fileShowOrder" type="xs:long"/>
+	<xs:element name="fileType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="D"/>
+				<xs:enumeration value="X"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="fileVector">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="fileItem" maxOccurs="50"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="idClassificazione" type="xs:string"/>
+	<xs:element name="ufficio" type="xs:string"/>
+</xs:schema>
