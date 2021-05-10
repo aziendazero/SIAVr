@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<configSections>
+	<section name="Log" type="OnVac.Log.ConfigHandler, OnVac.Log"/>
+</configSections>
+
+<Logs>
+	<Log>
+		<add name="LogDb" type="OnVac.Log.DbLogWriterProvider" enable="true">
+			<par name="ConnectionString" value=""/>
+			<par name="DataProvider" value="OracleClient"/>
+		</add>
+		<add name="LogFile" type="OnVac.Log.FileLogWriterProvider" enable="true">
+			<par name="FileName" value="prova.txt"/>
+		</add>
+	</Log>
+</Logs>
