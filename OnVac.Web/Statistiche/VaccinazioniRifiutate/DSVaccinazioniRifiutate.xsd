@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DSVaccinazioniRifiutate" targetNamespace="http://tempuri.org/DSVaccinazioniRifiutate.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DSVaccinazioniRifiutate.xsd"
+	xmlns:mstns="http://tempuri.org/DSVaccinazioniRifiutate.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DSVaccinazioniRifiutate" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="VaccinazioniRifiutate">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PAZ_CODICE" type="xs:integer" minOccurs="0" />
+							<xs:element name="PAZ_NOME" type="xs:string" minOccurs="0" />
+							<xs:element name="PAZ_COGNOME" type="xs:string" minOccurs="0" />
+							<xs:element name="PAZ_DATA_NASCITA" type="xs:date" minOccurs="0" />
+							<xs:element name="PAZ_INDIRIZZO_RESIDENZA" type="xs:string" minOccurs="0" />
+							<xs:element name="PRF_GENITORE" type="xs:string" minOccurs="0" />
+							<xs:element name="PRF_NOTE_RIFIUTO" type="xs:string" minOccurs="0" />
+							<xs:element name="PRF_DATA_RIFIUTO" type="xs:date" minOccurs="0" />
+							<xs:element name="VAC_DESCRIZIONE" type="xs:string" minOccurs="0" />
+							<xs:element name="PRF_N_RICHIAMO" type="xs:integer" minOccurs="0" />
+							<xs:element name="VAC_OBBLIGATORIA" type="xs:string" minOccurs="0" />
+							<xs:element name="CNS_DESCRIZIONE" type="xs:string" minOccurs="0" />
+							<xs:element name="COM_DESCRIZIONE" type="xs:string" minOccurs="0" />
+							<xs:element name="UTE_DESCRIZIONE" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

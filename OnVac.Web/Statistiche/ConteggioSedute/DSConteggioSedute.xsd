@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSConteggioSedute" targetNamespace="http://tempuri.org/DSConteggioSedute.xsd" xmlns:mstns="http://tempuri.org/DSConteggioSedute.xsd" xmlns="http://tempuri.org/DSConteggioSedute.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSConteggioSedute" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSConteggioSedute" msprop:Generator_UserDSName="DSConteggioSedute">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConteggioSedute" msprop:Generator_TableClassName="ConteggioSeduteDataTable" msprop:Generator_TableVarName="tableConteggioSedute" msprop:Generator_RowChangedName="ConteggioSeduteRowChanged" msprop:Generator_TablePropName="ConteggioSedute" msprop:Generator_RowDeletingName="ConteggioSeduteRowDeleting" msprop:Generator_RowChangingName="ConteggioSeduteRowChanging" msprop:Generator_RowEvHandlerName="ConteggioSeduteRowChangeEventHandler" msprop:Generator_RowDeletedName="ConteggioSeduteRowDeleted" msprop:Generator_RowClassName="ConteggioSeduteRow" msprop:Generator_UserTableName="ConteggioSedute" msprop:Generator_RowEvArgName="ConteggioSeduteRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ves_cns_codice" msprop:Generator_ColumnVarNameInTable="columnves_cns_codice" msprop:Generator_ColumnPropNameInRow="ves_cns_codice" msprop:Generator_ColumnPropNameInTable="ves_cns_codiceColumn" msprop:Generator_UserColumnName="ves_cns_codice" type="xs:string" minOccurs="0" />
+              <xs:element name="cns_descrizione" msprop:Generator_ColumnVarNameInTable="columncns_descrizione" msprop:Generator_ColumnPropNameInRow="cns_descrizione" msprop:Generator_ColumnPropNameInTable="cns_descrizioneColumn" msprop:Generator_UserColumnName="cns_descrizione" type="xs:string" minOccurs="0" />
+              <xs:element name="ves_dataora_effettuazione" msprop:Generator_ColumnVarNameInTable="columnves_dataora_effettuazione" msprop:Generator_ColumnPropNameInRow="ves_dataora_effettuazione" msprop:Generator_ColumnPropNameInTable="ves_dataora_effettuazioneColumn" msprop:Generator_UserColumnName="ves_dataora_effettuazione" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Mattino" msprop:Generator_ColumnVarNameInTable="columnMattino" msprop:Generator_ColumnPropNameInRow="Mattino" msprop:Generator_ColumnPropNameInTable="MattinoColumn" msprop:Generator_UserColumnName="Mattino" type="xs:int" minOccurs="0" />
+              <xs:element name="Pomeriggio" msprop:Generator_ColumnVarNameInTable="columnPomeriggio" msprop:Generator_ColumnPropNameInRow="Pomeriggio" msprop:Generator_ColumnPropNameInTable="PomeriggioColumn" msprop:Generator_UserColumnName="Pomeriggio" type="xs:int" minOccurs="0" />
+              <xs:element name="ves_paz_codice" msprop:Generator_ColumnVarNameInTable="columnves_paz_codice" msprop:Generator_ColumnPropNameInRow="ves_paz_codice" msprop:Generator_ColumnPropNameInTable="ves_paz_codiceColumn" msprop:Generator_UserColumnName="ves_paz_codice" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

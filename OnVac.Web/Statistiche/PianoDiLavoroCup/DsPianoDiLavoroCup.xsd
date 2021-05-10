@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DsPianoDiLavoroCup" targetNamespace="http://tempuri.org/DsPianoDiLavoroCup.xsd"
+	elementFormDefault="qualified" xmlns="http://tempuri.org/DsPianoDiLavoroCup.xsd" xmlns:mstns="http://tempuri.org/DsPianoDiLavoroCup.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="PrenotatiCup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="paz_codice" type="xs:integer" />
+				<xs:element name="paz_codice_ausiliario" type="xs:string" />
+				<xs:element name="paz_nome" type="xs:string" />
+				<xs:element name="paz_cognome" type="xs:string" />
+				<xs:element name="paz_data_nascita" type="xs:date" />
+				<xs:element name="paz_cns_codice" type="xs:string" />
+				<xs:element name="paz_comune_residenza" type="xs:string" />
+				<xs:element name="paz_cap_residenza" type="xs:string" />
+				<xs:element name="paz_com_codice" type="xs:string" />
+				<xs:element name="data_prenotazione" type="xs:date" />
+				<xs:element name="data_effettuazione" type="xs:date" />
+				<xs:element name="paz_cns_descrizione" type="xs:string" />
+				<xs:element name="ves_cns_codice" type="xs:string" />
+				<xs:element name="ves_accesso" type="xs:string" />
+				<xs:element name="ora_prenotazione" type="xs:time" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

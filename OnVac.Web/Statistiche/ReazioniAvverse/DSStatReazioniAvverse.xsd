@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSStatReazioniAvverse" targetNamespace="http://tempuri.org/DSVaccinazioniEseguite.xsd" xmlns:mstns="http://tempuri.org/DSVaccinazioniEseguite.xsd" xmlns="http://tempuri.org/DSVaccinazioniEseguite.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSStatReazioniAvverse" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="DSStatReazioniAvverse" msprop:Generator_DataSetName="DSStatReazioniAvverse">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReazioniAvverse" msprop:Generator_UserTableName="ReazioniAvverse" msprop:Generator_RowDeletedName="ReazioniAvverseRowDeleted" msprop:Generator_RowChangedName="ReazioniAvverseRowChanged" msprop:Generator_RowClassName="ReazioniAvverseRow" msprop:Generator_RowChangingName="ReazioniAvverseRowChanging" msprop:Generator_RowEvArgName="ReazioniAvverseRowChangeEvent" msprop:Generator_RowEvHandlerName="ReazioniAvverseRowChangeEventHandler" msprop:Generator_TableClassName="ReazioniAvverseDataTable" msprop:Generator_TableVarName="tableReazioniAvverse" msprop:Generator_RowDeletingName="ReazioniAvverseRowDeleting" msprop:Generator_TablePropName="ReazioniAvverse">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ves_paz_codice" msprop:Generator_UserColumnName="ves_paz_codice" msprop:Generator_ColumnVarNameInTable="columnves_paz_codice" msprop:Generator_ColumnPropNameInRow="ves_paz_codice" msprop:Generator_ColumnPropNameInTable="ves_paz_codiceColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ves_data_effettuazione" msprop:Generator_UserColumnName="ves_data_effettuazione" msprop:Generator_ColumnVarNameInTable="columnves_data_effettuazione" msprop:Generator_ColumnPropNameInRow="ves_data_effettuazione" msprop:Generator_ColumnPropNameInTable="ves_data_effettuazioneColumn" type="xs:date" minOccurs="0" />
+              <xs:element name="ves_ass_n_dose" msprop:Generator_UserColumnName="ves_ass_n_dose" msprop:Generator_ColumnVarNameInTable="columnves_ass_n_dose" msprop:Generator_ColumnPropNameInRow="ves_ass_n_dose" msprop:Generator_ColumnPropNameInTable="ves_ass_n_doseColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ves_ass_codice" msprop:Generator_UserColumnName="ves_ass_codice" msprop:Generator_ColumnVarNameInTable="columnves_ass_codice" msprop:Generator_ColumnPropNameInRow="ves_ass_codice" msprop:Generator_ColumnPropNameInTable="ves_ass_codiceColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ass_descrizione" msprop:Generator_UserColumnName="ass_descrizione" msprop:Generator_ColumnVarNameInTable="columnass_descrizione" msprop:Generator_ColumnPropNameInRow="ass_descrizione" msprop:Generator_ColumnPropNameInTable="ass_descrizioneColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="vra_rea_codice" msprop:Generator_UserColumnName="vra_rea_codice" msprop:Generator_ColumnVarNameInTable="columnvra_rea_codice" msprop:Generator_ColumnPropNameInRow="vra_rea_codice" msprop:Generator_ColumnPropNameInTable="vra_rea_codiceColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="rea_descrizione" msprop:Generator_UserColumnName="rea_descrizione" msprop:Generator_ColumnVarNameInTable="columnrea_descrizione" msprop:Generator_ColumnPropNameInRow="rea_descrizione" msprop:Generator_ColumnPropNameInTable="rea_descrizioneColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="gruppo" msprop:Generator_UserColumnName="gruppo" msprop:Generator_ColumnPropNameInRow="gruppo" msprop:Generator_ColumnVarNameInTable="columngruppo" msprop:Generator_ColumnPropNameInTable="gruppoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
