@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="OnVacAnomalieCampagna" targetNamespace="http://tempuri.org/OnVacAnomalieCampagna.xsd"
+	elementFormDefault="qualified" xmlns="http://tempuri.org/OnVacAnomalieCampagna.xsd" xmlns:mstns="http://tempuri.org/OnVacAnomalieCampagna.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="anomalieCampagna">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PAZ_CODICE" type="xs:integer" />
+				<xs:element name="PAZ_COGNOME" type="xs:string" />
+				<xs:element name="PAZ_NOME" type="xs:string" />
+				<xs:element name="PAZ_DATA_NASCITA" type="xs:string" />
+				<xs:element name="COM_RESIDENZA_DESCRIZIONE" type="xs:string" />
+				<xs:element name="MOTIVO_FALLIMENTO" type="xs:string" />
+				<xs:element name="CNV_DATA" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--
+	<xs:element name="pazConCicliNonCreati">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PAZ_CODICE" type="xs:integer" />
+				<xs:element name="PAZ_COGNOME" type="xs:string" />
+				<xs:element name="PAZ_NOME" type="xs:string" />
+				<xs:element name="PAZ_DATA_NASCITA" type="xs:string" />
+				<xs:element name="COM_RESIDENZA_DESCRIZIONE" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pazConEsclusioni">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PAZ_CODICE" type="xs:integer" />
+				<xs:element name="PAZ_COGNOME" type="xs:string" />
+				<xs:element name="PAZ_NOME" type="xs:string" />
+				<xs:element name="PAZ_DATA_NASCITA" type="xs:string" />
+				<xs:element name="COM_RESIDENZA_DESCRIZIONE" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	 -->
+</xs:schema>

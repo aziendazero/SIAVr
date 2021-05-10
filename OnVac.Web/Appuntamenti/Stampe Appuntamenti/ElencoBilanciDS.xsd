@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ElencoBilanciDS" targetNamespace="http://tempuri.org/ElencoBilanciDS.xsd" xmlns:mstns="http://tempuri.org/ElencoBilanciDS.xsd" xmlns="http://tempuri.org/ElencoBilanciDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ElencoBilanciDS" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="ElencoBilanciDS" msprop:Generator_DataSetName="ElencoBilanciDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="elencoBilanci" msprop:Generator_UserTableName="elencoBilanci" msprop:Generator_RowDeletedName="elencoBilanciRowDeleted" msprop:Generator_TableClassName="elencoBilanciDataTable" msprop:Generator_RowChangedName="elencoBilanciRowChanged" msprop:Generator_RowClassName="elencoBilanciRow" msprop:Generator_RowChangingName="elencoBilanciRowChanging" msprop:Generator_RowEvArgName="elencoBilanciRowChangeEvent" msprop:Generator_RowEvHandlerName="elencoBilanciRowChangeEventHandler" msprop:Generator_TablePropName="elencoBilanci" msprop:Generator_TableVarName="tableelencoBilanci" msprop:Generator_RowDeletingName="elencoBilanciRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PAZ_CODICE" msprop:Generator_UserColumnName="PAZ_CODICE" msprop:Generator_ColumnPropNameInRow="PAZ_CODICE" msprop:Generator_ColumnVarNameInTable="columnPAZ_CODICE" msprop:Generator_ColumnPropNameInTable="PAZ_CODICEColumn" type="xs:integer" minOccurs="0" />
+              <xs:element name="PAZ_COGNOME" msprop:Generator_UserColumnName="PAZ_COGNOME" msprop:Generator_ColumnPropNameInRow="PAZ_COGNOME" msprop:Generator_ColumnVarNameInTable="columnPAZ_COGNOME" msprop:Generator_ColumnPropNameInTable="PAZ_COGNOMEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PAZ_NOME" msprop:Generator_UserColumnName="PAZ_NOME" msprop:Generator_ColumnPropNameInRow="PAZ_NOME" msprop:Generator_ColumnVarNameInTable="columnPAZ_NOME" msprop:Generator_ColumnPropNameInTable="PAZ_NOMEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PAZ_DATA_NASCITA" msprop:Generator_UserColumnName="PAZ_DATA_NASCITA" msprop:Generator_ColumnPropNameInRow="PAZ_DATA_NASCITA" msprop:Generator_ColumnVarNameInTable="columnPAZ_DATA_NASCITA" msprop:Generator_ColumnPropNameInTable="PAZ_DATA_NASCITAColumn" type="xs:date" minOccurs="0" />
+              <xs:element name="PAZ_LIBERO_1" msprop:Generator_UserColumnName="PAZ_LIBERO_1" msprop:Generator_ColumnPropNameInRow="PAZ_LIBERO_1" msprop:Generator_ColumnVarNameInTable="columnPAZ_LIBERO_1" msprop:Generator_ColumnPropNameInTable="PAZ_LIBERO_1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="RES_COM_DESCRIZIONE" msprop:Generator_UserColumnName="RES_COM_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="RES_COM_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnRES_COM_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="RES_COM_DESCRIZIONEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DOM_COM_DESCRIZIONE" msprop:Generator_UserColumnName="DOM_COM_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="DOM_COM_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnDOM_COM_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="DOM_COM_DESCRIZIONEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CNV_DATA_APPUNTAMENTO" msprop:Generator_UserColumnName="CNV_DATA_APPUNTAMENTO" msprop:Generator_ColumnPropNameInRow="CNV_DATA_APPUNTAMENTO" msprop:Generator_ColumnVarNameInTable="columnCNV_DATA_APPUNTAMENTO" msprop:Generator_ColumnPropNameInTable="CNV_DATA_APPUNTAMENTOColumn" type="xs:date" minOccurs="0" />
+              <xs:element name="BIP_BIL_NUMERO" msprop:Generator_UserColumnName="BIP_BIL_NUMERO" msprop:Generator_ColumnPropNameInRow="BIP_BIL_NUMERO" msprop:Generator_ColumnVarNameInTable="columnBIP_BIL_NUMERO" msprop:Generator_ColumnPropNameInTable="BIP_BIL_NUMEROColumn" type="xs:integer" minOccurs="0" />
+              <xs:element name="MAL_DESCRIZIONE" msprop:Generator_UserColumnName="MAL_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="MAL_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnMAL_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="MAL_DESCRIZIONEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CNS_DESCRIZIONE" msprop:Generator_UserColumnName="CNS_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="CNS_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnCNS_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="CNS_DESCRIZIONEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MED_DESCRIZIONE" msprop:Generator_UserColumnName="MED_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="MED_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnMED_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="MED_DESCRIZIONEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DATA_ULTIMA_VACCINAZIONE" msprop:Generator_UserColumnName="DATA_ULTIMA_VACCINAZIONE" msprop:Generator_ColumnPropNameInRow="DATA_ULTIMA_VACCINAZIONE" msprop:Generator_ColumnVarNameInTable="columnDATA_ULTIMA_VACCINAZIONE" msprop:Generator_ColumnPropNameInTable="DATA_ULTIMA_VACCINAZIONEColumn" type="xs:date" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

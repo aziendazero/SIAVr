@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="CalendarioCupDS" targetNamespace="http://tempuri.org/CalendarioCupDS.xsd" elementFormDefault="qualified"
+	xmlns="http://tempuri.org/CalendarioCupDS.xsd" xmlns:mstns="http://tempuri.org/CalendarioCupDS.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Appuntamenti">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="NumeroRichiesta" type="xs:string" minOccurs="0" />
+				<xs:element name="Data" type="xs:date" minOccurs="0" />
+				<xs:element name="Ora" type="xs:time" minOccurs="0" />
+				<xs:element name="CodicePaziente" type="xs:integer" minOccurs="0" />
+				<xs:element name="CodicePazienteAusiliario" type="xs:string" minOccurs="0" />
+				<xs:element name="Cognome" type="xs:string" minOccurs="0" />
+				<xs:element name="Nome" type="xs:string" minOccurs="0" />
+				<xs:element name="DataNascita" type="xs:date" minOccurs="0" />
+				<xs:element name="TipoRichiesta" type="xs:integer" minOccurs="0" />
+				<xs:element name="ComuneResidenza" type="xs:string" minOccurs="0" />
+				<xs:element name="CapResidenza" type="xs:string" minOccurs="0" />
+				<xs:element name="TipoAgenda" type="xs:string" minOccurs="0" />
+				<xs:element name="DescComuneResidenza" type="xs:string" />
+				<xs:element name="MedicoBase" type="xs:string" />
+				<xs:element name="NotePaziente" type="xs:string" />
+				<xs:element name="DataUltimaVac" type="xs:dateTime" />
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="key1">
+			<xs:selector xpath="." />
+			<xs:field xpath="mstns:NumeroRichiesta" />
+		</xs:key>
+	</xs:element>
+	<xs:element name="Prestazioni">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="NumeroRichiesta" type="xs:string" minOccurs="0" />
+				<xs:element name="PrestazioneMnemonico" type="xs:string" minOccurs="0" />
+				<xs:element name="PrestazioneDescrizione" type="xs:string" minOccurs="0" />
+				<xs:element name="ProfiloMnemonico" type="xs:string" minOccurs="0" />
+				<xs:element name="ProfiloDescrizione" type="xs:string" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+		<xs:keyref name="AppuntamentiPrestazioni" refer="key1">
+			<xs:selector xpath="." />
+			<xs:field xpath="mstns:NumeroRichiesta" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

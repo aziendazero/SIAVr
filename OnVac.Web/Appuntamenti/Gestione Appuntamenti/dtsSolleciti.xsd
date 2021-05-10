@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dtsSolleciti" targetNamespace="http://tempuri.org/dtsSolleciti.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dtsSolleciti.xsd" xmlns:mstns="http://tempuri.org/dtsSolleciti.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dtsSolleciti" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="SOLLECITI">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="sol_cognome" type="xs:string" minOccurs="0" />
+							<xs:element name="sol_nome" type="xs:string" minOccurs="0" />
+							<xs:element name="sol_numero_sollecito" type="xs:integer" minOccurs="0" />
+							<xs:element name="sol_data_nascita" type="xs:date" minOccurs="0" />
+							<xs:element name="sol_data_convocazione" type="xs:date" minOccurs="0" />
+							<xs:element name="sol_data_appuntamento" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="sol_stato_anagrafico" type="xs:string" minOccurs="0" />
+							<xs:element name="sol_stato" type="xs:string" minOccurs="0" />
+							<xs:element name="sol_data_invio" type="xs:string" minOccurs="0" />
+							<xs:element name="sol_tipo" type="xs:string" minOccurs="0" />
+							<xs:element name="sol_ordine" type="xs:integer" minOccurs="0" />
+							<xs:element name="sol_codice" type="xs:integer" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

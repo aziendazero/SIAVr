@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsRicerca" targetNamespace="http://tempuri.org/dtsRicerca.xsd" xmlns:mstns="http://tempuri.org/dtsRicerca.xsd" xmlns="http://tempuri.org/dtsRicerca.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsRicerca" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="dtsRicerca" msprop:Generator_UserDSName="dtsRicerca">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="T_RICERCA" msprop:Generator_TableClassName="T_RICERCADataTable" msprop:Generator_TableVarName="tableT_RICERCA" msprop:Generator_TablePropName="T_RICERCA" msprop:Generator_RowDeletingName="T_RICERCARowDeleting" msprop:Generator_RowChangingName="T_RICERCARowChanging" msprop:Generator_RowEvHandlerName="T_RICERCARowChangeEventHandler" msprop:Generator_RowDeletedName="T_RICERCARowDeleted" msprop:Generator_UserTableName="T_RICERCA" msprop:Generator_RowChangedName="T_RICERCARowChanged" msprop:Generator_RowEvArgName="T_RICERCARowChangeEvent" msprop:Generator_RowClassName="T_RICERCARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PAZ_CODICE" msprop:Generator_ColumnVarNameInTable="columnPAZ_CODICE" msprop:Generator_ColumnPropNameInRow="PAZ_CODICE" msprop:Generator_ColumnPropNameInTable="PAZ_CODICEColumn" msprop:Generator_UserColumnName="PAZ_CODICE" type="xs:integer" minOccurs="0" />
+              <xs:element name="PAZ_COGNOME" msprop:Generator_ColumnVarNameInTable="columnPAZ_COGNOME" msprop:Generator_ColumnPropNameInRow="PAZ_COGNOME" msprop:Generator_ColumnPropNameInTable="PAZ_COGNOMEColumn" msprop:Generator_UserColumnName="PAZ_COGNOME" type="xs:string" minOccurs="0" />
+              <xs:element name="PAZ_NOME" msprop:Generator_ColumnVarNameInTable="columnPAZ_NOME" msprop:Generator_ColumnPropNameInRow="PAZ_NOME" msprop:Generator_ColumnPropNameInTable="PAZ_NOMEColumn" msprop:Generator_UserColumnName="PAZ_NOME" type="xs:string" minOccurs="0" />
+              <xs:element name="PAZ_DATA_NASCITA" msprop:Generator_ColumnVarNameInTable="columnPAZ_DATA_NASCITA" msprop:Generator_ColumnPropNameInRow="PAZ_DATA_NASCITA" msprop:Generator_ColumnPropNameInTable="PAZ_DATA_NASCITAColumn" msprop:Generator_UserColumnName="PAZ_DATA_NASCITA" type="xs:date" />
+              <xs:element name="PAZ_STATO" msprop:Generator_ColumnVarNameInTable="columnPAZ_STATO" msprop:Generator_ColumnPropNameInRow="PAZ_STATO" msprop:Generator_ColumnPropNameInTable="PAZ_STATOColumn" msprop:Generator_UserColumnName="PAZ_STATO" type="xs:string" minOccurs="0" />
+              <xs:element name="CNV_DATA" msprop:Generator_ColumnVarNameInTable="columnCNV_DATA" msprop:Generator_ColumnPropNameInRow="CNV_DATA" msprop:Generator_ColumnPropNameInTable="CNV_DATAColumn" msprop:Generator_UserColumnName="CNV_DATA" type="xs:date" minOccurs="0" />
+              <xs:element name="CNV_BIL_NUMERO" msprop:Generator_ColumnVarNameInTable="columnCNV_BIL_NUMERO" msprop:Generator_ColumnPropNameInRow="CNV_BIL_NUMERO" msprop:Generator_ColumnPropNameInTable="CNV_BIL_NUMEROColumn" msprop:Generator_UserColumnName="CNV_BIL_NUMERO" type="xs:integer" minOccurs="0" />
+              <xs:element name="MED_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnMED_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="MED_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="MED_DESCRIZIONEColumn" msprop:Generator_UserColumnName="MED_DESCRIZIONE" type="xs:string" minOccurs="0" />
+              <xs:element name="CNV_CNS_CODICE" msprop:Generator_ColumnVarNameInTable="columnCNV_CNS_CODICE" msprop:Generator_ColumnPropNameInRow="CNV_CNS_CODICE" msprop:Generator_ColumnPropNameInTable="CNV_CNS_CODICEColumn" msprop:Generator_UserColumnName="CNV_CNS_CODICE" type="xs:string" minOccurs="0" />
+              <xs:element name="VACCINAZIONI" msprop:Generator_ColumnVarNameInTable="columnVACCINAZIONI" msprop:Generator_ColumnPropNameInRow="VACCINAZIONI" msprop:Generator_ColumnPropNameInTable="VACCINAZIONIColumn" msprop:Generator_UserColumnName="VACCINAZIONI" type="xs:string" minOccurs="0" />
+              <xs:element name="CNV_DATA_APPUNTAMENTO" msprop:Generator_ColumnVarNameInTable="columnCNV_DATA_APPUNTAMENTO" msprop:Generator_ColumnPropNameInRow="CNV_DATA_APPUNTAMENTO" msprop:Generator_ColumnPropNameInTable="CNV_DATA_APPUNTAMENTOColumn" msprop:Generator_UserColumnName="CNV_DATA_APPUNTAMENTO" type="xs:date" minOccurs="0" />
+              <xs:element name="CNV_TIPO_APPUNTAMENTO" msprop:Generator_ColumnVarNameInTable="columnCNV_TIPO_APPUNTAMENTO" msprop:Generator_ColumnPropNameInRow="CNV_TIPO_APPUNTAMENTO" msprop:Generator_ColumnPropNameInTable="CNV_TIPO_APPUNTAMENTOColumn" msprop:Generator_UserColumnName="CNV_TIPO_APPUNTAMENTO" type="xs:string" minOccurs="0" />
+              <xs:element name="SOLLECITO" msprop:Generator_ColumnVarNameInTable="columnSOLLECITO" msprop:Generator_ColumnPropNameInRow="SOLLECITO" msprop:Generator_ColumnPropNameInTable="SOLLECITOColumn" msprop:Generator_UserColumnName="SOLLECITO" type="xs:integer" minOccurs="0" />
+              <xs:element name="PAZ_STATO_ANAGRAFICO" msprop:Generator_ColumnVarNameInTable="columnPAZ_STATO_ANAGRAFICO" msprop:Generator_ColumnPropNameInRow="PAZ_STATO_ANAGRAFICO" msprop:Generator_ColumnPropNameInTable="PAZ_STATO_ANAGRAFICOColumn" msprop:Generator_UserColumnName="PAZ_STATO_ANAGRAFICO" type="xs:string" minOccurs="0" />
+              <xs:element name="COMUNE_RESIDENZA" msprop:Generator_ColumnVarNameInTable="columnCOMUNE_RESIDENZA" msprop:Generator_ColumnPropNameInRow="COMUNE_RESIDENZA" msprop:Generator_ColumnPropNameInTable="COMUNE_RESIDENZAColumn" msprop:Generator_UserColumnName="COMUNE_RESIDENZA" type="xs:string" minOccurs="0" />
+              <xs:element name="COMUNE_DOMICILIO" msprop:Generator_ColumnVarNameInTable="columnCOMUNE_DOMICILIO" msprop:Generator_ColumnPropNameInRow="COMUNE_DOMICILIO" msprop:Generator_ColumnPropNameInTable="COMUNE_DOMICILIOColumn" msprop:Generator_UserColumnName="COMUNE_DOMICILIO" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_IMMI_NON_EXTRA_PRIMA" msprop:Generator_ColumnVarNameInTable="columnTIPO_IMMI_NON_EXTRA_PRIMA" msprop:Generator_ColumnPropNameInRow="TIPO_IMMI_NON_EXTRA_PRIMA" msprop:Generator_ColumnPropNameInTable="TIPO_IMMI_NON_EXTRA_PRIMAColumn" msprop:Generator_UserColumnName="TIPO_IMMI_NON_EXTRA_PRIMA" type="xs:integer" minOccurs="0" />
+              <xs:element name="TIPO_EXTRACOMUNITARI" msprop:Generator_ColumnVarNameInTable="columnTIPO_EXTRACOMUNITARI" msprop:Generator_ColumnPropNameInRow="TIPO_EXTRACOMUNITARI" msprop:Generator_ColumnPropNameInTable="TIPO_EXTRACOMUNITARIColumn" msprop:Generator_UserColumnName="TIPO_EXTRACOMUNITARI" type="xs:integer" minOccurs="0" />
+              <xs:element name="CRONICO" msprop:Generator_ColumnVarNameInTable="columnCRONICO" msprop:Generator_ColumnPropNameInRow="CRONICO" msprop:Generator_ColumnPropNameInTable="CRONICOColumn" msprop:Generator_UserColumnName="CRONICO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
