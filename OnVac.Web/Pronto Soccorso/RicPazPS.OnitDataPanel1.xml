@@ -1,0 +1,77 @@
+<odpRicercaPazienteConfiguration>
+  <General FieldBindingMode="2" />
+  <Connections>
+       <Connection ConnectionName="centrale" ConnectionString="" DataSourceName="Onit.OnAssistnet.OnVac.Web;Onit.OnAssistnet.OnVac.Common.Adapters.PazienteHL7OdpAdapter" ProviderName="SQLSERVER" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniServizio" Encrypted="False" IsServiceConnection="True" ReadAuth="read" WriteAuth="write" serviceType="CustomAdapter">
+    <!--<Connection ConnectionName="centrale" ConnectionString="http://localhost/Portale/OnitServizi/PazienteNew/Paziente.asmx" DataSourceName="" ProviderName="SQLSERVER" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniServizio" Encrypted="False" IsServiceConnection="True" ReadAuth="read" WriteAuth="insertOnly" serviceType="PazienteNew">-->
+      <Table TableName="t_paz_pazienti_centrale" TableAlias="" ConnectionName="centrale" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_cnas" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="locale_cnas" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_comre" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="locale_comre" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="locale" />
+      <Table TableName="T_ANA_COMUNI" TableAlias="T_ANA_COMUNI_RES" ConnectionName="locale" />
+      <Table TableName="T_PAZ_PAZIENTI" TableAlias="" ConnectionName="locale" />
+      <Parameters />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="centrale" ConnectionChildName="locale_cnas" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_COMUNI" FieldParentName="PAZ_COM_CODICE_NASCITA" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="centrale" ConnectionChildName="locale" TableParentName="t_paz_pazienti_centrale" TableChildName="T_PAZ_PAZIENTI" FieldParentName="PAZ_CODICE" FieldChildName="PAZ_CODICE_AUSILIARIO" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_2" ConnectionParentName="centrale" ConnectionChildName="locale_comre" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_COMUNI" FieldParentName="PAZ_COM_CODICE_RESIDENZA" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_3" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_COMUNI" FieldParentName="PAZ_COM_CODICE_NASCITA" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_4" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_COMUNI_RES" FieldParentName="PAZ_COM_CODICE_RESIDENZA" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="centrale" TableName="t_paz_pazienti_centrale" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="PAZ_CODICE" DefaultValue="" keyFieldGenMode="generatedFromDb" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="PAZ_DATA_INSERIMENTO" DefaultValue="" keyFieldType="SysDate" keyFieldGenMode="defaultValue" />
+    </NotNullFields>
+  </MainTable>
+  <MainTable Connection="locale" TableName="T_PAZ_PAZIENTI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="PAZ_CODICE" DefaultValue="" keyFieldGenMode="generatedFromDb" keyFieldType="Float" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="PAZ_DATA_INSERIMENTO" DefaultValue="" keyFieldType="SysDate" keyFieldGenMode="defaultValue" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+  <FieldsMaps TargetFrom="1" TargetTo="2">
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CODICE,locale.T_PAZ_PAZIENTI.PAZ_CODICE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COGNOME,locale.T_PAZ_PAZIENTI.PAZ_COGNOME" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_NOME,locale.T_PAZ_PAZIENTI.PAZ_NOME" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CODICE_FISCALE,locale.T_PAZ_PAZIENTI.PAZ_CODICE_FISCALE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_TESSERA,locale.T_PAZ_PAZIENTI.PAZ_TESSERA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_NASCITA,locale.T_PAZ_PAZIENTI.PAZ_DATA_NASCITA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COM_CODICE_NASCITA,locale.T_PAZ_PAZIENTI.PAZ_COM_CODICE_NASCITA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_SESSO,locale.T_PAZ_PAZIENTI.PAZ_SESSO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COM_CODICE_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_COM_CODICE_RESIDENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_INDIRIZZO_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_INDIRIZZO_RESIDENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CAP_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_CAP_RESIDENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COM_CODICE_DOMICILIO,locale.T_PAZ_PAZIENTI.PAZ_COM_CODICE_DOMICILIO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_INDIRIZZO_DOMICILIO,locale.T_PAZ_PAZIENTI.PAZ_INDIRIZZO_DOMICILIO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CAP_DOMICILIO,locale.T_PAZ_PAZIENTI.PAZ_CAP_DOMICILIO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CIT_CODICE,locale.T_PAZ_PAZIENTI.PAZ_CIT_CODICE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_USL_CODICE_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_USL_CODICE_RESIDENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_USL_CODICE_ASSISTENZA,locale.T_PAZ_PAZIENTI.PAZ_USL_CODICE_ASSISTENZA" />    
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_TELEFONO_1,locale.T_PAZ_PAZIENTI.PAZ_TELEFONO_1" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_TELEFONO_2,locale.T_PAZ_PAZIENTI.PAZ_TELEFONO_2" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_TELEFONO_3,locale.T_PAZ_PAZIENTI.PAZ_TELEFONO_3" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_MED_CODICE_BASE,locale.T_PAZ_PAZIENTI.PAZ_MED_CODICE_BASE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_NOTE,locale.T_PAZ_PAZIENTI.PAZ_NOTE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_ANONIMO,locale.T_PAZ_PAZIENTI.PAZ_ANONIMO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_cnas.T_ANA_COMUNI.COM_DESCRIZIONE,locale.T_ANA_COMUNI.COM_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_comre.T_ANA_COMUNI.COM_DESCRIZIONE,locale.T_ANA_COMUNI_RES.COM_DESCRIZIONE" />
+  </FieldsMaps>
+  <Optimizer AccessPlan="centrale;locale_cnas;locale_comre;locale" enabled="True" matchNull="False" maxFilters="-1" />
+</odpRicercaPazienteConfiguration>
