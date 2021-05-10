@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="urn:onit-it:dto" xmlns:tns="http://server.ws.cda2.integrations.onit.it/" xmlns:ns2="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns3="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" targetNamespace="http://server.ws.cda2.integrations.onit.it/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=1" namespace="urn:onit-it:dto" />
+  <xs:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=3" namespace="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" />
+  <xs:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=2" namespace="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" />
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="sendRegistryMessage" type="tns:sendRegistryMessage" />
+  <xs:element name="sendRegistryMessageResponse" type="tns:sendRegistryMessageResponse" />
+  <xs:complexType name="sendRegistryMessage">
+    <xs:sequence>
+      <xs:element name="inputData" type="ns1:datiRegistryPaziente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendRegistryMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns3:RegistryResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

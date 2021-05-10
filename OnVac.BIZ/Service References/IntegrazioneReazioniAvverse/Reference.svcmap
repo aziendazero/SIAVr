@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6a170633-15dc-4c52-9898-210784e58a5a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vaccini106.onit.local/On.Health/On.AssistNet/ReazioniAvverseServizio/ReazioniAvverse.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReazioniAvverse.xsd" MetadataType="Schema" ID="b9a69a25-1350-4269-9f90-e4af3c4e5744" SourceId="1" SourceUrl="http://vaccini106.onit.local/On.Health/On.AssistNet/ReazioniAvverseServizio/ReazioniAvverse.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReazioniAvverse.disco" MetadataType="Disco" ID="a2a54c1e-bac9-4370-847a-15ee4ef24abd" SourceId="1" SourceUrl="http://vaccini106.onit.local/On.Health/On.AssistNet/ReazioniAvverseServizio/ReazioniAvverse.svc?disco" />
+    <MetadataFile FileName="ReazioniAvverse.wsdl" MetadataType="Wsdl" ID="00857699-e0ed-4c69-b483-c3fa42f644e5" SourceId="1" SourceUrl="http://vaccini106.onit.local/On.Health/On.AssistNet/ReazioniAvverseServizio/ReazioniAvverse.svc?wsdl" />
+    <MetadataFile FileName="ReazioniAvverse1.xsd" MetadataType="Schema" ID="19e281d1-f616-43f4-a1ec-1d855eb58440" SourceId="1" SourceUrl="http://vaccini106.onit.local/On.Health/On.AssistNet/ReazioniAvverseServizio/ReazioniAvverse.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReazioniAvverse2.xsd" MetadataType="Schema" ID="8a85d911-1bcb-48eb-9630-0fa8a73359e8" SourceId="1" SourceUrl="http://vaccini106.onit.local/On.Health/On.AssistNet/ReazioniAvverseServizio/ReazioniAvverse.svc?xsd=xsd3" />
+    <MetadataFile FileName="ReazioniAvverse3.xsd" MetadataType="Schema" ID="0177574b-c441-4dcd-935e-6c5d1bee740b" SourceId="1" SourceUrl="http://vaccini106.onit.local/On.Health/On.AssistNet/ReazioniAvverseServizio/ReazioniAvverse.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

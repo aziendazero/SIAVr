@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://server.ws.cda2.integrations.onit.it/" targetNamespace="http://server.ws.cda2.integrations.onit.it/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="recordAuditEvent" type="tns:recordAuditEvent" />
+  <xs:element name="recordAuditEventResponse" type="tns:recordAuditEventResponse" />
+  <xs:complexType name="recordAuditEvent">
+    <xs:sequence>
+      <xs:element name="cda" type="xs:string" />
+      <xs:element name="newDocumentUniqueId" type="xs:string" />
+      <xs:element name="repositoryUniqueId" type="xs:string" />
+      <xs:element name="ITI43_SourceIP" type="xs:string" />
+      <xs:element name="ITI43_DestinationUserId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recordAuditEventResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

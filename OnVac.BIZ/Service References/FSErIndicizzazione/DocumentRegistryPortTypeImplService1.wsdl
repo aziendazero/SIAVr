@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://server.ws.cda2.integrations.onit.it/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="DocumentRegistryPortTypeImplService" targetNamespace="http://server.ws.cda2.integrations.onit.it/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=1" namespace="urn:onit-it:dto" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=2" namespace="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=3" namespace="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=4" namespace="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=5" namespace="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=6" namespace="urn:hl7-org:v3" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=7" namespace="http://www.w3.org/XML/1998/namespace" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=8" namespace="http://server.ws.cda2.integrations.onit.it/" />
+    </xsd:schema>
+  </types>
+  <message name="sendRegistryMessage">
+    <part name="parameters" element="tns:sendRegistryMessage" />
+  </message>
+  <message name="sendRegistryMessageResponse">
+    <part name="parameters" element="tns:sendRegistryMessageResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <portType name="DocumentRegistryCustomPortType">
+    <operation name="sendRegistryMessage">
+      <input wsam:Action="http://server.ws.cda2.integrations.onit.it/DocumentRegistryCustomPortType/sendRegistryMessageRequest" message="tns:sendRegistryMessage" />
+      <output wsam:Action="http://server.ws.cda2.integrations.onit.it/DocumentRegistryCustomPortType/sendRegistryMessageResponse" message="tns:sendRegistryMessageResponse" />
+      <fault wsam:Action="http://server.ws.cda2.integrations.onit.it/DocumentRegistryCustomPortType/sendRegistryMessage/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="DocumentRegistryPortTypeImplPortBinding" type="tns:DocumentRegistryCustomPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="sendRegistryMessage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="DocumentRegistryPortTypeImplService">
+    <port name="DocumentRegistryPortTypeImplPort" binding="tns:DocumentRegistryPortTypeImplPortBinding">
+      <soap:address location="http://172.16.7.151:8076/services/DocR" />
+    </port>
+  </service>
+</definitions>
