@@ -1,0 +1,19 @@
+<odpCittadinanzeMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessioneMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_CITTADINANZE" TableAlias="" ConnectionName="connessioneMaster" />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="connessioneMaster" TableName="T_ANA_CITTADINANZE" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="CIT_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="CIT_STATO" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+</odpCittadinanzeMasterConfiguration>

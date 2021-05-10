@@ -1,0 +1,29 @@
+<odpCircoscrizioniDetailConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="CircoscrizioniDettaglio" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_CIRCOSCRIZIONI" TableAlias="" ConnectionName="CircoscrizioniDettaglio" />
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="CircoscrizioniDettaglio" />
+      <Parameters />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_1" ConnectionParentName="CircoscrizioniDettaglio" ConnectionChildName="CircoscrizioniDettaglio" TableParentName="T_ANA_COMUNI" TableChildName="T_ANA_CIRCOSCRIZIONI" FieldParentName="COM_CODICE" FieldChildName="CIR_COM_CODICE" Comparator="Uguale" RelationType="OutJoinRight" />
+  </Relations>
+  <MainTable Connection="CircoscrizioniDettaglio" TableName="T_ANA_CIRCOSCRIZIONI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="CIR_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="Float" />
+      <keyField FieldName="CIR_COM_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="CIR_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields>
+    <BindingField Connection="CircoscrizioniMaster" SourceField="CIR_CODICE" SourceTable="T_ANA_CIRCOSCRIZIONI" Value="" Target="Codice" Description="" Hidden="False" Editable="always" />
+    <BindingField Connection="CircoscrizioniMaster" SourceField="CIR_COM_CODICE" SourceTable="T_ANA_CIRCOSCRIZIONI" Value="" Target="Consultorio" Description="" Hidden="False" Editable="always" />
+  </BindingFields>
+  <FieldsMaps TargetFrom="" TargetTo="" />
+  <Optimizer AccessPlan="" AlternativeAccessPlan="" useAlternativePlan="False" enabled="False" matchNull="False" maxFilters="-1" />
+</odpCircoscrizioniDetailConfiguration>

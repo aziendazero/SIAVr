@@ -1,0 +1,24 @@
+<odpComuniConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessioneMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="connessioneMaster" />
+      <Table TableName="T_ANA_REGIONI" TableAlias="" ConnectionName="connessioneMaster" />
+      <Table TableName="T_ANA_DISTRETTI" TableAlias="" ConnectionName="connessioneMaster" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="connessioneMaster" ConnectionChildName="connessioneMaster" TableParentName="T_ANA_COMUNI" TableChildName="T_ANA_REGIONI" FieldParentName="COM_REG_CODICE" FieldChildName="REG_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="connessioneMaster" ConnectionChildName="connessioneMaster" TableParentName="T_ANA_COMUNI" TableChildName="T_ANA_DISTRETTI" FieldParentName="COM_DIS_CODICE" FieldChildName="DIS_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="connessioneMaster" TableName="T_ANA_COMUNI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="COM_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="COM_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+</odpComuniConfiguration>

@@ -1,0 +1,22 @@
+<odpFornitoriMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessioneMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_FORNITORI" TableAlias="" ConnectionName="connessioneMaster" />
+      <Parameters />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="connessioneMaster" TableName="T_ANA_FORNITORI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="FOR_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="FOR_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+  <FieldsMaps TargetFrom="" TargetTo="" />
+  <Optimizer AccessPlan="" AlternativeAccessPlan="" useAlternativePlan="False" enabled="False" matchNull="False" maxFilters="-1" />
+</odpFornitoriMasterConfiguration>

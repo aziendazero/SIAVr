@@ -1,0 +1,30 @@
+<PanComuni3Configuration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessione" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="connessione" />
+      <Table TableName="T_ANA_REGIONI" TableAlias="" ConnectionName="connessione" />
+      <Table TableName="T_ANA_LINK_COMUNI_USL" TableAlias="" ConnectionName="connessione" />
+      <Table TableName="T_ANA_USL" TableAlias="" ConnectionName="connessione" />
+      <Parameters />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="connessione" ConnectionChildName="connessione" TableParentName="T_ANA_COMUNI" TableChildName="T_ANA_REGIONI" FieldParentName="COM_REG_CODICE" FieldChildName="REG_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="connessione" ConnectionChildName="connessione" TableParentName="T_ANA_COMUNI" TableChildName="T_ANA_LINK_COMUNI_USL" FieldParentName="COM_CODICE" FieldChildName="LCU_COM_CODICE" Comparator="Uguale" RelationType="OutJoinRight" />
+    <Relation RelationName="Rel_2" ConnectionParentName="connessione" ConnectionChildName="connessione" TableParentName="T_ANA_LINK_COMUNI_USL" TableChildName="T_ANA_USL" FieldParentName="LCU_USL_CODICE" FieldChildName="USL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="connessione" TableName="T_ANA_LINK_COMUNI_USL" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="LCU_COM_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+      <keyField FieldName="LCU_USL_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields />
+  </MainTable>
+  <Filters>
+    <Filter connectionName="connessione" TableName="T_ANA_LINK_COMUNI_USL" Field="LCU_USL_CODICE" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="evaluate" Value="CodUSL" ignoreCase="False" />
+  </Filters>
+  <BindingFields />
+  <FieldsMaps TargetFrom="" TargetTo="" />
+  <Optimizer AccessPlan="" AlternativeAccessPlan="" useAlternativePlan="False" enabled="False" matchNull="False" maxFilters="-1" />
+</PanComuni3Configuration>

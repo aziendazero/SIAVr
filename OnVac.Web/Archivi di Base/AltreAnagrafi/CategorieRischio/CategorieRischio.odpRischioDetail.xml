@@ -1,0 +1,18 @@
+<panDettaglioConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessioneSec" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False">
+      <Table TableName="T_ANA_RISCHIO" TableAlias="" ConnectionName="connessioneSec" />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="connessioneSec" TableName="T_ANA_RISCHIO" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="RSC_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields />
+  </MainTable>
+  <BindingFields>
+    <BindingField Connection="connessioneMaster" SourceField="RSC_CODICE" SourceTable="T_ANA_RISCHIO" Value="" Target="codice" Description="con" Hidden="False" Editable="always" />
+  </BindingFields>
+</panDettaglioConfiguration>

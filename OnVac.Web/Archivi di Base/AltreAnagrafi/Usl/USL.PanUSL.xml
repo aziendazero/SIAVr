@@ -1,0 +1,25 @@
+<PanUSLConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessione" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_USL" TableAlias="" ConnectionName="connessione" />
+      <Table TableName="T_ANA_REGIONI" TableAlias="" ConnectionName="connessione" />
+      <Parameters />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="connessione" ConnectionChildName="connessione" TableParentName="T_ANA_USL" TableChildName="T_ANA_REGIONI" FieldParentName="USL_REG_CODICE" FieldChildName="REG_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="connessione" TableName="T_ANA_USL" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="USL_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="USL_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+  <FieldsMaps TargetFrom="" TargetTo="" />
+  <Optimizer  AccessPlan="" AlternativeAccessPlan="" useAlternativePlan="False" enabled="False" matchNull="False" maxFilters="-1" />
+</PanUSLConfiguration>

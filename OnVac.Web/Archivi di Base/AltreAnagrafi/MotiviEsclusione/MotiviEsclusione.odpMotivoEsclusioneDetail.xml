@@ -1,0 +1,23 @@
+<panDettagliConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessioneSec" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False">
+      <Table TableName="T_ANA_MOTIVI_ESCLUSIONE" TableAlias="" ConnectionName="connessioneSec" />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="connessioneSec" TableName="T_ANA_MOTIVI_ESCLUSIONE" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="MOE_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="MOE_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="MOE_CALCOLO_COPERTURA" DefaultValue="N" keyFieldType="String" keyFieldGenMode="defaultValue" />
+      <NotNullField FieldName="MOE_CALCOLO_SCADENZA" DefaultValue="0" keyFieldType="String" keyFieldGenMode="defaultValue" />
+      <NotNullField FieldName="MOE_FLAG_CENTRALIZZATO" DefaultValue="N" keyFieldType="String" keyFieldGenMode="defaultValue" />
+    </NotNullFields>
+  </MainTable>
+  <BindingFields>
+    <BindingField Connection="connessioneMaster" SourceField="MOE_CODICE" SourceTable="T_ANA_MOTIVI_ESCLUSIONE" Value="" Target="codice" Description="Desc" Hidden="False" Editable="always" />
+  </BindingFields>
+</panDettagliConfiguration>

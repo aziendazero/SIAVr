@@ -1,0 +1,23 @@
+<odpCircoscrizioniMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="CircoscrizioniMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_CIRCOSCRIZIONI" TableAlias="" ConnectionName="CircoscrizioniMaster" />
+      <Parameters />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="CircoscrizioniMaster" TableName="T_ANA_CIRCOSCRIZIONI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="CIR_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="Float" />
+      <keyField FieldName="CIR_COM_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="CIR_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+  <FieldsMaps TargetFrom="" TargetTo="" />
+  <Optimizer AccessPlan="" AlternativeAccessPlan="" useAlternativePlan="False" enabled="False" matchNull="False" maxFilters="-1" />
+</odpCircoscrizioniMasterConfiguration>

@@ -1,0 +1,17 @@
+<odpSitiInoculazioneMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessioneMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False">
+      <Table TableName="T_ANA_SITI_INOCULAZIONE" TableAlias="" ConnectionName="connessioneMaster" />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="connessioneMaster" TableName="T_ANA_SITI_INOCULAZIONE" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="SII_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields />
+  </MainTable>
+  <Filters />
+  <BindingFields />
+</odpSitiInoculazioneMasterConfiguration>

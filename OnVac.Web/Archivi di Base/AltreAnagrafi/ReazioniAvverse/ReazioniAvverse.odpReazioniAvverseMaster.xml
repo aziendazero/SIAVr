@@ -1,0 +1,22 @@
+<odpReazioniAvverseMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="ConnessioneMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False">
+      <Table TableName="T_ANA_REAZIONI_AVVERSE" TableAlias="" ConnectionName="ConnessioneMaster" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="" ConnectionName="ConnessioneMaster" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="ConnessioneMaster" ConnectionChildName="ConnessioneMaster" TableParentName="T_ANA_CODIFICHE" TableChildName="T_ANA_REAZIONI_AVVERSE" FieldParentName="COD_CODICE" FieldChildName="REA_LOCALE" Comparator="Uguale" RelationType="Join" />
+  </Relations>
+  <MainTable Connection="ConnessioneMaster" TableName="T_ANA_REAZIONI_AVVERSE" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="REA_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields />
+  </MainTable>
+  <Filters>
+    <Filter connectionName="ConnessioneMaster" TableName="T_ANA_CODIFICHE" Field="COD_CAMPO" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="REA_LOCALE" />
+  </Filters>
+  <BindingFields />
+</odpReazioniAvverseMasterConfiguration>

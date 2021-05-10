@@ -1,0 +1,20 @@
+<panDettagliConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessioneSec" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False">
+      <Table TableName="T_ANA_STATI_ANAGRAFICI" TableAlias="" ConnectionName="connessioneSec" />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="connessioneSec" TableName="T_ANA_STATI_ANAGRAFICI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="SAN_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="SAN_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <BindingFields>
+    <BindingField Connection="connessioneMaster" SourceField="SAN_CODICE" SourceTable="T_ANA_STATI_ANAGRAFICI" Value="" Target="codice" Description="Desc" Hidden="False" Editable="always" />
+  </BindingFields>
+</panDettagliConfiguration>

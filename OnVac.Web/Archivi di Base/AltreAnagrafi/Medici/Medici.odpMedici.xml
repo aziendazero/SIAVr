@@ -1,0 +1,24 @@
+<odpMediciConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessioneMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_MEDICI" TableAlias="" ConnectionName="connessioneMaster" />
+      <Table TableName="T_ANA_TIPI_MEDICO" TableAlias="" ConnectionName="connessioneMaster" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="connessioneMaster" ConnectionChildName="connessioneMaster" TableParentName="T_ANA_MEDICI" TableChildName="T_ANA_TIPI_MEDICO" FieldParentName="MED_TIPO" FieldChildName="TME_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="connessioneMaster" TableName="T_ANA_MEDICI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="MED_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="MED_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="MED_NOME" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="MED_COGNOME" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+</odpMediciConfiguration>

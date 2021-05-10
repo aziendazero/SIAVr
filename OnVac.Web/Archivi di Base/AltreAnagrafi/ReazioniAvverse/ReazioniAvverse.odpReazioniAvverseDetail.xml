@@ -1,0 +1,18 @@
+<panDettagliConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="ConnessioneSec" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False">
+      <Table TableName="T_ANA_REAZIONI_AVVERSE" TableAlias="" ConnectionName="ConnessioneSec" />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="ConnessioneSec" TableName="T_ANA_REAZIONI_AVVERSE" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="REA_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields />
+  </MainTable>
+  <BindingFields>
+    <BindingField Connection="ConnessioneMaster" SourceField="REA_CODICE" SourceTable="T_ANA_REAZIONI_AVVERSE" Value="" Target="codice" Description="" Hidden="False" Editable="always" />
+  </BindingFields>
+</panDettagliConfiguration>

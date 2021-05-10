@@ -1,0 +1,19 @@
+<panCategorieMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="Categorie" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_CATEGORIE1" TableAlias="" ConnectionName="Categorie" />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="Categorie" TableName="T_ANA_CATEGORIE1" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="CAT_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="CAT_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+</panCategorieMasterConfiguration>
