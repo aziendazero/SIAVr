@@ -1,0 +1,27 @@
+<odpOsservazioniConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="OsservazioniMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_OSSERVAZIONI" TableAlias="" ConnectionName="OsservazioniMaster" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="Sesso" ConnectionName="OsservazioniMaster" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="TipoRisposta" ConnectionName="OsservazioniMaster" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="OsservazioniMaster" ConnectionChildName="OsservazioniMaster" TableParentName="T_ANA_OSSERVAZIONI" TableChildName="TipoRisposta" FieldParentName="OSS_TIPO_RISPOSTA" FieldChildName="COD_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="OsservazioniMaster" ConnectionChildName="OsservazioniMaster" TableParentName="T_ANA_OSSERVAZIONI" TableChildName="Sesso" FieldParentName="OSS_SESSO" FieldChildName="COD_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="OsservazioniMaster" TableName="T_ANA_OSSERVAZIONI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="OSS_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="OSS_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters>
+    <Filter connectionName="OsservazioniMaster" TableName="TipoRisposta" Field="COD_CAMPO" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="OSS_TIPO_RISPOSTA" />
+    <Filter connectionName="OsservazioniMaster" TableName="Sesso" Field="COD_CAMPO" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="OSS_SESSO" />
+  </Filters>
+  <BindingFields />
+</odpOsservazioniConfiguration>

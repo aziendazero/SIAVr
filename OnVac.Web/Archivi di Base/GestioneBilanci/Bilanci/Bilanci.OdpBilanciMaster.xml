@@ -1,0 +1,30 @@
+<OdpBilanciMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="ConnessioneMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_BILANCI" TableAlias="" ConnectionName="ConnessioneMaster" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="" ConnectionName="ConnessioneMaster" />
+      <Table TableName="T_ANA_MALATTIE" TableAlias="" ConnectionName="ConnessioneMaster" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="T_ANA_COD" ConnectionName="ConnessioneMaster" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="ConnessioneMaster" ConnectionChildName="ConnessioneMaster" TableParentName="T_ANA_BILANCI" TableChildName="T_ANA_CODIFICHE" FieldParentName="BIL_OBBLIGATORIO" FieldChildName="COD_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="ConnessioneMaster" ConnectionChildName="ConnessioneMaster" TableParentName="T_ANA_BILANCI" TableChildName="T_ANA_MALATTIE" FieldParentName="BIL_MAL_CODICE" FieldChildName="MAL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_2" ConnectionParentName="ConnessioneMaster" ConnectionChildName="ConnessioneMaster" TableParentName="T_ANA_BILANCI" TableChildName="T_ANA_COD" FieldParentName="BIL_CRANIO" FieldChildName="COD_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="ConnessioneMaster" TableName="T_ANA_BILANCI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="BIL_MAL_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+      <keyField FieldName="BIL_NUMERO" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="Float" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="BIL_NUM_SOLLECITI" DefaultValue="" keyFieldType="Float" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters>
+   <Filter connectionName="ConnessioneMaster" TableName="T_ANA_CODIFICHE" Field="COD_CAMPO" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="BIL_OBBLIGATORIO" />
+   <Filter connectionName="ConnessioneMaster" TableName="T_ANA_COD" Field="COD_CAMPO" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="BIL_CRANIO" />
+  </Filters>
+  <BindingFields />
+</OdpBilanciMasterConfiguration>

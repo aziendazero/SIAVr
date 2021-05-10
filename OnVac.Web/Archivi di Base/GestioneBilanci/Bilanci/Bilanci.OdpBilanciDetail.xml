@@ -1,0 +1,25 @@
+<OdpBilanciDetailConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="ConnessioneDetail" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_BILANCI" TableAlias="" ConnectionName="ConnessioneDetail" />
+      <Table TableName="T_ANA_MALATTIE" TableAlias="" ConnectionName="ConnessioneDetail" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="ConnessioneDetail" ConnectionChildName="ConnessioneDetail" TableParentName="T_ANA_MALATTIE" TableChildName="T_ANA_BILANCI" FieldParentName="MAL_CODICE" FieldChildName="BIL_MAL_CODICE" Comparator="Uguale" RelationType="OutJoinRight" />
+  </Relations>
+  <MainTable Connection="ConnessioneDetail" TableName="T_ANA_BILANCI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="BIL_MAL_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+      <keyField FieldName="BIL_NUMERO" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="Float" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="BIL_NUM_SOLLECITI" DefaultValue="0" keyFieldType="Float" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <BindingFields>
+    <BindingField Connection="ConnessioneMaster" SourceField="BIL_NUMERO" SourceTable="T_ANA_BILANCI" Value="" Target="numeroBilancio" Description="" Hidden="False" Editable="always" />
+    <BindingField Connection="ConnessioneMaster" SourceField="BIL_MAL_CODICE" SourceTable="T_ANA_BILANCI" Value="" Target="codiceMalattia" Description="" Hidden="False" Editable="always" />
+  </BindingFields>
+</OdpBilanciDetailConfiguration>

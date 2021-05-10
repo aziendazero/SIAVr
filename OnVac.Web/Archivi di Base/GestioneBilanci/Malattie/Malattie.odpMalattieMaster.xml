@@ -1,0 +1,17 @@
+<odpMalattieMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="MalattieMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_MALATTIE" TableAlias="" ConnectionName="MalattieMaster" />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="MalattieMaster" TableName="T_ANA_MALATTIE" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="MAL_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields />
+  </MainTable>
+  <Filters />
+  <BindingFields />
+</odpMalattieMasterConfiguration>
