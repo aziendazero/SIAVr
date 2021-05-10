@@ -1,0 +1,21 @@
+<OdpCicliDetailConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="cicliDettConn" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_CICLI" TableAlias="" ConnectionName="cicliDettConn" />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="cicliDettConn" TableName="T_ANA_CICLI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="CIC_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="CIC_DATA_INTRODUZIONE" DefaultValue="" keyFieldType="Date" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="CIC_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <BindingFields>
+    <BindingField Connection="cicliConn" SourceField="CIC_CODICE" SourceTable="T_ANA_CICLI" Value="" Target="codCiclo" Description="" Hidden="False" Editable="always" />
+  </BindingFields>
+</OdpCicliDetailConfiguration>

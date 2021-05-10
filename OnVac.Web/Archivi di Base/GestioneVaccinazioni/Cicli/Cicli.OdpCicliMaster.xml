@@ -1,0 +1,25 @@
+<OdpCicliMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="cicliConn" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_CICLI" TableAlias="" ConnectionName="cicliConn" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="" ConnectionName="cicliConn" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="cicliConn" ConnectionChildName="cicliConn" TableParentName="T_ANA_CODIFICHE" TableChildName="T_ANA_CICLI" FieldParentName="COD_CODICE" FieldChildName="CIC_STANDARD" Comparator="Uguale" RelationType="Join" />
+  </Relations>
+  <MainTable Connection="cicliConn" TableName="T_ANA_CICLI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="CIC_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="CIC_DATA_INTRODUZIONE" DefaultValue="" keyFieldType="Date" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="CIC_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters>
+    <Filter connectionName="cicliConn" TableName="T_ANA_CODIFICHE" Field="COD_CAMPO" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="CIC_STANDARD" />
+  </Filters>
+  <BindingFields />
+</OdpCicliMasterConfiguration>

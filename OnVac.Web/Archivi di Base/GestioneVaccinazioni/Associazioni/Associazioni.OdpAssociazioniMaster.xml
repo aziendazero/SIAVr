@@ -1,0 +1,28 @@
+<OdpAssociazioniMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="assConn" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="false">
+      <Table TableName="T_ANA_ASSOCIAZIONI" TableAlias="" ConnectionName="assConn" />
+      <Table TableName="T_ANA_SITI_INOCULAZIONE" TableAlias="" ConnectionName="assConn" />
+      <Table TableName="T_ANA_VIE_SOMMINISTRAZIONE" TableAlias="" ConnectionName="assConn" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="assConn" ConnectionChildName="assConn"
+              TableParentName="T_ANA_ASSOCIAZIONI" TableChildName="T_ANA_SITI_INOCULAZIONE"
+              FieldParentName="ASS_SII_CODICE" FieldChildName="SII_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="assConn" ConnectionChildName="assConn"
+              TableParentName="T_ANA_ASSOCIAZIONI" TableChildName="T_ANA_VIE_SOMMINISTRAZIONE"
+              FieldParentName="ASS_VII_CODICE" FieldChildName="VII_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="assConn" TableName="T_ANA_ASSOCIAZIONI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="ASS_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="ASS_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+</OdpAssociazioniMasterConfiguration>

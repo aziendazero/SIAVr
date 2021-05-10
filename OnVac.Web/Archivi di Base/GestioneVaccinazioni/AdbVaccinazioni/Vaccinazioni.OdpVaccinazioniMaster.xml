@@ -1,0 +1,25 @@
+<OdpVaccinazioniMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="vacConn" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_VACCINAZIONI" TableAlias="" ConnectionName="vacConn" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="" ConnectionName="vacConn" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="vacConn" ConnectionChildName="vacConn" TableParentName="T_ANA_CODIFICHE" TableChildName="T_ANA_VACCINAZIONI" FieldParentName="COD_CODICE" FieldChildName="VAC_OBBLIGATORIA" Comparator="Uguale" RelationType="Join" />
+  </Relations>
+  <MainTable Connection="vacConn" TableName="T_ANA_VACCINAZIONI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="VAC_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="VAC_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="VAC_OBBLIGATORIA" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters>
+    <Filter connectionName="vacConn" TableName="T_ANA_CODIFICHE" Field="COD_CAMPO" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="VAC_OBBLIGATORIA" />
+  </Filters>
+  <BindingFields />
+</OdpVaccinazioniMasterConfiguration>

@@ -1,0 +1,41 @@
+<OdpNomiCommercialiMasterConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="nomiComConn" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_NOMI_COMMERCIALI" TableAlias="" ConnectionName="nomiComConn" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="" ConnectionName="nomiComConn" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="T_ANA_CODIFICHE_1" ConnectionName="nomiComConn" />
+      <Table TableName="T_ANA_FORNITORI" TableAlias="" ConnectionName="nomiComConn" />
+      <Table TableName="T_ANA_SITI_INOCULAZIONE" TableAlias="" ConnectionName="nomiComConn" />
+      <Table TableName="T_ANA_VIE_SOMMINISTRAZIONE" TableAlias="" ConnectionName="nomiComConn" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="nomiComConn" ConnectionChildName="nomiComConn" 
+              TableParentName="T_ANA_CODIFICHE" TableChildName="T_ANA_NOMI_COMMERCIALI" 
+              FieldParentName="COD_CODICE" FieldChildName="NOC_SESSO" Comparator="Uguale" RelationType="Join" />
+    <Relation RelationName="Rel_1" ConnectionParentName="nomiComConn" ConnectionChildName="nomiComConn" 
+              TableParentName="T_ANA_NOMI_COMMERCIALI" TableChildName="T_ANA_FORNITORI" 
+              FieldParentName="NOC_FOR_CODICE" FieldChildName="FOR_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_2" ConnectionParentName="nomiComConn" ConnectionChildName="nomiComConn" 
+              TableParentName="T_ANA_CODIFICHE_1" TableChildName="T_ANA_NOMI_COMMERCIALI" 
+              FieldParentName="COD_CODICE" FieldChildName="NOC_OBSOLETO" Comparator="Uguale" RelationType="Join" />
+    <Relation RelationName="Rel_3" ConnectionParentName="nomiComConn" ConnectionChildName="nomiComConn"
+              TableParentName="T_ANA_NOMI_COMMERCIALI" TableChildName="T_ANA_SITI_INOCULAZIONE"
+              FieldParentName="NOC_SII_CODICE" FieldChildName="SII_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_4" ConnectionParentName="nomiComConn" ConnectionChildName="nomiComConn"
+              TableParentName="T_ANA_NOMI_COMMERCIALI" TableChildName="T_ANA_VIE_SOMMINISTRAZIONE"
+              FieldParentName="NOC_VII_CODICE" FieldChildName="VII_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />    
+    </Relations>
+  <MainTable Connection="nomiComConn" TableName="T_ANA_NOMI_COMMERCIALI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="NOC_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields />
+  </MainTable>
+  <Filters>
+    <Filter connectionName="nomiComConn" TableName="T_ANA_CODIFICHE" Field="COD_CAMPO" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="NOC_SESSO" />
+    <Filter connectionName="nomiComConn" TableName="T_ANA_CODIFICHE_1"  Field="COD_CAMPO" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="NOC_OBSOLETO" />
+  </Filters>
+  <BindingFields />
+</OdpNomiCommercialiMasterConfiguration>
