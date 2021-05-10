@@ -1,0 +1,1 @@
+﻿Xsd2Code ArchiviazioneDIRV_Metadata.xsd Entities.ArchiviazioneDIRV Metadata.vb /l VB /p Net35
