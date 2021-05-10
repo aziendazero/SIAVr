@@ -1,0 +1,18 @@
+<panDettaglioConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="connessioneSec" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="connessione" Encrypted="False">
+      <Table TableName="T_ANA_VIE_SOMMINISTRAZIONE" TableAlias="" ConnectionName="connessioneSec" />
+    </Connection>
+  </Connections>
+  <Relations />
+  <MainTable Connection="connessioneSec" TableName="T_ANA_VIE_SOMMINISTRAZIONE" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="VII_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields />
+  </MainTable>
+  <BindingFields>
+    <BindingField Connection="connessioneMaster" SourceField="VII_CODICE" SourceTable="T_ANA_VIE_SOMMINISTRAZIONE" Value="" Target="codice" Description="con" Hidden="False" Editable="always" />
+  </BindingFields>
+</panDettaglioConfiguration>

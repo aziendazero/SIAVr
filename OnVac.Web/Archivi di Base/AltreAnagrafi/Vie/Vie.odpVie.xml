@@ -1,0 +1,29 @@
+<odpVieConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="VieMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_VIE" TableAlias="" ConnectionName="VieMaster" />
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="VieMaster" />
+      <Table TableName="T_ANA_DISTRETTI" TableAlias="" ConnectionName="VieMaster" />
+      <Table TableName="T_ANA_CIRCOSCRIZIONI" TableAlias="" ConnectionName="VieMaster" />
+      <Parameters />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="VieMaster" ConnectionChildName="VieMaster" TableParentName="T_ANA_VIE" TableChildName="T_ANA_COMUNI" FieldParentName="VIA_COM_CODICE" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="VieMaster" ConnectionChildName="VieMaster" TableParentName="T_ANA_VIE" TableChildName="T_ANA_DISTRETTI" FieldParentName="VIA_DIS_CODICE" FieldChildName="DIS_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_2" ConnectionParentName="VieMaster" ConnectionChildName="VieMaster" TableParentName="T_ANA_VIE" TableChildName="T_ANA_CIRCOSCRIZIONI" FieldParentName="VIA_CIRCOSCRIZIONE" FieldChildName="CIR_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="VieMaster" TableName="T_ANA_VIE" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="VIA_PROGRESSIVO" DefaultValue="" keyFieldGenMode="generatedFromDb" keyFieldType="Number" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="VIA_CODICE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+  <FieldsMaps TargetFrom="" TargetTo="" />
+  <Optimizer AccessPlan="" AlternativeAccessPlan="" useAlternativePlan="False" enabled="False" matchNull="False" maxFilters="-1" />
+</odpVieConfiguration>
