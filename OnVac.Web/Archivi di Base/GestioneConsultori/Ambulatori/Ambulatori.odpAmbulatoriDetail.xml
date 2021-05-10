@@ -1,0 +1,29 @@
+<odpAmbulatoriDetailConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="AmbulatoriDettaglio" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_ANA_AMBULATORI" TableAlias="" ConnectionName="AmbulatoriDettaglio" />
+      <Table TableName="T_ANA_CONSULTORI" TableAlias="" ConnectionName="AmbulatoriDettaglio" />
+      <Parameters />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_1" ConnectionParentName="AmbulatoriDettaglio" ConnectionChildName="AmbulatoriDettaglio" TableParentName="T_ANA_CONSULTORI" TableChildName="T_ANA_AMBULATORI" FieldParentName="CNS_CODICE" FieldChildName="AMB_CNS_CODICE" Comparator="Uguale" RelationType="OutJoinRight" />
+  </Relations>
+  <MainTable Connection="AmbulatoriDettaglio" TableName="T_ANA_AMBULATORI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="AMB_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="Float" />
+      <keyField FieldName="AMB_CNS_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="AMB_DESCRIZIONE" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields>
+    <BindingField Connection="AmbulatoriMaster" SourceField="AMB_CODICE" SourceTable="T_ANA_AMBULATORI" Value="" Target="Codice" Description="" Hidden="False" Editable="always" />
+    <BindingField Connection="AmbulatoriMaster" SourceField="AMB_CNS_CODICE" SourceTable="T_ANA_AMBULATORI" Value="" Target="Consultorio" Description="" Hidden="False" Editable="always" />
+  </BindingFields>
+  <FieldsMaps TargetFrom="" TargetTo="" />
+  <Optimizer AccessPlan="" AlternativeAccessPlan="" useAlternativePlan="False" enabled="False" matchNull="False" maxFilters="-1" />
+</odpAmbulatoriDetailConfiguration>

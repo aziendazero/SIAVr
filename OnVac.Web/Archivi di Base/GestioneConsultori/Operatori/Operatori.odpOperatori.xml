@@ -1,0 +1,26 @@
+<odpOperatoriConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="OperatoriMaster" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+      <Table TableName="T_ANA_OPERATORI" TableAlias="" ConnectionName="OperatoriMaster" />
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="OperatoriMaster" />
+      <Table TableName="T_ANA_CODIFICHE" TableAlias="" ConnectionName="OperatoriMaster" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="OperatoriMaster" ConnectionChildName="OperatoriMaster" TableParentName="T_ANA_OPERATORI" TableChildName="T_ANA_COMUNI" FieldParentName="OPE_COM_RESIDENZA" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="OperatoriMaster" ConnectionChildName="OperatoriMaster" TableParentName="T_ANA_OPERATORI" TableChildName="T_ANA_CODIFICHE" FieldParentName="OPE_QUALIFICA" FieldChildName="COD_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="OperatoriMaster" TableName="T_ANA_OPERATORI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="OPE_CODICE" DefaultValue="" keyFieldGenMode="fromControl" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="OPE_NOME" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+  <Filters>
+    <Filter connectionName="OperatoriMaster" TableName="T_ANA_CODIFICHE" Field="COD_CAMPO" Operator="And" Comparator="Uguale" FieldType="String" valueProvenience="valueProperty" Value="OPE_QUALIFICA" />
+  </Filters>
+  <BindingFields />
+</odpOperatoriConfiguration>
