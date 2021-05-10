@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="Dst_Report" targetNamespace="http://tempuri.org/Dst_Report.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/Dst_Report.xsd" xmlns:mstns="http://tempuri.org/Dst_Report.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="Dst_Report" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="DettaglioReport">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="rpt_nome" type="xs:string" minOccurs="0" />
+							<xs:element name="rpt_installazione" type="xs:string" minOccurs="0" />
+							<xs:element name="rpt_cartella" type="xs:string" minOccurs="0" />
+							<xs:element name="rpt_dataset" type="xs:string" minOccurs="0" />
+							<xs:element name="rpd_descrizione" type="xs:string" minOccurs="0" />
+							<xs:element name="rpd_utilizzato_da" type="xs:string" minOccurs="0" />
+							<xs:element name="rpd_standard" type="xs:string" minOccurs="0" />
+							<xs:element name="rpd_maschera" type="xs:string" minOccurs="0" />
+							<xs:element name="rpd_flag_intestazione" type="xs:string" minOccurs="0" />
+							<xs:element name="rpd_rep_intestazione" type="xs:string" minOccurs="0" />
+							<xs:element name="rpd_rep_pie_pagina" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,30 @@
+<OdpAbilVisPazDetailConfiguration>
+  <General FieldBindingMode="0" />
+  <Connections>
+    <Connection ConnectionName="AbilVisPazDetail" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="Connessione" Encrypted="False">
+       <Table TableName="T_MED_ABILITAZIONI_VIS_PAZ" TableAlias="" ConnectionName="AbilVisPazDetail" />
+       <Table TableName="T_ANA_MEDICI" TableAlias="" ConnectionName="AbilVisPazDetail" />
+       <Table TableName="T_ANA_MEDICI" TableAlias="MediciAbilitati" ConnectionName="AbilVisPazMaster" />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_0" ConnectionParentName="AbilVisPazDetail" ConnectionChildName="AbilVisPazDetail" TableParentName="T_ANA_MEDICI" TableChildName="T_MED_ABILITAZIONI_VIS_PAZ" FieldParentName="MED_CODICE" FieldChildName="MAP_MED_CODICE_MEDICO" Comparator="Uguale" RelationType="Join" />
+    <Relation RelationName="Rel_1" ConnectionParentName="AbilVisPazDetail" ConnectionChildName="AbilVisPazDetail" TableParentName="MediciAbilitati" TableChildName="T_MED_ABILITAZIONI_VIS_PAZ" FieldParentName="MED_CODICE" FieldChildName="MAP_MED_CODICE_ABILITATO" Comparator="Uguale" RelationType="Join" />
+  </Relations>
+  <MainTable Connection="AbilVisPazDetail" TableName="T_MED_ABILITAZIONI_VIS_PAZ" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+       <keyField FieldName="MAP_ID" DefaultValue="" keyFieldGenMode="generatedFromDb" keyFieldType="Number" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="MAP_MED_CODICE_MEDICO" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="MAP_MED_CODICE_ABILITATO" DefaultValue="" keyFieldType="String" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="MAP_DATA_INIZIO" DefaultValue="" keyFieldType="Date" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="MAP_DATA_FINE" DefaultValue="" keyFieldType="Date" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="MAP_UTE_ID_UTENTE" DefaultValue="" keyFieldType="Number" keyFieldGenMode="fromControl" />
+      <NotNullField FieldName="MAP_DATA_REGISTRAZIONE" DefaultValue="" keyFieldType="Date" keyFieldGenMode="fromControl" />
+    </NotNullFields>
+  </MainTable>
+   <BindingFields>
+    <BindingField Connection="AbilVisPazMaster" SourceField="MAP_ID" SourceTable="T_MED_ABILITAZIONI_VIS_PAZ" Value="" Target="MapId" Description="" Hidden="False" Editable="always" />
+  </BindingFields>
+</OdpAbilVisPazDetailConfiguration>
