@@ -1,0 +1,202 @@
+<odpDettaglioPazienteConfiguration>
+  <General FieldBindingMode="2" />
+  <Connections>
+    <Connection ConnectionName="locale" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="write">
+      <Table TableName="T_PAZ_PAZIENTI" TableAlias="" ConnectionName="locale" />
+      <Table TableName="T_ANA_COMUNI" TableAlias="T_ANA_COM_NAS" ConnectionName="locale" />
+      <Table TableName="T_ANA_CITTADINANZE" TableAlias="" ConnectionName="locale" />
+      <Table TableName="T_ANA_COMUNI" TableAlias="T_ANA_COM_RES" ConnectionName="locale" />
+      <Table TableName="T_ANA_COMUNI" TableAlias="T_ANA_COM_DOM" ConnectionName="locale" />
+      <Table TableName="T_ANA_COMUNI" TableAlias="T_ANA_COM_DOM_SAN" ConnectionName="locale" />
+      <Table TableName="T_ANA_USL" TableAlias="" ConnectionName="locale" />
+      <Table TableName="T_ANA_USL" TableAlias="T_ANA_USL_ASS" ConnectionName="locale" />
+      <Table TableName="T_ANA_USL" TableAlias="T_ANA_USL_ASS_PRECEDENTE" ConnectionName="locale" />
+      <Table TableName="T_ANA_COMUNI" TableAlias="T_ANA_COM_PROVEN" ConnectionName="locale" />
+      <Table TableName="T_ANA_COMUNI" TableAlias="T_ANA_COM_EMIGRA" ConnectionName="locale" />
+      <Table TableName="T_ANA_CONSULTORI" TableAlias="" ConnectionName="locale" />
+      <Table TableName="T_ANA_CONSULTORI" TableAlias="T_ANA_CONS_TERR" ConnectionName="locale" />
+      <Table TableName="T_ANA_CONSULTORI" TableAlias="T_ANA_CONS_OLD" ConnectionName="locale" />
+      <Table TableName="T_ANA_MEDICI" TableAlias="" ConnectionName="locale" />
+      <Table TableName="T_ANA_CIRCOSCRIZIONI" TableAlias="" ConnectionName="locale" />
+      <Table TableName="T_ANA_CIRCOSCRIZIONI" TableAlias="T_ANA_CIRCOSCRIZIONI_2" ConnectionName="locale" />
+      <Table TableName="T_ANA_DISTRETTI" TableAlias="" ConnectionName="locale" />
+      <Table TableName="T_ANA_RISCHIO" TableAlias="" ConnectionName="locale" />
+      <Table TableName="T_ANA_CATEGORIE1" TableAlias="" ConnectionName="locale" />
+      <Table TableName="T_ANA_CATEGORIE2" TableAlias="" ConnectionName="locale" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="centrale" ConnectionString="" DataSourceName="Onit.OnAssistnet.OnVac.Web;Onit.OnAssistnet.OnVac.Common.Adapters.PazienteHL7OdpAdapter" ProviderName="SQLSERVER" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniServizio" Encrypted="False" IsServiceConnection="True" ReadAuth="read" WriteAuth="write" serviceType="CustomAdapter">
+      <!--<Connection ConnectionName="centrale" ConnectionString="http://localhost/Portale/OnitServizi/PazienteNew/Paziente.asmx" DataSourceName="" ProviderName="SQLSERVER" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniServizio" Encrypted="False" IsServiceConnection="True" ReadAuth="read" WriteAuth="write" serviceType="PazienteNew">-->
+      <Table TableName="t_paz_pazienti_centrale" TableAlias="" ConnectionName="centrale" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_cnas" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="locale_cnas" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_citt" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_CITTADINANZE" TableAlias="" ConnectionName="locale_citt" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_comre" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="locale_comre" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_comdo" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="locale_comdo" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_comdosan" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_COMUNI" TableAlias="" ConnectionName="locale_comdosan" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_ausl" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_USL" TableAlias="" ConnectionName="locale_ausl" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_ausl_ass" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_USL" TableAlias="" ConnectionName="locale_ausl_ass" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_ausl_ass_precedente" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_USL" TableAlias="" ConnectionName="locale_ausl_ass_precedente" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_med" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_MEDICI" TableAlias="" ConnectionName="locale_med" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_cir" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_CIRCOSCRIZIONI" TableAlias="" ConnectionName="locale_cir" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_cir_2" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_CIRCOSCRIZIONI" TableAlias="" ConnectionName="locale_cir_2" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_dis" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_DISTRETTI" TableAlias="" ConnectionName="locale_dis" />
+      <Parameters />
+    </Connection>
+    <Connection ConnectionName="locale_ris" ConnectionString="" DataSourceName="" ProviderName="ORACLE" RunTimeConnectionType="EVALUATE" ReleaseConnectionVarName="ottieniDam" Encrypted="False" IsServiceConnection="False" ReadAuth="read" WriteAuth="none">
+      <Table TableName="T_ANA_RISCHIO" TableAlias="" ConnectionName="locale_ris" />
+      <Parameters />
+    </Connection>
+  </Connections>
+  <Relations>
+    <Relation RelationName="Rel_6" ConnectionParentName="centrale" ConnectionChildName="locale" TableParentName="t_paz_pazienti_centrale" TableChildName="T_PAZ_PAZIENTI" FieldParentName="PAZ_CODICE" FieldChildName="PAZ_CODICE_AUSILIARIO" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_19" ConnectionParentName="locale" ConnectionChildName="centrale" TableParentName="T_PAZ_PAZIENTI" TableChildName="t_paz_pazienti_centrale" FieldParentName="PAZ_CODICE_AUSILIARIO" FieldChildName="PAZ_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <!-- join su locale -->
+    <Relation RelationName="Rel_5 " ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_MEDICI" FieldParentName="PAZ_MED_CODICE_BASE" FieldChildName="MED_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_10" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_COM_DOM" FieldParentName="PAZ_COM_CODICE_DOMICILIO" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_50" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_COM_DOM_SAN" FieldParentName="PAZ_COM_CODICE_DOMICILIO_SAN" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_11" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_USL" FieldParentName="PAZ_USL_CODICE_RESIDENZA" FieldChildName="USL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_13" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_COM_PROVEN" FieldParentName="PAZ_COM_COMUNE_PROVENIENZA" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_14" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_COM_EMIGRA" FieldParentName="PAZ_COM_COMUNE_EMIGRAZIONE" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_15" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_CONSULTORI" FieldParentName="PAZ_CNS_CODICE" FieldChildName="CNS_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_22" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_CONS_TERR" FieldParentName="PAZ_CNS_TERR_CODICE" FieldChildName="CNS_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_23" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_CONS_OLD" FieldParentName="PAZ_CNS_CODICE_OLD" FieldChildName="CNS_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_16" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_DISTRETTI" FieldParentName="PAZ_DIS_CODICE" FieldChildName="DIS_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_17" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_RISCHIO" FieldParentName="PAZ_RSC_CODICE" FieldChildName="RSC_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_18" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_CATEGORIE1" FieldParentName="PAZ_CAT_CODICE" FieldChildName="CAT_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_21" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_CATEGORIE2" FieldParentName="PAZ_CAG_CODICE" FieldChildName="CAG_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_7" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_COM_NAS" FieldParentName="PAZ_COM_CODICE_NASCITA" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_8" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_CITTADINANZE" FieldParentName="PAZ_CIT_CODICE" FieldChildName="CIT_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_9" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_COM_RES" FieldParentName="PAZ_COM_CODICE_RESIDENZA" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_20" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_CIRCOSCRIZIONI" FieldParentName="PAZ_CIR_CODICE" FieldChildName="CIR_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_30" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_CIRCOSCRIZIONI_2" FieldParentName="PAZ_CIR_CODICE_2" FieldChildName="CIR_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_25" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_USL_ASS" FieldParentName="PAZ_USL_CODICE_ASSISTENZA" FieldChildName="USL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_40" ConnectionParentName="locale" ConnectionChildName="locale" TableParentName="T_PAZ_PAZIENTI" TableChildName="T_ANA_USL_ASS_PRECEDENTE" FieldParentName="PAZ_USL_PROVENIENZA" FieldChildName="USL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <!-- join su centrale -->
+    <Relation RelationName="Rel_0" ConnectionParentName="centrale" ConnectionChildName="locale_cnas" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_COMUNI" FieldParentName="PAZ_COM_CODICE_NASCITA" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_1" ConnectionParentName="centrale" ConnectionChildName="locale_citt" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_CITTADINANZE" FieldParentName="PAZ_CIT_CODICE" FieldChildName="CIT_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_2" ConnectionParentName="centrale" ConnectionChildName="locale_comre" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_COMUNI" FieldParentName="PAZ_COM_CODICE_RESIDENZA" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_3" ConnectionParentName="centrale" ConnectionChildName="locale_comdo" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_COMUNI" FieldParentName="PAZ_COM_CODICE_DOMICILIO" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_50" ConnectionParentName="centrale" ConnectionChildName="locale_comdosan" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_COMUNI" FieldParentName="PAZ_COM_CODICE_DOMICILIO_SAN" FieldChildName="COM_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_4" ConnectionParentName="centrale" ConnectionChildName="locale_ausl" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_USL" FieldParentName="PAZ_USL_CODICE_RESIDENZA" FieldChildName="USL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_24" ConnectionParentName="centrale" ConnectionChildName="locale_ausl_ass" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_USL" FieldParentName="PAZ_USL_CODICE_ASSISTENZA" FieldChildName="USL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_41" ConnectionParentName="centrale" ConnectionChildName="locale_ausl_ass_precedente" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_USL" FieldParentName="PAZ_USL_PROVENIENZA" FieldChildName="USL_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_26" ConnectionParentName="centrale" ConnectionChildName="locale_med" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_MEDICI" FieldParentName="PAZ_MED_CODICE_BASE" FieldChildName="MED_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_28" ConnectionParentName="centrale" ConnectionChildName="locale_cir" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_CIRCOSCRIZIONI" FieldParentName="PAZ_LOCALITA_RESIDENZA" FieldChildName="CIR_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_31" ConnectionParentName="centrale" ConnectionChildName="locale_cir_2" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_CIRCOSCRIZIONI" FieldParentName="PAZ_LOCALITA_DOMICILIO" FieldChildName="CIR_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_29" ConnectionParentName="centrale" ConnectionChildName="locale_dis" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_DISTRETTI" FieldParentName="PAZ_DIS_CODICE" FieldChildName="DIS_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+    <Relation RelationName="Rel_32" ConnectionParentName="centrale" ConnectionChildName="locale_ris" TableParentName="t_paz_pazienti_centrale" TableChildName="T_ANA_RISCHIO" FieldParentName="PAZ_RSC_CODICE" FieldChildName="RSC_CODICE" Comparator="Uguale" RelationType="OutJoinLeft" />
+  </Relations>
+  <MainTable Connection="centrale" TableName="t_paz_pazienti_centrale" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="PAZ_CODICE" DefaultValue="" keyFieldGenMode="generatedFromDb" keyFieldType="String" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="PAZ_STATO_ANAGRAFICO" DefaultValue="" keyFieldType="String" keyFieldGenMode="defaultValue" />
+      <NotNullField FieldName="PAZ_CNS_CODICE" DefaultValue="" keyFieldType="String" keyFieldGenMode="defaultValue" />
+    </NotNullFields>
+  </MainTable>
+  <MainTable Connection="locale" TableName="T_PAZ_PAZIENTI" FieldsFieldName="" ValuesFieldName="">
+    <keyFields>
+      <keyField FieldName="PAZ_CODICE" DefaultValue="" keyFieldGenMode="generatedFromDb" keyFieldType="Float" />
+    </keyFields>
+    <NotNullFields>
+      <NotNullField FieldName="PAZ_STATO_ANAGRAFICO" DefaultValue="" keyFieldType="String" keyFieldGenMode="defaultValue" />
+      <NotNullField FieldName="PAZ_CNS_CODICE" DefaultValue="" keyFieldType="String" keyFieldGenMode="defaultValue" />
+    </NotNullFields>
+  </MainTable>
+  <Filters />
+  <BindingFields />
+  <FieldsMaps TargetFrom="1" TargetTo="2">
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_ANONIMO,locale.T_PAZ_PAZIENTI.PAZ_ANONIMO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_MED_CODICE_BASE,locale.T_PAZ_PAZIENTI.PAZ_MED_CODICE_BASE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_TELEFONO_3,locale.T_PAZ_PAZIENTI.PAZ_TELEFONO_3" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_TELEFONO_2,locale.T_PAZ_PAZIENTI.PAZ_TELEFONO_2" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_TELEFONO_1,locale.T_PAZ_PAZIENTI.PAZ_TELEFONO_1" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_USL_CODICE_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_USL_CODICE_RESIDENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CIT_CODICE,locale.T_PAZ_PAZIENTI.PAZ_CIT_CODICE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CAP_DOMICILIO,locale.T_PAZ_PAZIENTI.PAZ_CAP_DOMICILIO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_INDIRIZZO_DOMICILIO,locale.T_PAZ_PAZIENTI.PAZ_INDIRIZZO_DOMICILIO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COM_CODICE_DOMICILIO,locale.T_PAZ_PAZIENTI.PAZ_COM_CODICE_DOMICILIO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COM_CODICE_DOMICILIO_SAN,locale.T_PAZ_PAZIENTI.PAZ_COM_CODICE_DOMICILIO_SAN" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_INIZIO_DOMICILIO,locale.T_PAZ_PAZIENTI.PAZ_DATA_INIZIO_DOMICILIO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_FINE_DOMICILIO,locale.T_PAZ_PAZIENTI.PAZ_DATA_FINE_DOMICILIO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CAP_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_CAP_RESIDENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_INDIRIZZO_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_INDIRIZZO_RESIDENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COM_CODICE_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_COM_CODICE_RESIDENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_INIZIO_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_DATA_INIZIO_RESIDENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_FINE_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_DATA_FINE_RESIDENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_SESSO,locale.T_PAZ_PAZIENTI.PAZ_SESSO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COM_CODICE_NASCITA,locale.T_PAZ_PAZIENTI.PAZ_COM_CODICE_NASCITA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_NASCITA,locale.T_PAZ_PAZIENTI.PAZ_DATA_NASCITA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_TESSERA,locale.T_PAZ_PAZIENTI.PAZ_TESSERA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CODICE_FISCALE,locale.T_PAZ_PAZIENTI.PAZ_CODICE_FISCALE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_NOME,locale.T_PAZ_PAZIENTI.PAZ_NOME" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COGNOME,locale.T_PAZ_PAZIENTI.PAZ_COGNOME" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CODICE,locale.T_PAZ_PAZIENTI.PAZ_CODICE_AUSILIARIO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_DECESSO,locale.t_paz_pazienti.PAZ_DATA_DECESSO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COM_CODICE_EMIGRAZIONE,locale.T_PAZ_PAZIENTI.PAZ_COM_COMUNE_EMIGRAZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_COM_CODICE_IMMIGRAZIONE,locale.T_PAZ_PAZIENTI.PAZ_COM_COMUNE_PROVENIENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_EMIGRAZIONE,locale.T_PAZ_PAZIENTI.PAZ_DATA_EMIGRAZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_IMMIGRAZIONE,locale.T_PAZ_PAZIENTI.PAZ_DATA_IMMIGRAZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.DES_MED_BASE,locale.T_ANA_MEDICI.MED_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_USL_CODICE_ASSISTENZA,locale.T_PAZ_PAZIENTI.PAZ_USL_CODICE_ASSISTENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_INIZIO_ASS,locale.T_PAZ_PAZIENTI.PAZ_DATA_INIZIO_ASS" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DATA_CESSAZIONE_ASS,locale.T_PAZ_PAZIENTI.PAZ_DATA_CESSAZIONE_ASS" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_USL_PROVENIENZA,locale.T_PAZ_PAZIENTI.PAZ_USL_PROVENIENZA" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_LOCALITA_RESIDENZA,locale.T_PAZ_PAZIENTI.PAZ_CIR_CODICE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_LOCALITA_DOMICILIO,locale.T_PAZ_PAZIENTI.PAZ_CIR_CODICE_2" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_DIS_CODICE,locale.T_PAZ_PAZIENTI.PAZ_DIS_CODICE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_CODICE_REGIONALE,locale.T_PAZ_PAZIENTI.PAZ_CODICE_REGIONALE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="centrale.t_paz_pazienti_centrale.PAZ_RSC_CODICE,locale.T_PAZ_PAZIENTI.PAZ_RSC_CODICE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_citt.T_ANA_CITTADINANZE.CIT_STATO,locale.T_ANA_CITTADINANZE.CIT_STATO" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_cnas.T_ANA_COMUNI.COM_DESCRIZIONE,locale.T_ANA_COM_NAS.COM_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_cnas.T_ANA_COMUNI.COM_CATASTALE,locale.T_ANA_COM_NAS.COM_CATASTALE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_comdo.T_ANA_COMUNI.COM_DESCRIZIONE,locale.T_ANA_COM_DOM.COM_DESCRIZIONE" />    
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_comre.T_ANA_COMUNI.COM_DESCRIZIONE,locale.T_ANA_COM_RES.COM_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_ausl.T_ANA_USL.USL_DESCRIZIONE,locale.T_ANA_USL.USL_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_ausl_ass.T_ANA_USL.USL_DESCRIZIONE,locale.T_ANA_USL_ASS.USL_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_ausl_ass_precedente.T_ANA_USL.USL_DESCRIZIONE,locale.T_ANA_USL_ASS.USL_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_med.T_ANA_MEDICI.MED_DESCRIZIONE,locale.T_ANA_MEDICI.MED_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_cir.T_ANA_CIRCOSCRIZIONI.CIR_DESCRIZIONE,locale.T_ANA_CIRCOSCRIZIONI.CIR_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_cir_2.T_ANA_CIRCOSCRIZIONI.CIR_DESCRIZIONE,locale.T_ANA_CIRCOSCRIZIONI_2.CIR_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_dis.T_ANA_DISTRETTI.DIS_DESCRIZIONE,locale.T_ANA_DISTRETTI.DIS_DESCRIZIONE" />
+    <FieldsMaps NameSeparator="." fromToSeparator="," MapString="locale_comdosan.T_ANA_COMUNI.COM_DESCRIZIONE,locale.T_ANA_COM_DOM_SAN.COM_DESCRIZIONE" />
+  </FieldsMaps>
+  <Optimizer AccessPlan="centrale;locale_cnas;locale_citt;locale_comre;locale_med;locale_comdo;locale_ausl;locale_ausl_ass;locale_ausl_ass_precedente;locale_cir;locale_dis;locale_ris;locale;locale_comdosan" AlternativeAccessPlan="locale;centrale;locale_cnas;locale_citt;locale_comre;locale_comdo;locale_med;locale_ausl;locale_ausl_ass;locale_cir;locale_dis;locale_ris;locale_comdosan" enabled="True" matchNull="False" maxFilters="-1" />
+</odpDettaglioPazienteConfiguration>
