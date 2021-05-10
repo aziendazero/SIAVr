@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Onit.OnAssistnet.OnVac.Wcf.RicezioneMessaggiEsterniService" CodeBehind="RicezioneMessaggiEsterniService.svc.cs" %>

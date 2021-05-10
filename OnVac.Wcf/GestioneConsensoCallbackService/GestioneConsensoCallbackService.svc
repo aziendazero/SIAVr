@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="CS" Debug="true" Service="Onit.OnAssistnet.OnVac.Wcf.GestioneConsensoCallbackService" CodeBehind="GestioneConsensoCallbackService.svc.cs" %>
