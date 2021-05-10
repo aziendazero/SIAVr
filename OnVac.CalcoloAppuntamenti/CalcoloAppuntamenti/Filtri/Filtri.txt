@@ -1,0 +1,14 @@
+															Ambulatorio			Paziente		Variabile
+															-------------------------------------------------
+IndisponibilitaGenerica							1 (True) No
+MattinaPomeriggio																1 (False) Si
+NumeroMassimoApp																				2 (True) Si
+NumeroMassimoNuoviApp																		4 (True) Si
+Occupato																								1 (True) No
+DataMinima											2 (True) No
+DataValidita																		2 (True) Si
+TempoInvio																							8 (True) No
+Festa														4 (True) No
+GiornoPrefernza																	4 (False) Si
+NumeroMassimoRitardatariGiornalieri														16 (True) No
+MargineApertura										8 (False) Si
