@@ -1,0 +1,50 @@
+.sottosezione
+{
+	border: 2px outset;
+	font-weight: bold;
+	background-color: whitesmoke;
+	font-size: 11px;
+	font-family: Arial;
+	height: 15px;
+}
+
+tr.Alternating_RED td, TD.Alternating_RED TABLE, TD.Alternating_RED
+{
+	background-color: WhiteSmoke;
+	font-family: Arial;
+	font-size: 12px;
+	border: 0px;
+	color: red;
+	font-weight: bold;
+}
+
+tr.Item_RED td, TD.Item_RED TABLE, TD.Item_RED
+{
+	background-color: #E7E7FF;
+	font-family: Arial;
+	font-size: 12px;
+	border: 0px;
+	color: red;
+	font-weight: bold;
+}
+
+.styleLegend
+{
+    font-family: Verdana;
+    font-size: 12px;
+    text-align: right;
+	border-right: Navy 1px solid; 
+    border-top: Navy 1px solid; 
+    border-left: Navy 1px solid; 
+    border-bottom: Navy 1px solid; 
+    padding-right: 10px; 
+    padding-left: 10px;
+    padding-bottom: 1px;  
+    padding-top: 1px; 
+    font-weight: bold;
+    margin-left: 10px;
+    color: Navy;
+    background-color: #f0f8ff;
+}
+
+

@@ -1,0 +1,18 @@
+﻿/*
+    Dopo la sostituzione delle griglie da Infra a MS, questo stylesheet serve per ripristinare l'altezza delle righe,
+*/
+.header, .item, .alternating, .selected, .edit {
+    height: 26px;
+}
+
+.column_align_center {
+    text-align: center;
+}
+
+.vac-sezione {
+    margin: 1px 0px 1px 0px;
+}
+
+.InfraUltraWebTab2 {
+    margin-top: 1px;
+}

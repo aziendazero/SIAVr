@@ -1,0 +1,548 @@
+.textboxDgr_noEdit {
+    font-family: Arial,Tahoma,Verdana;
+    font-size: 10px;
+    text-align: right;
+    border-style: none;
+    background-color: Transparent;
+}
+
+.textboxVacEs_edit {
+    font-family: Arial,Tahoma,Verdana;
+    font-size: 12px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    background-color: White;
+    width: 99%;
+}
+
+.textboxVacEs_noEdit {
+    font-family: Arial,Tahoma,Verdana;
+    font-size: 12px;
+    text-align: center;
+    border-style: none;
+    background-color: Transparent;
+}
+
+.vac-sezione {
+    border: black 2px solid;
+    padding-top: 2px;
+    padding-left: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fffff5;
+    font-family: Calibri;
+    height: 20px;
+    background-color: #73b5ef;
+    text-align: left;
+}
+
+.fldroot {
+    margin: 5px;
+    border: 2px solid #048;
+    width: auto;
+    border-radius: 3px;
+    /* background-color: ghostwhite; */
+}
+
+    .fldroot legend {
+        border: 1px solid #048;
+        border-radius: 3px;
+        padding: 1px 5px 1px 5px;
+        color: white;
+        font-weight: bold;
+        background-color: #3771a1;
+    }
+
+.fldnode {
+    border: 1px solid silver;
+    width: auto;
+}
+
+    .fldnode legend {
+        border: 1px solid #058;
+        padding: 1px 5px 1px 5px;
+        color: white;
+        font-weight: bold;
+        background-color: silver;
+    }
+
+.vacFieldset {
+    border: 1px solid #058;
+    width: 95%;
+}
+
+    .vacFieldset legend {
+        border: 1px solid #058;
+        padding: 1px 10px 1px 10px;
+        font-weight: bold;
+        color: Navy;
+        background-color: #F0F8FF;
+    }
+
+.margin_btn {
+    margin-top: 5px;
+}
+
+.dgr {
+    width: 100%;
+}
+
+    .dgr td {
+        font-size: 12px;
+        font-family: Tahoma;
+    }
+
+.dgr2 {
+    border-right: gray 1px solid;
+    border-top: gray 1px solid;
+    border-left: gray 1px solid;
+    width: 95%;
+    border-bottom: gray 1px solid;
+    border-collapse: collapse;
+}
+
+    .dgr2 td {
+        font-size: 10px;
+    }
+
+.r1 {
+    background-color: #F5F5F5;
+}
+
+.r2 {
+    background-color: #e7e7ff;
+}
+
+.h1 {
+    font-weight: bold;
+    color: #4a3c8c;
+    border-style: none;
+    background-color: #B0C4DE;
+}
+
+.pan_VacEs {
+    overflow: auto;
+}
+
+    .pan_VacEs table {
+        table-layout: fixed;
+        overflow: auto;
+    }
+
+        .pan_VacEs table td {
+            border: 1px solid Gainsboro;
+        }
+
+            .pan_VacEs table td td {
+                border: none;
+            }
+
+.RedSquare, .OrangeSquare, .PurpleSquare, .MistyPurpleSquare, .GraySquare, .YellowGreenSquare, .PowderBlueSquare, .GreenSquare, .GoldSquare, .BlueSquare, .SilverSquare, .VioletSquare, .WhiteSmokeSquare, .DisabledSquare {
+    border: 1px solid black;
+    font-family: verdana;
+    font-size: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin: 2px;
+}
+
+.RedSquare {
+    background-color: Red;
+}
+
+.OrangeSquare {
+    background-color: Chocolate;
+}
+
+.GraySquare {
+    background-color: gray;
+}
+
+.PurpleSquare {
+    background-color: Purple;
+}
+
+.MistyPurpleSquare {
+    background-color: #cc6699;
+}
+
+.YellowGreenSquare {
+    background-color: YellowGreen;
+}
+
+.PowderBlueSquare {
+    background-color: PowderBlue;
+}
+
+.GreenSquare {
+    background-color: ForestGreen;
+}
+
+.GoldSquare {
+    background-color: Gold;
+}
+
+.BlueSquare {
+    background-color: #3366cc;
+}
+
+.SilverSquare {
+    background-color: #e0e0e0;
+}
+
+.VioletSquare {
+    background-color: #E7E7FF;
+}
+
+.WhiteSmokeSquare {
+    background-color: whitesmoke;
+}
+
+.DisabledSquare {
+    color: gray;
+    background-color: #e0e0e0;
+}
+
+.infratoolbar {
+    vertical-align: middle;
+    border-width: 1px;
+    background-color: #E7E7FF;
+    border-style: solid;
+    height: 28px;
+    background-image: url("../Images/infraToolbarBackground28.gif");
+}
+
+.infratoolbar_button_default, .infratoolbar_button_selected, .infratoolbar_button_hover {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 12px;
+    font-family: Arial;
+    text-align: center;
+}
+
+.infratoolbar_button_default {
+    border-color: transparent;
+}
+
+.infratoolbar_button_selected {
+    border-color: Navy;
+    background-color: #DCDCDC; /* Gainsboro */
+}
+
+.infratoolbar_button_hover {
+    cursor: pointer;
+    border-color: Navy;
+    background-color: #ADD8E6; /* LightBlue */
+}
+
+.infratoolbar_button_default[disabled='disabled'],
+.infratoolbar_button_default[disabled='true'] {
+    text-shadow: 1px 1px white, 0px 0px;
+    color: #A0A0A0;
+}
+
+/*identico al fldroot precedente, ma evita che sia pescato per classe da jquery*/
+.fldroot_clone {
+    margin: 5px;
+    border: 2px solid #058;
+    width: auto;
+}
+
+    .fldroot_clone legend {
+        border: 1px solid #058;
+        padding: 1px 5px 1px 5px;
+        color: white;
+        font-weight: bold;
+        background-color: #058;
+    }
+
+form {
+    margin: 0px;
+}
+
+.infoDati {
+    font-family: Arial, Tahoma, Verdana;
+    font-size: 12px;
+    border: solid 1px #058;
+    background-color: aliceblue;
+    width: 100%;
+    padding: 2px;
+    text-align: left;
+}
+
+.infoDatiCenterBold {
+    font-family: Arial, Tahoma, Verdana;
+    font-size: 12px;
+    border: solid 1px #058;
+    background-color: aliceblue;
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.infoLabelRight {
+    font-family: Arial, Tahoma, Verdana;
+    font-size: 12px;
+    text-align: right;
+}
+
+.infoLabelRightBold {
+    font-family: Arial, Tahoma, Verdana;
+    font-size: 12px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.infoLabelCenter {
+    font-family: Arial, Tahoma, Verdana;
+    font-size: 12px;
+    text-align: center;
+}
+
+.infoLabelCenterBold {
+    font-family: Arial, Tahoma, Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*
+    Il modulo di gestione del consenso viene sempre caricato in un iframe interno ad una OnitFinestraModale.
+    La modale ha le dimensioni impostate direttamente nell'oggetto, perchè non prende la CssClass. 
+    In tutti e 3 i posti in cui è usata, la height è sempre 600px.
+*/
+.frameConsensoStyle {
+    height: 575px;
+    width: 99%;
+    padding-left: 2px;
+    background-color: white;
+}
+
+    .frameConsensoStyle div {
+        text-align: center;
+        font-family: Verdana;
+        font-size: 18px;
+    }
+
+.labelAttenzione {
+    border: navy 2px solid;
+    padding: 4px;
+    color: blue;
+    background-color: whitesmoke;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 12px;
+    width: 98%;
+}
+
+/*
+    Layout diviso in righe e con due colonne sinistra e destra, realizzato tramite dynamic panel e div
+*/
+.vac-riga {
+    width: 100%;
+}
+
+    .vac-riga fieldset table {
+        width: 100%;
+    }
+
+.vac-colonna-sinistra {
+    width: 50%;
+    float: left;
+}
+
+.vac-colonna-destra {
+    width: 50%;
+    float: right;
+}
+
+.vac-fieldset-height-45 {
+    height: 45px;
+}
+
+
+/* LEGENDA */
+.legenda-vaccinazioni {
+    background-color: #f0f0f0;
+    margin-bottom: 2px;
+    padding: 4px 2px 4px 2px;
+    border-bottom: #058 1px solid;
+    font-family: Verdana;
+    font-size: 11px;
+}
+
+    .legenda-vaccinazioni span,
+    .legenda-vaccinazioni input,
+    .legenda-vaccinazioni label {
+        color: navy;
+        margin-right: 3px;
+        font-family: Verdana;
+        font-size: 11px;
+    }
+
+    .legenda-vaccinazioni input {
+        position: relative;
+        top: 2px;
+    }
+
+.legenda-vaccinazioni-checkbox {
+    border-left: 1px solid darkgray;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.legenda-vaccinazioni-reazione, .legenda-vaccinazioni-fittizia, .legenda-vaccinazioni-scaduta,
+.legenda-vaccinazioni-esclusioneScaduta, .legenda-vaccinazioni-esclusioneRinnovata, .legenda-vaccinazioni-eseguita,
+.legenda-vaccinazioni-esclusa, .legenda-vaccinazioni-obbligatoria,
+.legenda-magazzino-lotto-attivo, .legenda-magazzino-scorta-nulla, .legenda-magazzino-scorta-insufficiente, .legenda-magazzino-lotto-centro,
+span.legenda-vaccinazioni-reazione, span.legenda-vaccinazioni-fittizia, span.legenda-vaccinazioni-scaduta,
+span.legenda-vaccinazioni-esclusioneScaduta, span.legenda-vaccinazioni-esclusioneRinnovata, span.legenda-vaccinazioni-eseguita,
+span.legenda-vaccinazioni-esclusa, span.legenda-vaccinazioni-obbligatoria,
+span.legenda-magazzino-lotto-attivo, span.legenda-magazzino-scorta-nulla, span.legenda-magazzino-scorta-insufficiente, span.legenda-magazzino-lotto-centro {
+    color: navy;
+    border: navy 1px solid;
+    border-radius: 4px;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    padding: 1px 4px 1px 4px;
+    font-weight: bold;
+    font-family: Verdana;
+    font-size: 11px;
+}
+
+.legenda-vaccinazioni-reazione {
+    background-color: #ffff66;
+}
+
+.legenda-vaccinazioni-fittizia {
+    background-color: #ff65fe;
+}
+
+.legenda-vaccinazioni-scaduta {
+    background-color: #ffffff;
+}
+
+.legenda-vaccinazioni-esclusioneScaduta {
+    background-color: #ff0000;
+}
+
+.legenda-vaccinazioni-esclusioneRinnovata {
+    background-color: #7FFF00;
+}
+
+.legenda-vaccinazioni-eseguita {
+    background-color: #66cc66
+}
+
+.legenda-vaccinazioni-esclusa {
+    background-color: #ff0000
+}
+
+.legenda-vaccinazioni-obbligatoria {
+    background-color: #cccccc
+}
+
+.legenda-magazzino-lotto-attivo {
+    background-color: #33cc33;
+}
+
+.legenda-magazzino-scorta-nulla {
+    background-color: #ff0033;
+}
+
+.legenda-magazzino-scorta-insufficiente {
+    background-color: #ffff66;
+}
+
+.legenda-magazzino-lotto-centro {
+    background-color: whitesmoke;
+}
+
+.legenda-vaccinazioni .legenda-vaccinazioni-reazione,
+.legenda-vaccinazioni .legenda-vaccinazioni-fittizia,
+.legenda-vaccinazioni .legenda-vaccinazioni-scaduta,
+.legenda-vaccinazioni .legenda-vaccinazioni-esclusioneScaduta,
+.legenda-vaccinazioni .legenda-vaccinazioni-esclusioneRinnovata,
+.legenda-vaccinazioni .legenda-vaccinazioni-eseguita,
+.legenda-vaccinazioni .legenda-vaccinazioni-esclusa,
+.legenda-vaccinazioni .legenda-vaccinazioni-obbligatoria,
+.legenda-vaccinazioni .legenda-magazzino-lotto-attivo,
+.legenda-vaccinazioni .legenda-magazzino-scorta-nulla,
+.legenda-vaccinazioni .legenda-magazzino-scorta-insufficiente,
+.legenda-vaccinazioni .legenda-magazzino-lotto-centro {
+    margin-left: 5px;
+}
+
+td span.legenda-vaccinazioni-reazione,
+td span.legenda-vaccinazioni-fittizia,
+td span.legenda-vaccinazioni-scaduta,
+td span.legenda-vaccinazioni-esclusioneScaduta,
+td span.legenda-vaccinazioni-esclusioneRinnovata,
+td span.legenda-vaccinazioni-eseguita,
+td span.legenda-vaccinazioni-esclusa,
+td span.legenda-vaccinazioni-obbligatoria,
+td span.legenda-magazzino-lotto-attivo,
+td span.legenda-magazzino-scorta-nulla,
+td span.legenda-magazzino-scorta-insufficiente,
+td span.legenda-magazzino-lotto-centro {
+    position: relative;
+    top: 2px;
+    left: 1px;
+}
+
+.legenda-vaccinazioni .legenda-stato-import {
+    margin-left: 5px;
+}
+
+.legenda-stato-import span {
+    position: relative;
+    top: -3px;
+}
+
+.legenda-appuntamenti-E, .legenda-appuntamenti-I, .legenda-appuntamenti-C {
+    color: navy;
+    border: navy 1px solid;
+    border-radius: 4px;
+    text-align: center;
+    width: 20px;
+    height: 16px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-weight: bold;
+    font-family: Verdana;
+    font-size: 11px;
+}
+
+.legenda-appuntamenti-E {
+    background-color: deepskyblue;
+}
+
+.legenda-appuntamenti-I {
+    background-color: gold;
+}
+
+.legenda-appuntamenti-C {
+    background-color: aquamarine;
+}
+
+.dropItems {
+    width: 100%;
+}
+
+.dropItems[disabled="disabled"] {
+    background-color: #EBEBE4;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

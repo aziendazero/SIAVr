@@ -1,0 +1,100 @@
+A {
+    FONT-SIZE: 12px;
+    COLOR: #0064dc;
+    FONT-FAMILY: Calibri;
+    TEXT-DECORATION: underline
+}
+
+    A:hover {
+        COLOR: #003399;
+        TEXT-DECORATION: none
+    }
+
+TD {
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    FONT-FAMILY: Calibri;
+}
+
+A.left:link {
+    FONT: 12px Calibri;
+    COLOR: #000000;
+    TEXT-DECORATION: none
+}
+
+A.left:visited {
+    FONT: 12px Calibri;
+    COLOR: #000000;
+    TEXT-DECORATION: none
+}
+
+A.left:active {
+    FONT: 12px Calibri;
+    COLOR: aliceblue;
+}
+
+A.left:hover {
+    FONT: 12px Calibri;
+    COLOR: aliceblue;
+    TEXT-DECORATION: underline
+}
+
+.out {
+    /*BORDER-TOP: #3771a1 1px solid;
+    BORDER-RIGHT: #3771a1 1px solid;
+    BORDER-LEFT: #3771a1 1px solid;*/
+    PADDING-RIGHT: 8px;
+    PADDING-LEFT: 8px;
+    /* BACKGROUND: #3771a1; */
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+
+.over {
+    /*
+    BORDER-RIGHT: navy 1px solid;
+    BORDER-LEFT: navy 1px solid;
+    */
+    PADDING-TOP: 0px;
+    PADDING-RIGHT: 8px;
+    PADDING-LEFT: 8px;
+    PADDING-BOTTOM: 0px;
+    BACKGROUND: #73b5ef;
+    CURSOR: pointer;
+}
+
+A.menu:link {
+    FONT: 12px Calibri;
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+
+A.menu:visited {
+    FONT: 12px Calibri;
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+
+A.menu:hover {
+    FONT: 12px Calibri;
+    COLOR: aliceblue;
+    TEXT-DECORATION: none
+}
+
+A.menu:active {
+    FONT: 12px Calibri;
+    COLOR: aliceblue;
+    TEXT-DECORATION: none
+}
+
+A.top:visited {
+    FONT: 12px Calibri;
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+
+A.top:active {
+    FONT: 12px Calibri;
+    COLOR: aliceblue;
+    TEXT-DECORATION: none
+}

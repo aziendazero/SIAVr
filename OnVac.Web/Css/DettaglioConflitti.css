@@ -1,0 +1,29 @@
+﻿.datagridDettaglio
+{
+    border: 1px solid navy;
+    font-family: Arial;
+	font-size: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+        
+tr.headerDettaglio td, tr.headerDettaglio a
+{
+    font-weight: bold;
+	color: navy;
+	background-color: #B0C4DE;
+	height: 20px;
+	padding-top:2px;
+}
+
+tr.itemDettaglio td
+{
+    background-color: #F5F5F5;
+    height: 22px;
+}
+
+tr.alternatingDettaglio td
+{
+	background-color: #e7e7ff;
+	height: 22px;
+}    
