@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" targetNamespace="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.16.7.151:8076/services/DocR?xsd=7" namespace="http://www.w3.org/XML/1998/namespace" />
+  <xs:element name="Action" type="tns:ActionType" />
+  <xs:element name="Address" type="tns:PostalAddressType" />
+  <xs:element name="AdhocQuery" type="tns:AdhocQueryType" />
+  <xs:element name="Association" type="tns:AssociationType1" />
+  <xs:element name="AuditableEvent" type="tns:AuditableEventType" />
+  <xs:element name="Classification" type="tns:ClassificationType" />
+  <xs:element name="ClassificationNode" type="tns:ClassificationNodeType" />
+  <xs:element name="ClassificationScheme" type="tns:ClassificationSchemeType" />
+  <xs:element name="Description" type="tns:InternationalStringType" />
+  <xs:element name="EmailAddress" type="tns:EmailAddressType" />
+  <xs:element name="ExternalIdentifier" type="tns:ExternalIdentifierType" />
+  <xs:element name="ExternalLink" type="tns:ExternalLinkType" />
+  <xs:element name="ExtrinsicObject" type="tns:ExtrinsicObjectType" />
+  <xs:element name="Federation" type="tns:FederationType" />
+  <xs:element name="Identifiable" type="tns:IdentifiableType" />
+  <xs:element name="InternationalString" type="tns:InternationalStringType" />
+  <xs:element name="LocalizedString" type="tns:LocalizedStringType" />
+  <xs:element name="Name" type="tns:InternationalStringType" />
+  <xs:element name="Notification" type="tns:NotificationType" />
+  <xs:element name="NotifyAction" type="tns:NotifyActionType" />
+  <xs:element name="ObjectRef" type="tns:ObjectRefType" />
+  <xs:element name="ObjectRefList" type="tns:ObjectRefListType" />
+  <xs:element name="Organization" type="tns:OrganizationType" />
+  <xs:element name="Person" type="tns:PersonType" />
+  <xs:element name="PersonName" type="tns:PersonNameType" />
+  <xs:element name="PostalAddress" type="tns:PostalAddressType" />
+  <xs:element name="QueryExpression" type="tns:QueryExpressionType" />
+  <xs:element name="Registry" type="tns:RegistryType" />
+  <xs:element name="RegistryObject" type="tns:RegistryObjectType" />
+  <xs:element name="RegistryObjectList" type="tns:RegistryObjectListType" />
+  <xs:element name="RegistryPackage" type="tns:RegistryPackageType" />
+  <xs:element name="Service" type="tns:ServiceType" />
+  <xs:element name="ServiceBinding" type="tns:ServiceBindingType" />
+  <xs:element name="Slot" type="tns:SlotType1" />
+  <xs:element name="SlotList" type="tns:SlotListType" />
+  <xs:element name="SpecificationLink" type="tns:SpecificationLinkType" />
+  <xs:element name="Subscription" type="tns:SubscriptionType" />
+  <xs:element name="TelephoneNumber" type="tns:TelephoneNumberType" />
+  <xs:element name="UsageDescription" type="tns:InternationalStringType" />
+  <xs:element name="UsageParameter" type="xs:string" />
+  <xs:element name="User" type="tns:UserType" />
+  <xs:element name="Value" type="xs:string" />
+  <xs:element name="ValueList" type="tns:ValueListType" />
+  <xs:complexType name="SlotListType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Slot" type="tns:SlotType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SlotType1">
+    <xs:sequence>
+      <xs:element form="qualified" name="ValueList" type="tns:ValueListType" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="slotType" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ValueListType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistryObjectListType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tns:Identifiable" />
+        <xs:element ref="tns:Service" />
+        <xs:element ref="tns:User" />
+        <xs:element ref="tns:Registry" />
+        <xs:element ref="tns:Federation" />
+        <xs:element ref="tns:ObjectRef" />
+        <xs:element ref="tns:Person" />
+        <xs:element ref="tns:ClassificationScheme" />
+        <xs:element ref="tns:Classification" />
+        <xs:element ref="tns:ExternalIdentifier" />
+        <xs:element ref="tns:ClassificationNode" />
+        <xs:element ref="tns:ExternalLink" />
+        <xs:element ref="tns:RegistryPackage" />
+        <xs:element ref="tns:Association" />
+        <xs:element ref="tns:RegistryObject" />
+        <xs:element ref="tns:AdhocQuery" />
+        <xs:element ref="tns:SpecificationLink" />
+        <xs:element ref="tns:AuditableEvent" />
+        <xs:element ref="tns:ExtrinsicObject" />
+        <xs:element ref="tns:Organization" />
+        <xs:element ref="tns:ServiceBinding" />
+        <xs:element ref="tns:Subscription" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NotificationType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element form="qualified" name="RegistryObjectList" type="tns:RegistryObjectListType" />
+        </xs:sequence>
+        <xs:attribute name="subscription" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="RegistryObjectType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:IdentifiableType">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="Name" type="tns:InternationalStringType" />
+          <xs:element minOccurs="0" form="qualified" name="Description" type="tns:InternationalStringType" />
+          <xs:element minOccurs="0" form="qualified" name="VersionInfo" type="tns:VersionInfoType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Classification" type="tns:ClassificationType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="ExternalIdentifier" type="tns:ExternalIdentifierType" />
+        </xs:sequence>
+        <xs:attribute name="lid" type="xs:anyURI" />
+        <xs:attribute name="objectType" type="xs:string" />
+        <xs:attribute name="status" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="IdentifiableType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Slot" type="tns:SlotType1" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:anyURI" use="required" />
+    <xs:attribute name="home" type="xs:anyURI" />
+  </xs:complexType>
+  <xs:complexType name="InternationalStringType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="LocalizedString" type="tns:LocalizedStringType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LocalizedStringType">
+    <xs:sequence />
+    <xs:attribute ref="xml:lang" />
+    <xs:attribute name="charset" type="xs:anySimpleType" />
+    <xs:attribute name="value" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="VersionInfoType">
+    <xs:sequence />
+    <xs:attribute name="versionName" type="xs:string" />
+    <xs:attribute name="comment" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ClassificationType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence />
+        <xs:attribute name="classificationScheme" type="xs:string" />
+        <xs:attribute name="classifiedObject" type="xs:string" use="required" />
+        <xs:attribute name="classificationNode" type="xs:string" />
+        <xs:attribute name="nodeRepresentation" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ExternalIdentifierType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence />
+        <xs:attribute name="registryObject" type="xs:string" use="required" />
+        <xs:attribute name="identificationScheme" type="xs:string" use="required" />
+        <xs:attribute name="value" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ObjectRefType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:IdentifiableType">
+        <xs:sequence />
+        <xs:attribute name="createReplica" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OrganizationType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Address" type="tns:PostalAddressType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="TelephoneNumber" type="tns:TelephoneNumberType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="EmailAddress" type="tns:EmailAddressType" />
+        </xs:sequence>
+        <xs:attribute name="parent" type="xs:string" />
+        <xs:attribute name="primaryContact" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PostalAddressType">
+    <xs:sequence />
+    <xs:attribute name="city" type="xs:string" />
+    <xs:attribute name="country" type="xs:string" />
+    <xs:attribute name="postalCode" type="xs:string" />
+    <xs:attribute name="stateOrProvince" type="xs:string" />
+    <xs:attribute name="street" type="xs:string" />
+    <xs:attribute name="streetNumber" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="TelephoneNumberType">
+    <xs:sequence />
+    <xs:attribute name="areaCode" type="xs:string" />
+    <xs:attribute name="countryCode" type="xs:string" />
+    <xs:attribute name="extension" type="xs:string" />
+    <xs:attribute name="number" type="xs:string" />
+    <xs:attribute name="phoneType" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="EmailAddressType">
+    <xs:sequence />
+    <xs:attribute name="address" type="xs:string" use="required" />
+    <xs:attribute name="type" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="SpecificationLinkType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="UsageDescription" type="tns:InternationalStringType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="UsageParameter" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="serviceBinding" type="xs:string" use="required" />
+        <xs:attribute name="specificationObject" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ExtrinsicObjectType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="ContentVersionInfo" type="tns:VersionInfoType" />
+        </xs:sequence>
+        <xs:attribute name="mimeType" type="xs:string" />
+        <xs:attribute name="isOpaque" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AuditableEventType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element form="qualified" name="affectedObjects" type="tns:ObjectRefListType" />
+        </xs:sequence>
+        <xs:attribute name="eventType" type="xs:string" use="required" />
+        <xs:attribute name="timestamp" type="xs:dateTime" use="required" />
+        <xs:attribute name="user" type="xs:string" use="required" />
+        <xs:attribute name="requestId" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ObjectRefListType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="ObjectRef" type="tns:ObjectRefType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistryPackageType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="RegistryObjectList" type="tns:RegistryObjectListType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AssociationType1">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence />
+        <xs:attribute name="associationType" type="xs:string" use="required" />
+        <xs:attribute name="sourceObject" type="xs:string" use="required" />
+        <xs:attribute name="targetObject" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FederationType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence />
+        <xs:attribute name="replicationSyncLatency" type="xs:duration" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SubscriptionType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tns:Action" />
+            <xs:element ref="tns:NotifyAction" />
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="selector" type="xs:string" use="required" />
+        <xs:attribute name="startTime" type="xs:dateTime" />
+        <xs:attribute name="endTime" type="xs:dateTime" />
+        <xs:attribute name="notificationInterval" type="xs:duration" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ClassificationNodeType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="ClassificationNode" type="tns:ClassificationNodeType" />
+        </xs:sequence>
+        <xs:attribute name="parent" type="xs:string" />
+        <xs:attribute name="code" type="xs:string" />
+        <xs:attribute name="path" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ServiceBindingType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="SpecificationLink" type="tns:SpecificationLinkType" />
+        </xs:sequence>
+        <xs:attribute name="service" type="xs:string" use="required" />
+        <xs:attribute name="accessURI" type="xs:anyURI" />
+        <xs:attribute name="targetBinding" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AdhocQueryType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="QueryExpression" type="tns:QueryExpressionType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="QueryExpressionType" mixed="true">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+    </xs:sequence>
+    <xs:attribute name="queryLanguage" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="ServiceType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="ServiceBinding" type="tns:ServiceBindingType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="RegistryType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence />
+        <xs:attribute name="operator" type="xs:string" use="required" />
+        <xs:attribute name="specificationVersion" type="xs:string" use="required" />
+        <xs:attribute name="replicationSyncLatency" type="xs:duration" />
+        <xs:attribute name="catalogingLatency" type="xs:duration" />
+        <xs:attribute name="conformanceProfile" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ExternalLinkType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence />
+        <xs:attribute name="externalURI" type="xs:anyURI" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ClassificationSchemeType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="ClassificationNode" type="tns:ClassificationNodeType" />
+        </xs:sequence>
+        <xs:attribute name="isInternal" type="xs:boolean" use="required" />
+        <xs:attribute name="nodeType" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PersonType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RegistryObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Address" type="tns:PostalAddressType" />
+          <xs:element minOccurs="0" form="qualified" name="PersonName" type="tns:PersonNameType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="TelephoneNumber" type="tns:TelephoneNumberType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="EmailAddress" type="tns:EmailAddressType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PersonNameType">
+    <xs:sequence />
+    <xs:attribute name="firstName" type="xs:string" />
+    <xs:attribute name="middleName" type="xs:string" />
+    <xs:attribute name="lastName" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="UserType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PersonType">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ActionType" abstract="true">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="NotifyActionType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ActionType">
+        <xs:sequence />
+        <xs:attribute name="notificationOption" type="xs:string" />
+        <xs:attribute name="endPoint" type="xs:anyURI" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TelephoneNumberListType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="TelephoneNumber" type="tns:TelephoneNumberType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

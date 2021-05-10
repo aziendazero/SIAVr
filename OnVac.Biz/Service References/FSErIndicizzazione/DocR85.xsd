@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:onit-it:dto" elementFormDefault="qualified" targetNamespace="urn:onit-it:dto" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="datiRegistryPaziente" type="tns:datiRegistryPaziente" />
+  <xs:element name="medico" type="tns:medico" />
+  <xs:element name="struttura" type="tns:struttura" />
+  <xs:complexType name="datiRegistryPaziente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="documentUniqueId" type="xs:string" />
+      <xs:element minOccurs="0" name="medicoRichiedente" type="tns:medico" />
+      <xs:element minOccurs="0" name="paziente" type="tns:pazienteCDA" />
+      <xs:element minOccurs="0" name="repositoryUniqueId" type="xs:string" />
+      <xs:element minOccurs="0" name="strutturaRichiedente" type="tns:struttura" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codiceFiscale" type="xs:string" />
+      <xs:element minOccurs="0" name="cognome" type="xs:string" />
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pazienteCDA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codiceAusiliario" type="xs:string" />
+      <xs:element minOccurs="0" name="codiceCittadinanza" type="xs:string" />
+      <xs:element minOccurs="0" name="codiceCns" type="xs:string" />
+      <xs:element minOccurs="0" name="codiceFiscale" type="xs:string" />
+      <xs:element minOccurs="0" name="codiceIsoCittadinanza" type="xs:string" />
+      <xs:element minOccurs="0" name="codicePaziente" type="xs:string" />
+      <xs:element minOccurs="0" name="codiceRegionale" type="xs:string" />
+      <xs:element minOccurs="0" name="cognome" type="xs:string" />
+      <xs:element minOccurs="0" name="comuneDomicilio" type="tns:comuneCDA" />
+      <xs:element minOccurs="0" name="comuneNascita" type="tns:comuneCDA" />
+      <xs:element minOccurs="0" name="comuneResidenza" type="tns:comuneCDA" />
+      <xs:element minOccurs="0" name="dataNascita" type="xs:string" />
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+      <xs:element minOccurs="0" name="sesso" type="xs:string" />
+      <xs:element minOccurs="0" name="statoCittadinanza" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono1" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono2" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono3" type="xs:string" />
+      <xs:element minOccurs="0" name="tesseraSanitaria" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoPaziente" type="xs:string" />
+      <xs:element minOccurs="0" name="uslCorrente" type="tns:struttura" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comuneCDA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cap" type="xs:string" />
+      <xs:element minOccurs="0" name="codice" type="xs:string" />
+      <xs:element minOccurs="0" name="codiceIstat" type="xs:string" />
+      <xs:element minOccurs="0" name="codiceStato" type="xs:string" />
+      <xs:element minOccurs="0" name="descrizione" type="xs:string" />
+      <xs:element minOccurs="0" name="indirizzo" type="xs:string" />
+      <xs:element minOccurs="0" name="provincia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="struttura">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codice" type="xs:string" />
+      <xs:element minOccurs="0" name="descrizione" type="xs:string" />
+      <xs:element minOccurs="0" name="oid" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoStruttura" type="tns:tipoStruttura" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoStruttura">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FLS11" />
+      <xs:enumeration value="HSP11" />
+      <xs:enumeration value="STS11" />
+      <xs:enumeration value="RIA11" />
+      <xs:enumeration value="AMB_MMG_PLS" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
