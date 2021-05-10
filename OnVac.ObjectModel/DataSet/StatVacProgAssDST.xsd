@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StatVacProgAssDST" targetNamespace="http://tempuri.org/StatVacProgAssDST.xsd" xmlns:mstns="http://tempuri.org/StatVacProgAssDST.xsd" xmlns="http://tempuri.org/StatVacProgAssDST.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StatVacProgAssDST" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="StatVacProgAssDST" msprop:Generator_UserDSName="StatVacProgAssDST">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="StatAssTable" msprop:Generator_TableClassName="StatAssTableDataTable" msprop:Generator_TableVarName="tableStatAssTable" msprop:Generator_TablePropName="StatAssTable" msprop:Generator_RowDeletingName="StatAssTableRowDeleting" msprop:Generator_RowChangingName="StatAssTableRowChanging" msprop:Generator_RowEvHandlerName="StatAssTableRowChangeEventHandler" msprop:Generator_RowDeletedName="StatAssTableRowDeleted" msprop:Generator_UserTableName="StatAssTable" msprop:Generator_RowChangedName="StatAssTableRowChanged" msprop:Generator_RowEvArgName="StatAssTableRowChangeEvent" msprop:Generator_RowClassName="StatAssTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodiceAssociazione" msprop:Generator_ColumnVarNameInTable="columnCodiceAssociazione" msprop:Generator_ColumnPropNameInRow="CodiceAssociazione" msprop:Generator_ColumnPropNameInTable="CodiceAssociazioneColumn" msprop:Generator_UserColumnName="CodiceAssociazione" type="xs:string" minOccurs="0" />
+              <xs:element name="CodiceConsultorio" msprop:Generator_ColumnVarNameInTable="columnCodiceConsultorio" msprop:Generator_ColumnPropNameInRow="CodiceConsultorio" msprop:Generator_ColumnPropNameInTable="CodiceConsultorioColumn" msprop:Generator_UserColumnName="CodiceConsultorio" type="xs:string" minOccurs="0" />
+              <xs:element name="NumeroAssociazioniConsultorio" msprop:Generator_ColumnVarNameInTable="columnNumeroAssociazioniConsultorio" msprop:Generator_ColumnPropNameInRow="NumeroAssociazioniConsultorio" msprop:Generator_ColumnPropNameInTable="NumeroAssociazioniConsultorioColumn" msprop:Generator_UserColumnName="NumeroAssociazioniConsultorio" type="xs:long" minOccurs="0" />
+              <xs:element name="DescrizioneAssociazione" msprop:Generator_ColumnVarNameInTable="columnDescrizioneAssociazione" msprop:Generator_ColumnPropNameInRow="DescrizioneAssociazione" msprop:Generator_ColumnPropNameInTable="DescrizioneAssociazioneColumn" msprop:Generator_UserColumnName="DescrizioneAssociazione" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

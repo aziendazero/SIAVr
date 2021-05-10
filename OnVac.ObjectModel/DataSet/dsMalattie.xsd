@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsMalattie" targetNamespace="http://tempuri.org/dsMalattie.xsd" xmlns:mstns="http://tempuri.org/dsMalattie.xsd" xmlns="http://tempuri.org/dsMalattie.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsMalattie" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsMalattie" msprop:Generator_UserDSName="dsMalattie">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Malattie" msprop:Generator_TableClassName="MalattieDataTable" msprop:Generator_TableVarName="tableMalattie" msprop:Generator_TablePropName="Malattie" msprop:Generator_RowDeletingName="MalattieRowDeleting" msprop:Generator_UserTableName="Malattie" msprop:Generator_RowChangingName="MalattieRowChanging" msprop:Generator_RowEvHandlerName="MalattieRowChangeEventHandler" msprop:Generator_RowDeletedName="MalattieRowDeleted" msprop:Generator_RowEvArgName="MalattieRowChangeEvent" msprop:Generator_RowChangedName="MalattieRowChanged" msprop:Generator_RowClassName="MalattieRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PMA_MAL_CODICE" msprop:Generator_ColumnVarNameInTable="columnPMA_MAL_CODICE" msprop:Generator_ColumnPropNameInRow="PMA_MAL_CODICE" msprop:Generator_ColumnPropNameInTable="PMA_MAL_CODICEColumn" msprop:Generator_UserColumnName="PMA_MAL_CODICE" type="xs:string" minOccurs="0" />
+              <xs:element name="PMA_N_MALATTIA" msprop:Generator_ColumnVarNameInTable="columnPMA_N_MALATTIA" msprop:Generator_ColumnPropNameInRow="PMA_N_MALATTIA" msprop:Generator_ColumnPropNameInTable="PMA_N_MALATTIAColumn" msprop:Generator_UserColumnName="PMA_N_MALATTIA" type="xs:int" minOccurs="0" />
+              <xs:element name="MAL_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnMAL_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="MAL_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="MAL_DESCRIZIONEColumn" msprop:Generator_UserColumnName="MAL_DESCRIZIONE" type="xs:string" minOccurs="0" />
+              <xs:element name="PMA_FOLLOW_UP" msprop:Generator_ColumnVarNameInTable="columnPMA_FOLLOW_UP" msprop:Generator_ColumnPropNameInRow="PMA_FOLLOW_UP" msprop:Generator_ColumnPropNameInTable="PMA_FOLLOW_UPColumn" msprop:Generator_UserColumnName="PMA_FOLLOW_UP" type="xs:string" minOccurs="0" />
+              <xs:element name="PMA_NUOVA_DIAGNOSI" msprop:Generator_ColumnVarNameInTable="columnPMA_NUOVA_DIAGNOSI" msprop:Generator_ColumnPropNameInRow="PMA_NUOVA_DIAGNOSI" msprop:Generator_ColumnPropNameInTable="PMA_NUOVA_DIAGNOSIColumn" msprop:Generator_UserColumnName="PMA_NUOVA_DIAGNOSI" type="xs:string" minOccurs="0" />
+              <xs:element name="PMA_DATA_DIAGNOSI" msprop:Generator_ColumnVarNameInTable="columnPMA_DATA_DIAGNOSI" msprop:Generator_ColumnPropNameInRow="PMA_DATA_DIAGNOSI" msprop:Generator_ColumnPropNameInTable="PMA_DATA_DIAGNOSIColumn" msprop:Generator_UserColumnName="PMA_DATA_DIAGNOSI" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PMA_DATA_ULTIMA_VISITA" msprop:Generator_ColumnVarNameInTable="columnPMA_DATA_ULTIMA_VISITA" msprop:Generator_ColumnPropNameInRow="PMA_DATA_ULTIMA_VISITA" msprop:Generator_ColumnPropNameInTable="PMA_DATA_ULTIMA_VISITAColumn" msprop:Generator_UserColumnName="PMA_DATA_ULTIMA_VISITA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PMA_N_BILANCIO_PARTENZA" msprop:Generator_ColumnVarNameInTable="columnPMA_N_BILANCIO_PARTENZA" msprop:Generator_ColumnPropNameInRow="PMA_N_BILANCIO_PARTENZA" msprop:Generator_ColumnPropNameInTable="PMA_N_BILANCIO_PARTENZAColumn" msprop:Generator_UserColumnName="PMA_N_BILANCIO_PARTENZA" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

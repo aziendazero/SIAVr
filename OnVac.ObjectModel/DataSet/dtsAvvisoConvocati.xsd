@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsAvvisoConvocati" targetNamespace="http://tempuri.org/dtsAvvisoConvocati.xsd" xmlns:mstns="http://tempuri.org/dtsAvvisoConvocati.xsd" xmlns="http://tempuri.org/dtsAvvisoConvocati.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsAvvisoConvocati" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="dtsAvvisoConvocati" msprop:Generator_UserDSName="dtsAvvisoConvocati">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Convocati" msprop:Generator_TableClassName="ConvocatiDataTable" msprop:Generator_TableVarName="tableConvocati" msprop:Generator_TablePropName="Convocati" msprop:Generator_RowDeletingName="ConvocatiRowDeleting" msprop:Generator_UserTableName="Convocati" msprop:Generator_RowChangingName="ConvocatiRowChanging" msprop:Generator_RowEvHandlerName="ConvocatiRowChangeEventHandler" msprop:Generator_RowDeletedName="ConvocatiRowDeleted" msprop:Generator_RowEvArgName="ConvocatiRowChangeEvent" msprop:Generator_RowChangedName="ConvocatiRowChanged" msprop:Generator_RowClassName="ConvocatiRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="paz_codice" msprop:Generator_ColumnVarNameInTable="columnpaz_codice" msprop:Generator_ColumnPropNameInRow="paz_codice" msprop:Generator_ColumnPropNameInTable="paz_codiceColumn" msprop:Generator_UserColumnName="paz_codice" type="xs:string" minOccurs="0" />
+              <xs:element name="paz_cognome" msprop:Generator_ColumnVarNameInTable="columnpaz_cognome" msprop:Generator_ColumnPropNameInRow="paz_cognome" msprop:Generator_ColumnPropNameInTable="paz_cognomeColumn" msprop:Generator_UserColumnName="paz_cognome" type="xs:string" minOccurs="0" />
+              <xs:element name="paz_nome" msprop:Generator_ColumnVarNameInTable="columnpaz_nome" msprop:Generator_ColumnPropNameInRow="paz_nome" msprop:Generator_ColumnPropNameInTable="paz_nomeColumn" msprop:Generator_UserColumnName="paz_nome" type="xs:string" minOccurs="0" />
+              <xs:element name="paz_data_nascita" msprop:Generator_ColumnVarNameInTable="columnpaz_data_nascita" msprop:Generator_ColumnPropNameInRow="paz_data_nascita" msprop:Generator_ColumnPropNameInTable="paz_data_nascitaColumn" msprop:Generator_UserColumnName="paz_data_nascita" type="xs:date" minOccurs="0" />
+              <xs:element name="paz_sesso" msprop:Generator_ColumnVarNameInTable="columnpaz_sesso" msprop:Generator_ColumnPropNameInRow="paz_sesso" msprop:Generator_ColumnPropNameInTable="paz_sessoColumn" msprop:Generator_UserColumnName="paz_sesso" type="xs:string" minOccurs="0" />
+              <xs:element name="med_codice" msprop:Generator_ColumnVarNameInTable="columnmed_codice" msprop:Generator_ColumnPropNameInRow="med_codice" msprop:Generator_ColumnPropNameInTable="med_codiceColumn" msprop:Generator_UserColumnName="med_codice" type="xs:string" minOccurs="0" />
+              <xs:element name="med_descrizione" msprop:Generator_ColumnVarNameInTable="columnmed_descrizione" msprop:Generator_ColumnPropNameInRow="med_descrizione" msprop:Generator_ColumnPropNameInTable="med_descrizioneColumn" msprop:Generator_UserColumnName="med_descrizione" type="xs:string" minOccurs="0" />
+              <xs:element name="paz_indirizzo_residenza" msprop:Generator_ColumnVarNameInTable="columnpaz_indirizzo_residenza" msprop:Generator_ColumnPropNameInRow="paz_indirizzo_residenza" msprop:Generator_ColumnPropNameInTable="paz_indirizzo_residenzaColumn" msprop:Generator_UserColumnName="paz_indirizzo_residenza" type="xs:string" minOccurs="0" />
+              <xs:element name="res_com_codice" msprop:Generator_ColumnVarNameInTable="columnres_com_codice" msprop:Generator_ColumnPropNameInRow="res_com_codice" msprop:Generator_ColumnPropNameInTable="res_com_codiceColumn" msprop:Generator_UserColumnName="res_com_codice" type="xs:string" minOccurs="0" />
+              <xs:element name="res_com_descrizione" msprop:Generator_ColumnVarNameInTable="columnres_com_descrizione" msprop:Generator_ColumnPropNameInRow="res_com_descrizione" msprop:Generator_ColumnPropNameInTable="res_com_descrizioneColumn" msprop:Generator_UserColumnName="res_com_descrizione" type="xs:string" minOccurs="0" />
+              <xs:element name="res_com_provincia" msprop:Generator_ColumnVarNameInTable="columnres_com_provincia" msprop:Generator_ColumnPropNameInRow="res_com_provincia" msprop:Generator_ColumnPropNameInTable="res_com_provinciaColumn" msprop:Generator_UserColumnName="res_com_provincia" type="xs:string" minOccurs="0" />
+              <xs:element name="res_com_cap" msprop:Generator_ColumnVarNameInTable="columnres_com_cap" msprop:Generator_ColumnPropNameInRow="res_com_cap" msprop:Generator_ColumnPropNameInTable="res_com_capColumn" msprop:Generator_UserColumnName="res_com_cap" type="xs:string" minOccurs="0" />
+              <xs:element name="paz_indirizzo_domicilio" msprop:Generator_ColumnVarNameInTable="columnpaz_indirizzo_domicilio" msprop:Generator_ColumnPropNameInRow="paz_indirizzo_domicilio" msprop:Generator_ColumnPropNameInTable="paz_indirizzo_domicilioColumn" msprop:Generator_UserColumnName="paz_indirizzo_domicilio" type="xs:string" minOccurs="0" />
+              <xs:element name="dom_com_codice" msprop:Generator_ColumnVarNameInTable="columndom_com_codice" msprop:Generator_ColumnPropNameInRow="dom_com_codice" msprop:Generator_ColumnPropNameInTable="dom_com_codiceColumn" msprop:Generator_UserColumnName="dom_com_codice" type="xs:string" minOccurs="0" />
+              <xs:element name="dom_com_descrizione" msprop:Generator_ColumnVarNameInTable="columndom_com_descrizione" msprop:Generator_ColumnPropNameInRow="dom_com_descrizione" msprop:Generator_ColumnPropNameInTable="dom_com_descrizioneColumn" msprop:Generator_UserColumnName="dom_com_descrizione" type="xs:string" minOccurs="0" />
+              <xs:element name="dom_com_provincia" msprop:Generator_ColumnVarNameInTable="columndom_com_provincia" msprop:Generator_ColumnPropNameInRow="dom_com_provincia" msprop:Generator_ColumnPropNameInTable="dom_com_provinciaColumn" msprop:Generator_UserColumnName="dom_com_provincia" type="xs:string" minOccurs="0" />
+              <xs:element name="dom_com_cap" msprop:Generator_ColumnVarNameInTable="columndom_com_cap" msprop:Generator_ColumnPropNameInRow="dom_com_cap" msprop:Generator_ColumnPropNameInTable="dom_com_capColumn" msprop:Generator_UserColumnName="dom_com_cap" type="xs:string" minOccurs="0" />
+              <xs:element name="cns_codice" msprop:Generator_ColumnVarNameInTable="columncns_codice" msprop:Generator_ColumnPropNameInRow="cns_codice" msprop:Generator_ColumnPropNameInTable="cns_codiceColumn" msprop:Generator_UserColumnName="cns_codice" type="xs:string" minOccurs="0" />
+              <xs:element name="cns_descrizione" msprop:Generator_ColumnVarNameInTable="columncns_descrizione" msprop:Generator_ColumnPropNameInRow="cns_descrizione" msprop:Generator_ColumnPropNameInTable="cns_descrizioneColumn" msprop:Generator_UserColumnName="cns_descrizione" type="xs:string" minOccurs="0" />
+              <xs:element name="cns_indirizzo" msprop:Generator_ColumnVarNameInTable="columncns_indirizzo" msprop:Generator_ColumnPropNameInRow="cns_indirizzo" msprop:Generator_ColumnPropNameInTable="cns_indirizzoColumn" msprop:Generator_UserColumnName="cns_indirizzo" type="xs:string" minOccurs="0" />
+              <xs:element name="cns_com_descrizione" msprop:Generator_ColumnVarNameInTable="columncns_com_descrizione" msprop:Generator_ColumnPropNameInRow="cns_com_descrizione" msprop:Generator_ColumnPropNameInTable="cns_com_descrizioneColumn" msprop:Generator_UserColumnName="cns_com_descrizione" type="xs:string" minOccurs="0" />
+              <xs:element name="cns_n_telefono" msprop:Generator_ColumnVarNameInTable="columncns_n_telefono" msprop:Generator_ColumnPropNameInRow="cns_n_telefono" msprop:Generator_ColumnPropNameInTable="cns_n_telefonoColumn" msprop:Generator_UserColumnName="cns_n_telefono" type="xs:string" minOccurs="0" />
+              <xs:element name="vac_codice" msprop:Generator_ColumnVarNameInTable="columnvac_codice" msprop:Generator_ColumnPropNameInRow="vac_codice" msprop:Generator_ColumnPropNameInTable="vac_codiceColumn" msprop:Generator_UserColumnName="vac_codice" type="xs:string" minOccurs="0" />
+              <xs:element name="vac_descrizione" msprop:Generator_ColumnVarNameInTable="columnvac_descrizione" msprop:Generator_ColumnPropNameInRow="vac_descrizione" msprop:Generator_ColumnPropNameInTable="vac_descrizioneColumn" msprop:Generator_UserColumnName="vac_descrizione" type="xs:string" minOccurs="0" />
+              <xs:element name="vac_dose" msprop:Generator_ColumnVarNameInTable="columnvac_dose" msprop:Generator_ColumnPropNameInRow="vac_dose" msprop:Generator_ColumnPropNameInTable="vac_doseColumn" msprop:Generator_UserColumnName="vac_dose" type="xs:string" minOccurs="0" />
+              <xs:element name="cns_stampa1" msprop:Generator_ColumnVarNameInTable="columncns_stampa1" msprop:Generator_ColumnPropNameInRow="cns_stampa1" msprop:Generator_ColumnPropNameInTable="cns_stampa1Column" msprop:Generator_UserColumnName="cns_stampa1" type="xs:string" minOccurs="0" />
+              <xs:element name="cns_stampa2" msprop:Generator_ColumnVarNameInTable="columncns_stampa2" msprop:Generator_ColumnPropNameInRow="cns_stampa2" msprop:Generator_ColumnPropNameInTable="cns_stampa2Column" msprop:Generator_UserColumnName="cns_stampa2" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

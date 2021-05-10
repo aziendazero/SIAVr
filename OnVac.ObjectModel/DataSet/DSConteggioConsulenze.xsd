@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSConteggioConsulenze" targetNamespace="http://tempuri.org/DSConteggioConsulenze.xsd" xmlns:mstns="http://tempuri.org/DSConteggioConsulenze.xsd" xmlns="http://tempuri.org/DSConteggioConsulenze.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSConteggioConsulenze" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSConteggioConsulenze" msprop:Generator_UserDSName="DSConteggioConsulenze">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConteggioConsulenze" msprop:Generator_TableClassName="ConteggioConsulenzeDataTable" msprop:Generator_TableVarName="tableConteggioConsulenze" msprop:Generator_TablePropName="ConteggioConsulenze" msprop:Generator_RowDeletingName="ConteggioConsulenzeRowDeleting" msprop:Generator_RowChangingName="ConteggioConsulenzeRowChanging" msprop:Generator_RowEvHandlerName="ConteggioConsulenzeRowChangeEventHandler" msprop:Generator_RowDeletedName="ConteggioConsulenzeRowDeleted" msprop:Generator_UserTableName="ConteggioConsulenze" msprop:Generator_RowChangedName="ConteggioConsulenzeRowChanged" msprop:Generator_RowEvArgName="ConteggioConsulenzeRowChangeEvent" msprop:Generator_RowClassName="ConteggioConsulenzeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodTipoConsulenza" msprop:Generator_ColumnVarNameInTable="columnCodTipoConsulenza" msprop:Generator_ColumnPropNameInRow="CodTipoConsulenza" msprop:Generator_ColumnPropNameInTable="CodTipoConsulenzaColumn" msprop:Generator_UserColumnName="CodTipoConsulenza" type="xs:string" minOccurs="0" />
+              <xs:element name="DescrTipoConsulenza" msprop:Generator_ColumnVarNameInTable="columnDescrTipoConsulenza" msprop:Generator_ColumnPropNameInRow="DescrTipoConsulenza" msprop:Generator_ColumnPropNameInTable="DescrTipoConsulenzaColumn" msprop:Generator_UserColumnName="DescrTipoConsulenza" type="xs:string" minOccurs="0" />
+              <xs:element name="CodCNS" msprop:Generator_ColumnVarNameInTable="columnCodCNS" msprop:Generator_ColumnPropNameInRow="CodCNS" msprop:Generator_ColumnPropNameInTable="CodCNSColumn" msprop:Generator_UserColumnName="CodCNS" type="xs:string" minOccurs="0" />
+              <xs:element name="DescrCNS" msprop:Generator_ColumnVarNameInTable="columnDescrCNS" msprop:Generator_ColumnPropNameInRow="DescrCNS" msprop:Generator_ColumnPropNameInTable="DescrCNSColumn" msprop:Generator_UserColumnName="DescrCNS" type="xs:string" minOccurs="0" />
+              <xs:element name="ConteggioConsulenze" msprop:Generator_ColumnVarNameInTable="columnConteggioConsulenze" msprop:Generator_ColumnPropNameInRow="ConteggioConsulenze" msprop:Generator_ColumnPropNameInTable="ConteggioConsulenzeColumn" msprop:Generator_UserColumnName="ConteggioConsulenze" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

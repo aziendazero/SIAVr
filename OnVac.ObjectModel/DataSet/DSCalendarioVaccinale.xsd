@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSCalendarioVaccinale" targetNamespace="http://tempuri.org/DSCalendarioVaccinale.xsd" xmlns:mstns="http://tempuri.org/DSCalendarioVaccinale.xsd" xmlns="http://tempuri.org/DSCalendarioVaccinale.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSCalendarioVaccinale" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="DSCalendarioVaccinale" msprop:Generator_DataSetName="DSCalendarioVaccinale">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCicSedVac" msprop:Generator_UserTableName="dtCicSedVac" msprop:Generator_RowDeletedName="dtCicSedVacRowDeleted" msprop:Generator_TableClassName="dtCicSedVacDataTable" msprop:Generator_RowChangedName="dtCicSedVacRowChanged" msprop:Generator_RowClassName="dtCicSedVacRow" msprop:Generator_RowChangingName="dtCicSedVacRowChanging" msprop:Generator_RowEvArgName="dtCicSedVacRowChangeEvent" msprop:Generator_RowEvHandlerName="dtCicSedVacRowChangeEventHandler" msprop:Generator_TablePropName="dtCicSedVac" msprop:Generator_TableVarName="tabledtCicSedVac" msprop:Generator_RowDeletingName="dtCicSedVacRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CIC_CODICE" msprop:Generator_UserColumnName="CIC_CODICE" msprop:Generator_ColumnPropNameInRow="CIC_CODICE" msprop:Generator_ColumnVarNameInTable="columnCIC_CODICE" msprop:Generator_ColumnPropNameInTable="CIC_CODICEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CIC_DESCRIZIONE" msprop:Generator_UserColumnName="CIC_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="CIC_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnCIC_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="CIC_DESCRIZIONEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CIC_DATA_INTRODUZIONE" msprop:Generator_UserColumnName="CIC_DATA_INTRODUZIONE" msprop:Generator_ColumnPropNameInRow="CIC_DATA_INTRODUZIONE" msprop:Generator_ColumnVarNameInTable="columnCIC_DATA_INTRODUZIONE" msprop:Generator_ColumnPropNameInTable="CIC_DATA_INTRODUZIONEColumn" type="xs:date" minOccurs="0" />
+              <xs:element name="VAC_DESCRIZIONE" msprop:Generator_UserColumnName="VAC_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="VAC_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnVAC_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="VAC_DESCRIZIONEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VAC_OBBLIGATORIA" msprop:Generator_UserColumnName="VAC_OBBLIGATORIA" msprop:Generator_ColumnPropNameInRow="VAC_OBBLIGATORIA" msprop:Generator_ColumnVarNameInTable="columnVAC_OBBLIGATORIA" msprop:Generator_ColumnPropNameInTable="VAC_OBBLIGATORIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TSD_CIC_CODICE" msprop:Generator_UserColumnName="TSD_CIC_CODICE" msprop:Generator_ColumnPropNameInRow="TSD_CIC_CODICE" msprop:Generator_ColumnVarNameInTable="columnTSD_CIC_CODICE" msprop:Generator_ColumnPropNameInTable="TSD_CIC_CODICEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TSD_N_SEDUTA" msprop:Generator_UserColumnName="TSD_N_SEDUTA" msprop:Generator_ColumnPropNameInRow="TSD_N_SEDUTA" msprop:Generator_ColumnVarNameInTable="columnTSD_N_SEDUTA" msprop:Generator_ColumnPropNameInTable="TSD_N_SEDUTAColumn" type="xs:integer" minOccurs="0" />
+              <xs:element name="TSD_ETA_SEDUTA" msprop:Generator_UserColumnName="TSD_ETA_SEDUTA" msprop:Generator_ColumnPropNameInRow="TSD_ETA_SEDUTA" msprop:Generator_ColumnVarNameInTable="columnTSD_ETA_SEDUTA" msprop:Generator_ColumnPropNameInTable="TSD_ETA_SEDUTAColumn" type="xs:integer" minOccurs="0" />
+              <xs:element name="TSD_DURATA_SEDUTA" msprop:Generator_UserColumnName="TSD_DURATA_SEDUTA" msprop:Generator_ColumnPropNameInRow="TSD_DURATA_SEDUTA" msprop:Generator_ColumnVarNameInTable="columnTSD_DURATA_SEDUTA" msprop:Generator_ColumnPropNameInTable="TSD_DURATA_SEDUTAColumn" type="xs:integer" minOccurs="0" />
+              <xs:element name="TSD_INTERVALLO" msprop:Generator_UserColumnName="TSD_INTERVALLO" msprop:Generator_ColumnPropNameInRow="TSD_INTERVALLO" msprop:Generator_ColumnVarNameInTable="columnTSD_INTERVALLO" msprop:Generator_ColumnPropNameInTable="TSD_INTERVALLOColumn" type="xs:integer" minOccurs="0" />
+              <xs:element name="TSD_INTERVALLO_PROSSIMA" msprop:Generator_UserColumnName="TSD_INTERVALLO_PROSSIMA" msprop:Generator_ColumnPropNameInRow="TSD_INTERVALLO_PROSSIMA" msprop:Generator_ColumnVarNameInTable="columnTSD_INTERVALLO_PROSSIMA" msprop:Generator_ColumnPropNameInTable="TSD_INTERVALLO_PROSSIMAColumn" type="xs:integer" minOccurs="0" />
+              <xs:element name="SED_VAC_CODICE" msprop:Generator_UserColumnName="SED_VAC_CODICE" msprop:Generator_ColumnPropNameInRow="SED_VAC_CODICE" msprop:Generator_ColumnVarNameInTable="columnSED_VAC_CODICE" msprop:Generator_ColumnPropNameInTable="SED_VAC_CODICEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SED_N_RICHIAMO" msprop:Generator_UserColumnName="SED_N_RICHIAMO" msprop:Generator_ColumnPropNameInRow="SED_N_RICHIAMO" msprop:Generator_ColumnVarNameInTable="columnSED_N_RICHIAMO" msprop:Generator_ColumnPropNameInTable="SED_N_RICHIAMOColumn" type="xs:integer" minOccurs="0" />              
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

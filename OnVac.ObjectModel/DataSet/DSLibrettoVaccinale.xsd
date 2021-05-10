@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DSLibrettoVaccinale" targetNamespace="http://tempuri.org/DSLibrettoVaccinale.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DSLibrettoVaccinale.xsd"
+	xmlns:mstns="http://tempuri.org/DSLibrettoVaccinale.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dtLibVac">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PAZ_CODICE" type="xs:integer" minOccurs="0" />
+				<xs:element name="PAZ_COGNOME" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_NOME" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_DATA_NASCITA" type="xs:date" minOccurs="0" />
+				<xs:element name="PAZ_COM_RESIDENZA" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_INDIRIZZO_RESIDENZA" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_CAP_RESIDENZA" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_COM_DOMICILIO" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_INDIRIZZO_DOMICILIO" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_CAP_DOMICILIO" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_COM_NASCITA" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_CODICE_DEMOGRAFICO" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_CIR_CODICE" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_SESSO" type="xs:string" minOccurs="0" />
+				<xs:element name="PAZ_CODICE_FISCALE" type="xs:string" minOccurs="0" />
+				<xs:element name="VAC_DESCRIZIONE" type="xs:string" minOccurs="0" />
+				<xs:element name="VES_N_RICHIAMO" type="xs:integer" minOccurs="0" />
+				<xs:element name="VES_DATA_EFFETTUAZIONE" type="xs:date" minOccurs="0" />
+				<xs:element name="VES_LOT_CODICE" type="xs:string" minOccurs="0" />
+				<xs:element name="VES_MED_VACCINANTE" type="xs:string" minOccurs="0" />
+				<xs:element name="VES_N_SEDUTA" type="xs:integer" minOccurs="0" />
+				<xs:element name="CIC_CODICE" type="xs:string" minOccurs="0" />
+				<xs:element name="CIC_DESCRIZIONE" type="xs:string" minOccurs="0" />
+				<xs:element name="CIC_DATA_INTRODUZIONE" type="xs:date" minOccurs="0" />
+				<xs:element name="VAC_OBBLIGATORIA" type="xs:string" minOccurs="0" />
+				<xs:element name="TSD_CIC_CODICE" type="xs:string" minOccurs="0" />
+				<xs:element name="TSD_N_SEDUTA" type="xs:integer" minOccurs="0" />
+				<xs:element name="TSD_ETA_SEDUTA" type="xs:integer" minOccurs="0" />
+				<xs:element name="TSD_DURATA_SEDUTA" type="xs:integer" minOccurs="0" />
+				<xs:element name="TSD_INTERVALLO" type="xs:integer" minOccurs="0" />
+				<xs:element name="NOC_DESCRIZIONE" type="xs:string" minOccurs="0" />
+				<xs:element name="LOT_DATA_SCADENZA" type="xs:date" minOccurs="0" />
+        <xs:element name="VES_FLAG_FITTIZIA" type="xs:string" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

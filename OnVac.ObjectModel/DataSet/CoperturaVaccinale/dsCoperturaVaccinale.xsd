@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCoperturaVaccinale" targetNamespace="http://tempuri.org/dsCoperturaVaccinale.xsd" xmlns:mstns="http://tempuri.org/dsCoperturaVaccinale.xsd" xmlns="http://tempuri.org/dsCoperturaVaccinale.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCoperturaVaccinale" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False" msprop:Generator_DataSetName="dsCoperturaVaccinale" msprop:Generator_UserDSName="dsCoperturaVaccinale">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CoperturaVaccinale" msprop:Generator_TableClassName="CoperturaVaccinaleDataTable" msprop:Generator_TableVarName="tableCoperturaVaccinale" msprop:Generator_TablePropName="CoperturaVaccinale" msprop:Generator_RowDeletingName="CoperturaVaccinaleRowDeleting" msprop:Generator_UserTableName="CoperturaVaccinale" msprop:Generator_RowChangingName="CoperturaVaccinaleRowChanging" msprop:Generator_RowEvHandlerName="CoperturaVaccinaleRowChangeEventHandler" msprop:Generator_RowDeletedName="CoperturaVaccinaleRowDeleted" msprop:Generator_RowEvArgName="CoperturaVaccinaleRowChangeEvent" msprop:Generator_RowChangedName="CoperturaVaccinaleRowChanged" msprop:Generator_RowClassName="CoperturaVaccinaleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VAC_CODICE" msprop:Generator_ColumnVarNameInTable="columnVAC_CODICE" msprop:Generator_ColumnPropNameInRow="VAC_CODICE" msprop:Generator_ColumnPropNameInTable="VAC_CODICEColumn" msprop:Generator_UserColumnName="VAC_CODICE" type="xs:string" minOccurs="0" />
+              <xs:element name="VAC_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnVAC_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="VAC_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="VAC_DESCRIZIONEColumn" msprop:Generator_UserColumnName="VAC_DESCRIZIONE" type="xs:string" minOccurs="0" />
+              <xs:element name="VAC_ORDINE" msprop:Generator_ColumnVarNameInTable="columnVAC_ORDINE" msprop:Generator_ColumnPropNameInRow="VAC_ORDINE" msprop:Generator_ColumnPropNameInTable="VAC_ORDINEColumn" msprop:Generator_UserColumnName="VAC_ORDINE" type="xs:long" minOccurs="0" />
+              <xs:element name="NUM_VACCINATI" msprop:Generator_ColumnVarNameInTable="columnNUM_VACCINATI" msprop:Generator_ColumnPropNameInRow="NUM_VACCINATI" msprop:Generator_ColumnPropNameInTable="NUM_VACCINATIColumn" msprop:Generator_UserColumnName="NUM_VACCINATI" type="xs:long" minOccurs="0" />
+              <xs:element name="IMMUNI_MAI_VACCINATI" msprop:Generator_ColumnVarNameInTable="columnIMMUNI_MAI_VACCINATI" msprop:Generator_ColumnPropNameInRow="IMMUNI_MAI_VACCINATI" msprop:Generator_ColumnPropNameInTable="IMMUNI_MAI_VACCINATIColumn" msprop:Generator_UserColumnName="IMMUNI_MAI_VACCINATI" type="xs:long" minOccurs="0" />
+              <xs:element name="IMMUNI_VACCINATI" msprop:Generator_ColumnVarNameInTable="columnIMMUNI_VACCINATI" msprop:Generator_ColumnPropNameInRow="IMMUNI_VACCINATI" msprop:Generator_ColumnPropNameInTable="IMMUNI_VACCINATIColumn" msprop:Generator_UserColumnName="IMMUNI_VACCINATI" type="xs:long" minOccurs="0" />
+              <xs:element name="NON_VACCINABILI_MAI_VACCINATI" msprop:Generator_ColumnVarNameInTable="columnNON_VACCINABILI_MAI_VACCINATI" msprop:Generator_ColumnPropNameInRow="NON_VACCINABILI_MAI_VACCINATI" msprop:Generator_ColumnPropNameInTable="NON_VACCINABILI_MAI_VACCINATIColumn" msprop:Generator_UserColumnName="NON_VACCINABILI_MAI_VACCINATI" type="xs:long" minOccurs="0" />
+              <xs:element name="NON_VACCINABILI_VACCINATI" msprop:Generator_ColumnVarNameInTable="columnNON_VACCINABILI_VACCINATI" msprop:Generator_ColumnPropNameInRow="NON_VACCINABILI_VACCINATI" msprop:Generator_ColumnPropNameInTable="NON_VACCINABILI_VACCINATIColumn" msprop:Generator_UserColumnName="NON_VACCINABILI_VACCINATI" type="xs:long" minOccurs="0" />
+              <xs:element name="NUM_PAZIENTI" msprop:Generator_ColumnVarNameInTable="columnNUM_PAZIENTI" msprop:Generator_ColumnPropNameInRow="NUM_PAZIENTI" msprop:Generator_ColumnPropNameInTable="NUM_PAZIENTIColumn" msprop:Generator_UserColumnName="NUM_PAZIENTI" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

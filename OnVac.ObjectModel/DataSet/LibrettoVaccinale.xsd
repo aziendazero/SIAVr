@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="LibrettoVaccinale" targetNamespace="http://tempuri.org/LibrettoVaccinale.xsd"
+	elementFormDefault="qualified" xmlns="http://tempuri.org/LibrettoVaccinale.xsd" xmlns:mstns="http://tempuri.org/LibrettoVaccinale.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="PAZIENTI">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="paz_codice" type="xs:integer" />
+				<xs:element name="paz_cognome" type="xs:string" />
+				<xs:element name="paz_nome" type="xs:string" />
+				<xs:element name="paz_data_nascita" type="xs:date" />
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="PAZIENTI_key" msdata:PrimaryKey="true">
+			<xs:selector xpath="." />
+			<xs:field xpath="mstns:paz_codice" />
+		</xs:key>
+	</xs:element>
+	<xs:element name="VACCINAZIONI">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="paz_codice" type="xs:integer" />
+				<xs:element name="vac_tipo" type="xs:string" />
+				<xs:element name="vac_dose" type="xs:integer" />
+				<xs:element name="vac_data" type="xs:date" />
+				<xs:element name="vac_associazione" type="xs:string" />
+				<xs:element name="vac_nome" type="xs:string" />
+        <xs:element name="vac_fittizia" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+		<xs:keyref name="PAZIENTI_VACCINAZIONI" refer="PAZIENTI_key" msdata:ConstraintOnly="true">
+			<xs:selector xpath="." />
+			<xs:field xpath="mstns:paz_codice" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

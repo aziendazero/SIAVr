@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsMotiviEsclusione" targetNamespace="http://tempuri.org/dsMotiviEsclusione.xsd" xmlns:mstns="http://tempuri.org/dsMotiviEsclusione.xsd" xmlns="http://tempuri.org/dsMotiviEsclusione.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsMotiviEsclusione" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="dsMotiviEsclusione" msprop:Generator_UserDSName="dsMotiviEsclusione">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_MOTIVI_ESCLUSIONE" msprop:Generator_TableClassName="V_MOTIVI_ESCLUSIONEDataTable" msprop:Generator_TableVarName="tableV_MOTIVI_ESCLUSIONE" msprop:Generator_TablePropName="V_MOTIVI_ESCLUSIONE" msprop:Generator_RowDeletingName="V_MOTIVI_ESCLUSIONERowDeleting" msprop:Generator_UserTableName="V_MOTIVI_ESCLUSIONE" msprop:Generator_RowChangingName="V_MOTIVI_ESCLUSIONERowChanging" msprop:Generator_RowEvHandlerName="V_MOTIVI_ESCLUSIONERowChangeEventHandler" msprop:Generator_RowDeletedName="V_MOTIVI_ESCLUSIONERowDeleted" msprop:Generator_RowEvArgName="V_MOTIVI_ESCLUSIONERowChangeEvent" msprop:Generator_RowChangedName="V_MOTIVI_ESCLUSIONERowChanged" msprop:Generator_RowClassName="V_MOTIVI_ESCLUSIONERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MOE_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnMOE_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="MOE_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="MOE_DESCRIZIONEColumn" msprop:Generator_UserColumnName="MOE_DESCRIZIONE" type="xs:string" minOccurs="0" />
+              <xs:element name="VAC_DESCRIZIONE" msprop:Generator_ColumnVarNameInTable="columnVAC_DESCRIZIONE" msprop:Generator_ColumnPropNameInRow="VAC_DESCRIZIONE" msprop:Generator_ColumnPropNameInTable="VAC_DESCRIZIONEColumn" msprop:Generator_UserColumnName="VAC_DESCRIZIONE" type="xs:string" minOccurs="0" />
+              <xs:element name="PAZ_CODICE" msprop:Generator_ColumnVarNameInTable="columnPAZ_CODICE" msprop:Generator_ColumnPropNameInRow="PAZ_CODICE" msprop:Generator_ColumnPropNameInTable="PAZ_CODICEColumn" msprop:Generator_UserColumnName="PAZ_CODICE" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
