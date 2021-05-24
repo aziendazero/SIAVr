@@ -53,7 +53,7 @@ Il DB utilizzato è Oracle versione 19c
 
 ## Contatti
 
-*ONIT Group Srl
+- ONIT Group Srl
 Via dell'Arrigoni, 308
 47522 - Cesena (FC) - Italy
 Tel: +39 0547 313110
