@@ -1,0 +1,82 @@
+publiccodeYmlVersion: "0.1"
+
+name: SIAVr
+url: "https://github.com/aziendazero/Siavr"
+softwareVersion: "4.24.00"
+releaseDate: "YYYY-MM-DD"
+
+inputType:
+
+outputType:
+
+platforms:
+    - web
+
+categories:
+    - data-collection
+    - data-visualization
+    - appointment-scheduling
+
+usedBy:
+    - Regione Veneto
+
+developmentStatus: development
+
+softwareType: "standalone/web"
+
+intendedAudiance:
+    scope:
+        - healtcare
+    
+description:
+    it:
+        localisedName: SIAVr
+        genericName: Web Service
+        shortDescription: >
+        
+        longDescription: >
+        
+        documentation:
+        apiDocumentation:
+        
+        features:
+        
+        
+legal:
+    license: AGPL-3.0-or-later
+    
+maintance:
+    type: "none"
+
+localisation:
+    localisationReady: No
+    availableLenguage:
+        - it
+    
+dependsOn:
+    open:
+        - name: ASP.NET Framework
+          version: 4.5.2 
+        - name: Bootstrap
+          version: 4
+    proprietary:
+        - name: Oracle
+          version: 19c
+    
+it:
+    countryExtensionVersion:
+    
+    conforme:
+        lineeGuidaDesign: 
+        modelloInteroperabilita:
+        misureMinimeSicurezza:
+        gdpr:
+    
+    piattaforme:
+        spid:
+        cie:
+        anpr:
+        pagopa:
+    
+    riuso:
+        codiceIPA: 
