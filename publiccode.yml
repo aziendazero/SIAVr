@@ -1,82 +1,125 @@
-publiccodeYmlVersion: "0.1"
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
 
-name: SIAVr
-url: "https://github.com/aziendazero/Siavr"
-softwareVersion: "4.24.00"
-releaseDate: "YYYY-MM-DD"
-
-inputType:
-
-outputType:
-
-platforms:
-    - web
-
+publiccodeYmlVersion: '0.2'
 categories:
-    - data-collection
-    - data-visualization
-    - appointment-scheduling
-
-usedBy:
-    - Regione Veneto
-
-developmentStatus: development
-
-softwareType: "standalone/web"
-
-intendedAudiance:
-    scope:
-        - healtcare
-    
+  - data-visualization
+  - data-collection
+  - appointment-scheduling
 description:
-    it:
-        localisedName: SIAVr
-        genericName: Web Service
-        shortDescription: >
-        
-        longDescription: >
-        
-        documentation:
-        apiDocumentation:
-        
-        features:
-        
-        
-legal:
-    license: AGPL-3.0-or-later
-    
-maintance:
-    type: "none"
+  it:
+    documentation: 'https://github.com/'
+    features:
+      - |-
+        gestione informatizza delle anagrafi vaccinali, anamnesi, patologie
+        croniche e categorie di rischio
+      - 'gestione calendari standard definiti a livello regionale '
+      - |-
+        personalizzazione calendari in base situazione sanitaria assistito
+        tramite gestione delle scadenze
+      - generazione degli inviti e dei solleciti ed ogni altro adempimento
+      - anamnesi prevaccinali
+      - funzionalità a supporto delle attività degli ambulatori
+      - gestione del magazzino
+      - possibilità di integrarsi ad un'anagrafe assistiti aziendale o regionale
+      - |-
+        possibilità di integrarsi al Fascicolo Sanitario Elettronico per l'invio
+        dei certificati vaccinali
+    genericName: SIAVr
+    longDescription: |
+      Sistema Informativo di Anagrafe Vaccinale Regionale - SIAVr.
 
-localisation:
-    localisationReady: No
-    availableLenguage:
-        - it
-    
-dependsOn:
-    open:
-        - name: ASP.NET Framework
-          version: 4.5.2 
-        - name: Bootstrap
-          version: 4
-    proprietary:
-        - name: Oracle
-          version: 19c
-    
+
+      L’applicativo prevede la gestione informatizza delle anagrafi vaccinali,
+      anamnesi, patologie croniche e categorie di rischio, associabili agli
+      assistiti.
+
+
+      Il sistema consente di gestire gli inviti per le vaccinazioni per cui è
+      effettuata una proposta attiva da parte delle Aziende sanitarie, sulla
+      base di calendari standard definiti a livello regionale o personalizzabili
+      in base alla situazione socio-sanitaria dell’assistito (figli di madre
+      HBSAG+, viaggiatori, ecc) tramite la gestione delle scadenze, la
+      generazione degli inviti e dei solleciti ed ogni altro adempimento
+      connesso alla gestione delle campagne vaccinali. Possono inoltre essere
+      registrate tutte le vaccinazioni, comprensive di anamnesi prevaccinali,
+      sia conseguenti alla proposta attiva da parte dell’Azienda Sanitaria sia
+      effettuate in seguito ad accesso spontaneo degli assistiti. Sono inoltre
+      presenti funzionalità a supporto delle attività degli ambulatori, compresa
+      la gestione del magazzino.
+
+
+      Il sistema può essere anche utilizzato da operatori esterni al servizio
+      vaccinale:
+
+
+      - medici di base / pediatri di libera scelta per le campagne
+      antiinfluenzali e anti- pneumococciche;
+
+
+      - medici di PS per verificare la copertura rispetto a determinate
+      vaccinazioni (Tetano)
+
+
+      E' prevista la possibilità di integrarsi ad un'anagrafe assistiti
+      aziendale o regionale, al Fascicolo Sanitario Elettronico per l'invio dei
+      certificati vaccinali.
+    shortDescription: Sistema Informativo di Anagrafe Vaccinale Regionale - SIAVr.
+developmentStatus: stable
+intendedAudience:
+  countries:
+    - it
+  scope:
+    - healthcare
 it:
-    countryExtensionVersion:
-    
-    conforme:
-        lineeGuidaDesign: 
-        modelloInteroperabilita:
-        misureMinimeSicurezza:
-        gdpr:
-    
-    piattaforme:
-        spid:
-        cie:
-        anpr:
-        pagopa:
-    
-    riuso:
-        codiceIPA: 
+  conforme:
+    gdpr: false
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: false
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: false
+  riuso:
+    codiceIPA: azero
+legal:
+  license: GPL-3.0-or-later
+  mainCopyrightOwner: Azienda Zero
+  repoOwner: Azienda Zero
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: false
+maintenance:
+  type: none
+name: SIAVr
+platforms:
+  - windows
+releaseDate: '2021-03-08'
+softwareType: standalone/web
+softwareVersion: 4.24.00
+url: 'https://github.com/aziendazero/Siavr'
+usedBy:
+  - Regione Veneto
+dependsOn:
+  open:
+    - name: ASP.NET Framework
+      optional: false
+      version: ''
+      versionMax: ''
+      versionMin: 4.5.2
+    - name: Bootstrap
+      optional: false
+      version: ''
+      versionMax: ''
+      versionMin: '4'
+  proprietary:
+    - name: Oracle
+      optional: false
+      version: ''
+      versionMax: ''
+      versionMin: 19c
