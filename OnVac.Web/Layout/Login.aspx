@@ -16,7 +16,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:TextBox ID="txtPassword" runat="server" Width="100%" TextMode="Password" Text="onit!2011"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" Width="100%" TextMode="Password" Text=""></asp:TextBox>
                 </td>
             </tr>
             <tr>
