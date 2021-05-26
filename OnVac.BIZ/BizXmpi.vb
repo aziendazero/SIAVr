@@ -17,7 +17,7 @@ Public Class BizXmpi
 
             'altrimenti scelgo se aggiornare per stp o codice fiscale
             If Not pazienteCentrale.codiceFiscale Is Nothing Then
-                'il codice fiscale è valorizzato
+                'il codice fiscale Ã¨ valorizzato
 
                 If IsStp(pazienteCentrale.codiceFiscale) Then
                     campi.Add("codiceSTP", pazienteCentrale.codiceFiscale)
@@ -59,7 +59,7 @@ Public Class BizXmpi
         campi.AddIfNotNull("codiceStatoCivile", pazienteCentrale.StatoCivile)
         campi.AddIfNotNull("motivoCessazioneAssistenza", pazienteCentrale.UslAssistenzaMotivoCessazione)
         campi.AddIfNotNull("codiceComuneDecesso", pazienteCentrale.ComCodiceDecesso)
-        campi.AddIfNotNull("codicePosizioneProfessionaleSacs", pazienteCentrale.CodiceProfessione) ' la professione è intesa come posizione professionale
+        campi.AddIfNotNull("codicePosizioneProfessionaleSacs", pazienteCentrale.CodiceProfessione) ' la professione Ã¨ intesa come posizione professionale
         campi.AddIfNotNull("identificativoAnagrafeComunale", pazienteCentrale.CodiceDemografico) '*
         campi.AddIfNotNull("flagCEE", pazienteCentrale.CEE)
         campi.AddIfNotNull("aslAssistenza", pazienteCentrale.UslAssistenzaCodice)
@@ -83,7 +83,7 @@ Public Class BizXmpi
 
     End Function
 
-    'controlla se il codice fiscale è un stp
+    'controlla se il codice fiscale Ã¨ un stp
     Private Shared Function IsStp(codiceFiscale As String) As Boolean
 
         If codiceFiscale Is Nothing Then
@@ -108,42 +108,42 @@ Public Class BizXmpi
             Case "ONAMB", "ONAMBV2"
                 strEntita = "ON-AMB"
                 strUser = "USR_ON-AMB"
-                strPassword = "ONIT0003"
+                strPassword = ""
 
             Case "ONVAC"
                 strEntita = "ON-VAC"
                 strUser = "USR_ON-VAC"
-                strPassword = "ONIT0001"
+                strPassword = ""
 
             Case "ONMED", "ONASLGACNEW"
                 strEntita = "MDB"
                 strUser = "USR_MDB"
-                strPassword = "ONIT0002"
+                strPassword = ""
 
             Case "ONREP"
                 strEntita = "ONREP"
                 strUser = "USR_ONREP"
-                strPassword = "ONIT0004"
+                strPassword = ""
 
             Case "ONSAS"
                 strEntita = "ON-SAS"
                 strUser = "USR_ON-SAS"
-                strPassword = "ONIT0005"
+                strPassword = ""
 
             Case "VANASL"
                 strEntita = "VANASL"
                 strUser = "USR_VANASL"
-                strPassword = "ONIT0006"
+                strPassword = ""
 
             Case "ALLINEA"
                 strEntita = "ALLINEA"
                 strUser = "USR_ALLIN"
-                strPassword = "ALLINEA1"
+                strPassword = ""
 
             Case "ONASLGACNEWCEDAP"
                 strEntita = "ONGAC2"
                 strUser = "OnAslGacNewCEDAP"
-                strPassword = "ONIT2222"
+                strPassword = ""
 
             Case Else
                 strErr = "Errore: " + strApplicativo + " applicativo sconosciuto"
